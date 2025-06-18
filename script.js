@@ -60,6 +60,7 @@ function preload(){
 function setup(){
     questions.push(loadImage("2013-NC-27.png")); 
     questions.push(loadImage("2013-NC-28.png")); 
+     console.log(questions);
   hgt=windowHeight;
   wdth=windowWidth;
   createCanvas(wdth-20,hgt-20);
