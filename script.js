@@ -1,6 +1,6 @@
 var wdth;
 var hgt;
-
+var controls=[];
 
 function setup(){
   hgt=windowHeight;
