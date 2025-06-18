@@ -50,7 +50,49 @@ function preload(){
     questions.push(loadImage("2013-NC-25.png")); 
     questions.push(loadImage("2013-NC-26.png")); 
 
-
+    questions.push(loadImage("2014-C-76.png")); 
+    questions.push(loadImage("2014-C-77.png")); 
+    questions.push(loadImage("2014-C-78.png")); 
+    questions.push(loadImage("2014-C-79.png")); 
+    questions.push(loadImage("2014-C-80.png")); 
+    questions.push(loadImage("2014-C-81.png")); 
+    questions.push(loadImage("2014-C-82.png")); 
+    questions.push(loadImage("2014-C-83.png")); 
+    questions.push(loadImage("2014-C-84.png")); 
+    questions.push(loadImage("2014-C-85.png")); 
+    questions.push(loadImage("2014-C-86.png")); 
+    questions.push(loadImage("2014-C-87.png")); 
+    questions.push(loadImage("2014-C-88.png")); 
+    questions.push(loadImage("2014-C-89.png")); 
+    questions.push(loadImage("2014-C-90.png")); 
+    questions.push(loadImage("2014-C-91.png")); 
+    questions.push(loadImage("2014-C-92.png")); 
+    questions.push(loadImage("2014-NC-1.png")); 
+    questions.push(loadImage("2014-NC-2.png")); 
+    questions.push(loadImage("2014-NC-3.png")); 
+    questions.push(loadImage("2014-NC-4.png")); 
+    questions.push(loadImage("2014-NC-5.png")); 
+    questions.push(loadImage("2014-NC-6.png")); 
+    questions.push(loadImage("2014-NC-7.png")); 
+    questions.push(loadImage("2014-NC-8.png")); 
+    questions.push(loadImage("2014-NC-9.png")); 
+    questions.push(loadImage("2014-NC-10.png")); 
+    questions.push(loadImage("2014-NC-11.png")); 
+    questions.push(loadImage("2014-NC-12.png")); 
+    questions.push(loadImage("2014-NC-13.png")); 
+    questions.push(loadImage("2014-NC-14.png")); 
+    questions.push(loadImage("2014-NC-15.png")); 
+    questions.push(loadImage("2014-NC-16.png")); 
+    questions.push(loadImage("2014-NC-17.png")); 
+    questions.push(loadImage("2014-NC-18.png")); 
+    questions.push(loadImage("2014-NC-19.png")); 
+    questions.push(loadImage("2014-NC-20.png")); 
+    questions.push(loadImage("2014-NC-21.png")); 
+    questions.push(loadImage("2014-NC-22.png")); 
+    questions.push(loadImage("2014-NC-23.png")); 
+    questions.push(loadImage("2014-NC-24.png")); 
+    questions.push(loadImage("2014-NC-25.png")); 
+    questions.push(loadImage("2014-NC-26.png")); 
   
   
 }
