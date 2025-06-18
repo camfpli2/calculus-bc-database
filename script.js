@@ -202,7 +202,7 @@ function setup(){
   controls.push(new control(5,5,120,70,"Histogram",butcolor));
   controls.push(new control(130,5,120,70,"Previous",butcolor));
   controls.push(new control(255,5,120,70,"Next",butcolor));
-  adjustImageDimensions(questions);
+  adjustImageDimensions();
   textAlign(LEFT);
   background(240);  
   textSize(30);
@@ -226,7 +226,7 @@ function touchEnded() {
   return false;
 }
 
-function adjustImageDimensions(questions){
+function adjustImageDimensions(){
   for(var v=1;v<questions.length;v++){
 
     if((questions[v].width>wdth-40)||(questions[v].height>hgt-130)){      //too tall and too wide
