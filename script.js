@@ -16,7 +16,7 @@ function setup(){
   // Using template literals for dynamic path
   // Note: This approach typically works in bundlers like Webpack or Vite
   // which can resolve dynamic imports at build time.
-  questions.push(loadImage(`2013-NC-${i+76}.png`)); 
+  questions.push(loadImage(`2013-NC-76.png`)); 
   }
   hgt=windowHeight;
   wdth=windowWidth;
