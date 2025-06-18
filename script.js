@@ -49,8 +49,7 @@ function preload(){
     questions.push(loadImage("2013-NC-24.png")); 
     questions.push(loadImage("2013-NC-25.png")); 
     questions.push(loadImage("2013-NC-26.png")); 
-    questions.push(loadImage("2013-NC-27.png")); 
-    questions.push(loadImage("2013-NC-28.png")); 
+
 
   
   
@@ -59,7 +58,8 @@ function preload(){
 
 
 function setup(){
-
+    questions.push(loadImage("2013-NC-27.png")); 
+    questions.push(loadImage("2013-NC-28.png")); 
   hgt=windowHeight;
   wdth=windowWidth;
   createCanvas(wdth-20,hgt-20);
