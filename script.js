@@ -3,9 +3,9 @@ var hgt;
 var controls=[];
 var butcolor=[220, 200, 190];
 var questions=[];
+var n=0;
 
 function preload(){
-     // questions.push(require(`./assets/2013-C-${g+76}.png`)); 
     questions.push(loadImage("2008-C-76.png")); 
     questions.push(loadImage("2008-C-77.png")); 
     questions.push(loadImage("2008-C-78.png")); 
@@ -195,7 +195,6 @@ function preload(){
 
 function setup(){
 
-     console.log(questions);
   hgt=windowHeight;
   wdth=windowWidth;
   createCanvas(wdth-20,hgt-20);
@@ -203,9 +202,29 @@ function setup(){
   controls.push(new control(5,5,120,70,"Histogram",butcolor));
   controls.push(new control(130,5,120,70,"Previous",butcolor));
   controls.push(new control(255,5,120,70,"Next",butcolor));
+  adjustImageDimensions(questions);
+  textAlign(LEFT);
+  background(240);  
+  textSize(30);
+  refresher();
+  
 
 }
 
+function refresher(){
+   background(240);  
+   for(var y=0;y<controls.length;y++){
+      controls[y].drawit();
+   }
+ image(questions[n],10,120);
+}
+
+function touchEnded() {
+    for(var g=0;g<controls.length;g++){
+    controls[g].tapit();
+  }
+  return false;
+}
 
 function adjustImageDimensions(questions){
   for(var v=1;v<questions.length;v++){
@@ -234,9 +253,11 @@ class control{
     if(mouseX>=this.x && mouseX<=this.x+this.w && mouseY>=this.y && mouseY <= this.y+this.h){
       if(this.txt==="Next"){
         n++;
+        refresher();
       }
       if(this.txt==="Previous"){
         n--;
+        refresher();
       }
     }
   }
