@@ -229,12 +229,14 @@ function touchEnded() {
 function adjustImageDimensions(){
   for(var v=0;v<questions.length;v++){
    console.log(questions[v].width, questions[v].height);
-    if((questions[v].width>wdth-40)||(questions[v].height>hgt-130)){      //too tall and too wide
+    if((questions[v].width>wdth-40)||(questions[v].height>hgt-130)){      //too tall or too wide
       if(questions[v].width/(wdth-40)>questions[v].height/(hgt-130)){    //%wise, wider than taller
          questions[v].resize(wdth-40,0);
+          console.log(questions[v].width, questions[v].height);
       }
       else{                                               //%wise, taller than wider
          questions[v].resize(0,hgt-130);
+         console.log(questions[v].width, questions[v].height);
       }
     }
   }
