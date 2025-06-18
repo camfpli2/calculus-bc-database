@@ -239,6 +239,8 @@ function adjustImageDimensions(){
          console.log(questions[v].width, questions[v].height);
       }
     }
+               console.log(questions[v].width, questions[v].height);
+
   }
 }
 
