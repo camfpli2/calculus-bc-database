@@ -2,6 +2,12 @@ var wdth;
 var hgt;
 var controls=[];
 var butcolor=[220, 200, 190];
+var questions=[];
+
+function preload(){
+  questions.push(loadImage(('/2013-NC-1-Integration.png')));
+  
+}
 
 
 function setup(){
