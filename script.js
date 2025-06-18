@@ -5,12 +5,11 @@ var butcolor=[220, 200, 190];
 var questions=[];
 
 function preload(){
-  //questions=loadImage(('2013-NC-1-Integration.png'));
-  // Using template literals for dynamic path
-  // Note: This approach typically works in bundlers like Webpack or Vite
-  // which can resolve dynamic imports at build time.
-  questions.push(loadImage("2013-C-76.png")); 
-      //console.log(questions[i]);
+  for(var g=0;g<17;g++){
+      questions.push(require(`./assets/2013-C-${i+76}.png`)); 
+
+  }
+  //questions.push(loadImage("2013-C-76.png")); 
   
 }
 
