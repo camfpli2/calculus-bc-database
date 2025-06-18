@@ -2,12 +2,18 @@ var wdth;
 var hgt;
 var controls=[];
 var butcolor=[220, 200, 190];
-var questions;
+var questions=[];
 
 function preload(){
-  questions=loadImage(('2013-NC-1-Integration.png'));
-  
+  //questions=loadImage(('2013-NC-1-Integration.png'));
+  for (let i = 0; i < 15; i++) {
+  // Using template literals for dynamic path
+  // Note: This approach typically works in bundlers like Webpack or Vite
+  // which can resolve dynamic imports at build time.
+  images.push(require(`2013-NC-${i+1}.png`)); 
+  }
 }
+
 
 
 function setup(){
