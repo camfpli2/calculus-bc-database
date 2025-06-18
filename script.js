@@ -11,6 +11,7 @@ function preload(){
   // Note: This approach typically works in bundlers like Webpack or Vite
   // which can resolve dynamic imports at build time.
   questions.push(loadImage("2013-C-{i+76}.png")); 
+      console.log(questions[i]);
   }
 }
 
