@@ -10,7 +10,7 @@ function preload(){
   // Using template literals for dynamic path
   // Note: This approach typically works in bundlers like Webpack or Vite
   // which can resolve dynamic imports at build time.
-  questions.push(require(`2013-NC-${i+1}.png`)); 
+  questions.push(require(`/2013-NC-${i+76}.png`)); 
   }
 }
 
