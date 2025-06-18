@@ -227,7 +227,7 @@ function touchEnded() {
 }
 
 function adjustImageDimensions(){
-  for(var v=1;v<questions.length;v++){
+  for(var v=0;v<questions.length;v++){
 
     if((questions[v].width>wdth-40)||(questions[v].height>hgt-130)){      //too tall and too wide
       if(questions[v].width/(wdth-40)>questions[v].height/(hgt-130)){    //%wise, wider than taller
