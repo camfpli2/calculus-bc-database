@@ -216,7 +216,7 @@ function refresher(){
    for(var y=0;y<controls.length;y++){
       controls[y].drawit();
    }
- image(questions[n],10,120);
+ image(questions[n],10,100);
 }
 
 function touchEnded() {
