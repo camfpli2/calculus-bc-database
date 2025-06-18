@@ -1,6 +1,8 @@
 var wdth;
 var hgt;
 var controls=[];
+var butcolor=[220, 200, 190];
+
 
 function setup(){
   hgt=windowHeight;
