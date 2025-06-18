@@ -5,7 +5,7 @@ var butcolor=[220, 200, 190];
 var questions;
 
 function preload(){
-  questions=loadImage(('/2013-NC-1-Integration.png'));
+  questions=loadImage(('/calculus-bc-database/2013-NC-1-Integration.png'));
   
 }
 
