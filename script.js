@@ -23,6 +23,34 @@ function preload(){
     questions.push(loadImage("2013-C-90.png")); 
     questions.push(loadImage("2013-C-91.png")); 
     questions.push(loadImage("2013-C-92.png")); 
+    questions.push(loadImage("2013-NC-1.png")); 
+    questions.push(loadImage("2013-NC-2.png")); 
+    questions.push(loadImage("2013-NC-3.png")); 
+    questions.push(loadImage("2013-NC-4.png")); 
+    questions.push(loadImage("2013-NC-5.png")); 
+    questions.push(loadImage("2013-NC-6.png")); 
+    questions.push(loadImage("2013-NC-7.png")); 
+    questions.push(loadImage("2013-NC-8.png")); 
+    questions.push(loadImage("2013-NC-9.png")); 
+    questions.push(loadImage("2013-NC-10.png")); 
+    questions.push(loadImage("2013-NC-11.png")); 
+    questions.push(loadImage("2013-NC-12.png")); 
+    questions.push(loadImage("2013-NC-13.png")); 
+    questions.push(loadImage("2013-NC-14.png")); 
+    questions.push(loadImage("2013-NC-15.png")); 
+    questions.push(loadImage("2013-NC-16.png")); 
+    questions.push(loadImage("2013-NC-17.png")); 
+    questions.push(loadImage("2013-NC-18.png")); 
+    questions.push(loadImage("2013-NC-19.png")); 
+    questions.push(loadImage("2013-NC-20.png")); 
+    questions.push(loadImage("2013-NC-21.png")); 
+    questions.push(loadImage("2013-NC-22.png")); 
+    questions.push(loadImage("2013-NC-23.png")); 
+    questions.push(loadImage("2013-NC-24.png")); 
+    questions.push(loadImage("2013-NC-25.png")); 
+    questions.push(loadImage("2013-NC-26.png")); 
+    questions.push(loadImage("2013-NC-27.png")); 
+    questions.push(loadImage("2013-NC-28.png")); 
 
   
   
