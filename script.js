@@ -5,11 +5,10 @@ var butcolor=[220, 200, 190];
 var questions=[];
 
 function preload(){
-  for(var g=0;g<17;g++){
      // questions.push(require(`./assets/2013-C-${g+76}.png`)); 
     questions.push(loadImage("2013-C-76.png")); 
 
-  }
+  
   
 }
 
