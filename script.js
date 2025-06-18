@@ -49,6 +49,8 @@ function preload(){
     questions.push(loadImage("2013-NC-24.png")); 
     questions.push(loadImage("2013-NC-25.png")); 
     questions.push(loadImage("2013-NC-26.png")); 
+    questions.push(loadImage("2013-NC-27.png")); 
+    questions.push(loadImage("2013-NC-28.png")); 
 
     questions.push(loadImage("2014-C-76.png")); 
     questions.push(loadImage("2014-C-77.png")); 
@@ -93,6 +95,8 @@ function preload(){
     questions.push(loadImage("2014-NC-24.png")); 
     questions.push(loadImage("2014-NC-25.png")); 
     questions.push(loadImage("2014-NC-26.png")); 
+    questions.push(loadImage("2014-NC-27.png")); 
+    questions.push(loadImage("2014-NC-28.png")); 
   
   
 }
@@ -100,8 +104,7 @@ function preload(){
 
 
 function setup(){
-    questions.push(loadImage("2013-NC-27.png")); 
-    questions.push(loadImage("2013-NC-28.png")); 
+
      console.log(questions);
   hgt=windowHeight;
   wdth=windowWidth;
