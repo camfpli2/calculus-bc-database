@@ -7,6 +7,22 @@ var questions=[];
 function preload(){
      // questions.push(require(`./assets/2013-C-${g+76}.png`)); 
     questions.push(loadImage("2013-C-76.png")); 
+    questions.push(loadImage("2013-C-77.png")); 
+    questions.push(loadImage("2013-C-78.png")); 
+    questions.push(loadImage("2013-C-79.png")); 
+    questions.push(loadImage("2013-C-80.png")); 
+    questions.push(loadImage("2013-C-81.png")); 
+    questions.push(loadImage("2013-C-82.png")); 
+    questions.push(loadImage("2013-C-83.png")); 
+    questions.push(loadImage("2013-C-84.png")); 
+    questions.push(loadImage("2013-C-85.png")); 
+    questions.push(loadImage("2013-C-86.png")); 
+    questions.push(loadImage("2013-C-87.png")); 
+    questions.push(loadImage("2013-C-88.png")); 
+    questions.push(loadImage("2013-C-89.png")); 
+    questions.push(loadImage("2013-C-90.png")); 
+    questions.push(loadImage("2013-C-91.png")); 
+    questions.push(loadImage("2013-C-92.png")); 
 
   
   
