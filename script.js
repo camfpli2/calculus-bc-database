@@ -6,17 +6,18 @@ var questions=[];
 
 function preload(){
   //questions=loadImage(('2013-NC-1-Integration.png'));
-  for (let i = 0; i < 17; i++) {
-  // Using template literals for dynamic path
-  // Note: This approach typically works in bundlers like Webpack or Vite
-  // which can resolve dynamic imports at build time.
-  questions.push(require(`./2013-NC-${i+76}.png`)); 
-  }
+
 }
 
 
 
 function setup(){
+    for (let i = 0; i < 17; i++) {
+  // Using template literals for dynamic path
+  // Note: This approach typically works in bundlers like Webpack or Vite
+  // which can resolve dynamic imports at build time.
+  questions.push(require(`2013-NC-${i+76}.png`)); 
+  }
   hgt=windowHeight;
   wdth=windowWidth;
   createCanvas(wdth-20,hgt-20);
