@@ -19,11 +19,11 @@ function setup(){
   controls.push(new control(5,5,120,70,"Histogram",false,butcolor));
   controls.push(new control(130,5,120,70,"Previous",false,butcolor));
   controls.push(new control(255,5,120,70,"Next",false,butcolor));
-  controls.push(new control(50,100,120,65,"2008",true,butcolor));
-  controls.push(new control(50,100,120,65,"2012",true,butcolor));
-  controls.push(new control(50,100,120,65,"2013",true,butcolor));
-  controls.push(new control(50,100,120,65,"2014",true,butcolor));
-  controls.push(new control(50,100,120,65,"2015",true,butcolor));
+  controls.push(new control(150,80,120,65,"2008",true,butcolor));
+  controls.push(new control(150,160,120,65,"2012",true,butcolor));
+  controls.push(new control(150,240,120,65,"2013",true,butcolor));
+  controls.push(new control(150,320,120,65,"2014",true,butcolor));
+  controls.push(new control(150,400,120,65,"2015",true,butcolor));
 
   
   adjustImageDimensions();
