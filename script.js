@@ -381,12 +381,12 @@ class control{
         activateUnitOne();  // does work but only for unit 1
         //homeScreen();
 
+
+        fill(20);
+        rect(this.x+this.w+30,this.y,400,500,2);
         for(var y=0;y<controls.length;y++){
             controls[y].drawit();
          }
-        fill(20);
-        rect(this.x+this.w+30,this.y,400,500,2);
-
         fill(this.rgb);
         noStroke();
         triangle(this.x+this.w-2,this.y,this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
