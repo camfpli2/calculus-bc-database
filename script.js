@@ -43,6 +43,9 @@ function homeScreen(){
     text("Multiple Choice Complete Sections",30,30);
     text("Practice By Unit",600,30);  //change later to be a percent of window width
     text("Practice By Skill",1000,30);  //same as above
+     for(var y=0;y<controls.length;y++){
+      controls[y].drawit();
+   }
 }
 
 
