@@ -2,10 +2,90 @@ var wdth;
 var hgt;
 var controls=[];
 var butcolor=[220, 200, 190];
+var textcolor=[25,55,66];
 var questions=[];
 var n=0;
 
 function preload(){
+
+
+
+     
+ 
+
+
+  
+
+}
+
+
+
+function setup(){
+
+  hgt=windowHeight;
+  wdth=windowWidth;
+  createCanvas(wdth-20,hgt-20);
+  background(240);
+  controls.push(new control(5,5,120,70,"Histogram",butcolor));
+  controls.push(new control(130,5,120,70,"Previous",butcolor));
+  controls.push(new control(255,5,120,70,"Next",butcolor));
+  adjustImageDimensions();
+  textAlign(LEFT);
+  background(240);  
+  textSize(30);
+ // refresher();  refreshes background and goes to question
+  homeScreen();
+
+}
+
+function homeScreen(){
+    background(240);
+    textSize(30);
+    noStroke();
+    fill(textcolor);
+    text("Multiple Choice Complete Sections",10,10);
+    text("Practice By Unit",400,10);  //change later to be a percent of window width
+    text("Practice By Skill",800,10);  //same as above
+}
+
+
+
+
+function refresher(){
+   background(240);  
+   for(var y=0;y<controls.length;y++){
+      controls[y].drawit();
+   }
+ image(questions[n],10,80);
+}
+
+function touchEnded() {
+    for(var g=0;g<controls.length;g++){
+    controls[g].tapit();
+  }
+  return false;
+}
+
+function adjustImageDimensions(){
+  for(var v=0;v<questions.length;v++){
+   console.log(v,questions[v].width, questions[v].height);
+    if((questions[v].width>wdth-40)||(questions[v].height>hgt-130)){      //too tall or too wide
+      if(questions[v].width/(wdth-40)>questions[v].height/(hgt-130)){    //%wise, wider than taller
+         questions[v].resize(wdth-40,0);
+          console.log(v,questions[v].width, questions[v].height);
+      }
+      else{                                               //%wise, taller than wider
+         questions[v].resize(0,hgt-130);
+         console.log(v,questions[v].width, questions[v].height);
+      }
+    }
+              // console.log(v,questions[v].width, questions[v].height);
+
+  }
+}
+
+
+function load2008(){
     questions.push(loadImage("2008-C-76.png")); 
     questions.push(loadImage("2008-C-77.png")); 
     questions.push(loadImage("2008-C-78.png")); 
@@ -51,8 +131,9 @@ function preload(){
     questions.push(loadImage("2008-NC-26.png")); 
     questions.push(loadImage("2008-NC-27.png")); 
     questions.push(loadImage("2008-NC-28.png"));
-
-    questions.push(loadImage("2012-C-76.png")); 
+}
+ function load2012(){
+         questions.push(loadImage("2012-C-76.png")); 
     questions.push(loadImage("2012-C-77.png")); 
     questions.push(loadImage("2012-C-78.png")); 
     questions.push(loadImage("2012-C-79.png")); 
@@ -97,7 +178,9 @@ function preload(){
     questions.push(loadImage("2012-NC-26.png")); 
     questions.push(loadImage("2012-NC-27.png")); 
     questions.push(loadImage("2012-NC-28.png")); 
-     
+ }
+
+function load2013(){
     questions.push(loadImage("2013-C-76.png")); 
     questions.push(loadImage("2013-C-77.png")); 
     questions.push(loadImage("2013-C-78.png")); 
@@ -142,9 +225,11 @@ function preload(){
     questions.push(loadImage("2013-NC-25.png")); 
     questions.push(loadImage("2013-NC-26.png")); 
     questions.push(loadImage("2013-NC-27.png")); 
-    questions.push(loadImage("2013-NC-28.png")); 
+    questions.push(loadImage("2013-NC-28.png"));
+}
 
-    questions.push(loadImage("2014-C-76.png")); 
+function load2014(){
+        questions.push(loadImage("2014-C-76.png")); 
     questions.push(loadImage("2014-C-77.png")); 
     questions.push(loadImage("2014-C-78.png")); 
     questions.push(loadImage("2014-C-79.png")); 
@@ -189,28 +274,6 @@ function preload(){
     questions.push(loadImage("2014-NC-26.png")); 
     questions.push(loadImage("2014-NC-27.png")); 
     questions.push(loadImage("2014-NC-28.png")); 
-  
-
-}
-
-
-
-function setup(){
-
-  hgt=windowHeight;
-  wdth=windowWidth;
-  createCanvas(wdth-20,hgt-20);
-  background(240);
-  controls.push(new control(5,5,120,70,"Histogram",butcolor));
-  controls.push(new control(130,5,120,70,"Previous",butcolor));
-  controls.push(new control(255,5,120,70,"Next",butcolor));
-  adjustImageDimensions();
-  textAlign(LEFT);
-  background(240);  
-  textSize(30);
-  refresher();
-  
-
 }
 
 function load2015(){
@@ -260,44 +323,6 @@ function load2015(){
     questions.push(loadImage("2015-NC-27.png")); 
     questions.push(loadImage("2015-NC-28.png"));
 }
-
-
-function refresher(){
-   background(240);  
-   for(var y=0;y<controls.length;y++){
-      controls[y].drawit();
-   }
- image(questions[n],10,80);
-}
-
-function touchEnded() {
-    for(var g=0;g<controls.length;g++){
-    controls[g].tapit();
-  }
-  return false;
-}
-
-function adjustImageDimensions(){
-  for(var v=0;v<questions.length;v++){
-   console.log(v,questions[v].width, questions[v].height);
-    if((questions[v].width>wdth-40)||(questions[v].height>hgt-130)){      //too tall or too wide
-      if(questions[v].width/(wdth-40)>questions[v].height/(hgt-130)){    //%wise, wider than taller
-         questions[v].resize(wdth-40,0);
-          console.log(v,questions[v].width, questions[v].height);
-      }
-      else{                                               //%wise, taller than wider
-         questions[v].resize(0,hgt-130);
-         console.log(v,questions[v].width, questions[v].height);
-      }
-    }
-              // console.log(v,questions[v].width, questions[v].height);
-
-  }
-}
-
-
-
-
 
 class control{
   constructor(x,y,w,h,txt,rgb){
