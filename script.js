@@ -361,7 +361,7 @@ class control{
   
   tapit(){
     if(mouseX>=this.x && mouseX<=this.x+this.w && mouseY>=this.y && mouseY <= this.y+this.h && this.there){
-      if(this.ind<==8){  // user clicks a unit
+      if(this.ind<=8){  // user clicks a unit
         fill(this.rgb);
         stroke(25, 45, 100);
         strokeWeight(2);
