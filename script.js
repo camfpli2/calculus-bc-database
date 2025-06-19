@@ -359,9 +359,14 @@ class control{
       rect(this.x, this.y, this.w, this.h, 4);
       fill(0,0,200);
       textSize(20);
-      if(this.ind<=4){textAlign(CENTER,CENTER);}
-      else{textAlign(LEFT,CENTER);}
-      text(this.txt,this.x+this.w/2, this.y+this.h/2)
+      if(this.ind<=4){
+        textAlign(CENTER,CENTER);
+        text(this.txt,this.x+this.w/2, this.y+this.h/2);
+      }
+      else{
+        textAlign(LEFT,CENTER);
+        text(this.txt,this.x, this.y+this.h/2);
+      }
     }
   }
 }
