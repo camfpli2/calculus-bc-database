@@ -364,6 +364,12 @@ function load2015(){
     questions.push(loadImage("2015-NC-28.png"));
 }
 
+function activateUnitOne(){
+  for(var g=9;g<14;g++){
+    controls[v].there=true;
+  }
+}
+
 class control{
   constructor(x,y,w,h,txt,there,rgb,ind){
     this.x=x; this.y=y; this.w=w; this.h=h; this.txt=txt; this.there=there; this.rgb=rgb; this.ind=ind;
@@ -372,6 +378,7 @@ class control{
   tapit(){
     if(mouseX>=this.x && mouseX<=this.x+this.w && mouseY>=this.y && mouseY <= this.y+this.h && this.there){
       if(this.ind<=8){  // user clicks a unit
+        activateUnitOne();  // test code to see if it works
         homeScreen();
         fill(this.rgb);
         noStroke();
@@ -382,6 +389,9 @@ class control{
         line(this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
         fill(240);
         rect(this.x+this.w+30,this.y+this.h/2,400,500,2);
+        for(var y=0;y<controls.length;y++){
+          controls[y].drawit();
+       }
       }
       if(this.txt==="Next"){
         n++;
