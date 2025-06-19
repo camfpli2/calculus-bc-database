@@ -379,12 +379,9 @@ class control{
     if(mouseX>=this.x && mouseX<=this.x+this.w && mouseY>=this.y && mouseY <= this.y+this.h && this.there){
       if(this.ind<=8){  // user clicks a unit
         activateUnitOne();  // does work but only for unit 1
-        //homeScreen();
-
-
         fill(240);
-                stroke(25, 45, 100);
-strokeWeight(2);
+        stroke(25, 45, 100);
+        strokeWeight(2);
         rect(this.x+this.w+30,this.y,400,500,2);
         for(var y=0;y<controls.length;y++){
             controls[y].drawit();
