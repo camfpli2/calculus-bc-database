@@ -380,13 +380,12 @@ class control{
       if(this.ind<=8){  // user clicks a unit
         activateUnitOne();  // does work but only for unit 1
         homeScreen();
-
         fill(240);
         rect(this.x+this.w+30,this.y,400,500,2);
         for(var y=0;y<controls.length;y++){
           controls[y].drawit();
        }
-                stroke(25, 45, 100);
+        stroke(25, 45, 100);
         strokeWeight(2);
         line(this.x+this.w-2,this.y,this.x+this.w+30,this.y+this.h/2);
         line(this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
