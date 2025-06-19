@@ -274,7 +274,6 @@ function touchEnded() {
     for(var g=0;g<controls.length;g++){
     controls[g].tapit();
   }
-    load2015();
   return false;
 }
 
