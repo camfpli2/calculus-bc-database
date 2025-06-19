@@ -66,7 +66,7 @@ function homeScreen(){
     fill(240);
     stroke(35,35,200);
     rect(10,10,490,710,5);
-    rect(520,20,490,710,5);
+    rect(520,10,490,710,5);
     textSize(26);
     noStroke();
     fill(textcolor);
