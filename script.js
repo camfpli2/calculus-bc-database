@@ -32,10 +32,10 @@ function setup(){
   controls.push(new control(150,220,120,60,"2013",true,butcolor,11));
   controls.push(new control(150,290,120,60,"2014",true,butcolor,12));
   controls.push(new control(150,360,120,60,"2015",true,butcolor,13));
-  controls.push(new control(150,360,120,60,"2016",true,butcolor,14));
-  controls.push(new control(150,360,120,60,"2017",true,butcolor,15));
-  controls.push(new control(150,360,120,60,"2018",true,butcolor,16));
-  controls.push(new control(150,360,120,60,"2019",true,butcolor,17));
+  controls.push(new control(150,430,120,60,"2016",true,butcolor,14));
+  controls.push(new control(150,500,120,60,"2017",true,butcolor,15));
+  controls.push(new control(150,570,120,60,"2018",true,butcolor,16));
+  controls.push(new control(150,640,120,60,"2019",true,butcolor,17));
   
   controls.push(new control(5,5,120,70,"Histogram",false,butcolor,18));
   controls.push(new control(130,5,120,70,"Previous",false,butcolor,19));
