@@ -62,10 +62,11 @@ function setup(){
 }
 
 function homeScreen(){
-    background(240);
-    fill(250);
+    background(230);
+    fill(240);
     stroke(35,35,200);
-    rect(5,5,500,700,4);
+    rect(10,10,490,710,5);
+    rect(520,20,490,710,5);
     textSize(26);
     noStroke();
     fill(textcolor);
