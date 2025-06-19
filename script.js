@@ -365,13 +365,13 @@ class control{
         homeScreen();
         fill(this.rgb);
         noStroke();
-        
-
         triangle(this.x+this.w-2,this.y,this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
         stroke(25, 45, 100);
         strokeWeight(2);
         line(this.x+this.w-2,this.y,this.x+this.w+30,this.y+this.h/2);
         line(this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
+        fill(240);
+        rect(this.x+this.w+30,this.y+this.h/2,300,400);
       }
       if(this.txt==="Next"){
         n++;
