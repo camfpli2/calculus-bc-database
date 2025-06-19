@@ -379,7 +379,7 @@ class control{
     if(mouseX>=this.x && mouseX<=this.x+this.w && mouseY>=this.y && mouseY <= this.y+this.h && this.there){
       if(this.ind<=8){  // user clicks a unit
         activateUnitOne();  // does work but only for unit 1
-        homeScreen();
+        //homeScreen();
         fill(240);
         rect(this.x+this.w+30,this.y,400,500,2);
         for(var y=0;y<controls.length;y++){
