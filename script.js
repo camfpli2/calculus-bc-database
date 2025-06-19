@@ -378,9 +378,8 @@ class control{
   tapit(){
     if(mouseX>=this.x && mouseX<=this.x+this.w && mouseY>=this.y && mouseY <= this.y+this.h && this.there){
       if(this.ind<=8){  // user clicks a unit
-        activateUnitOne();  // test code to see if it works
+        activateUnitOne();  // does work but only for unit 1
         homeScreen();
-        
         stroke(25, 45, 100);
         strokeWeight(2);
         line(this.x+this.w-2,this.y,this.x+this.w+30,this.y+this.h/2);
