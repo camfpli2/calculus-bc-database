@@ -27,15 +27,26 @@ function setup(){
   controls.push(new control(550,500,400,60,"Unit 7: Parametric Equations",true,butcolor,6));
   controls.push(new control(550,570,400,60,"Unit 8: Polar Equations",true,butcolor,7));
   controls.push(new control(550,640,400,60,"Unit 9: Sequences and Series",true,butcolor,8));
-  controls.push(new control(150,80,120,60,"2008",true,butcolor,9));
-  controls.push(new control(150,150,120,60,"2012",true,butcolor,10));
-  controls.push(new control(150,220,120,60,"2013",true,butcolor,11));
-  controls.push(new control(150,290,120,60,"2014",true,butcolor,12));
-  controls.push(new control(150,360,120,60,"2015",true,butcolor,13));
-  controls.push(new control(150,430,120,60,"2016",true,butcolor,14));
-  controls.push(new control(150,500,120,60,"2017",true,butcolor,15));
-  controls.push(new control(150,570,120,60,"2018",true,butcolor,16));
-  controls.push(new control(150,640,120,60,"2019",true,butcolor,17));
+  controls.push(new control(80,80,120,60,"1996",true,butcolor,"year"));
+  controls.push(new control(80,150,120,60,"1997",true,butcolor,"year"));
+  controls.push(new control(80,220,120,60,"1998",true,butcolor,"year"));
+  controls.push(new control(80,290,120,60,"1999",true,butcolor,"year"));
+  controls.push(new control(80,360,120,60,"2006",true,butcolor,"year"));
+  controls.push(new control(80,430,120,60,"2007",true,butcolor,"year"));
+  controls.push(new control(80,500,120,60,"2008",true,butcolor,"year"));
+  controls.push(new control(80,570,120,60,"2009",true,butcolor,"year"));
+  controls.push(new control(80,640,120,60,"2010",true,butcolor,"year"));
+
+
+  controls.push(new control(2500,80,120,60,"2011",true,butcolor,"year"));
+  controls.push(new control(250,150,120,60,"2012",true,butcolor,"year"));
+  controls.push(new control(250,220,120,60,"2013",true,butcolor,"year"));
+  controls.push(new control(250,290,120,60,"2014",true,butcolor,"year"));
+  controls.push(new control(250,360,120,60,"2015",true,butcolor,"year"));
+  controls.push(new control(250,430,120,60,"2016",true,butcolor,"year"));
+  controls.push(new control(250,500,120,60,"2017",true,butcolor,"year"));
+  controls.push(new control(250,570,120,60,"2018",true,butcolor,"year"));
+  controls.push(new control(250,640,120,60,"2019",true,butcolor,"year"));
   
   controls.push(new control(5,5,120,70,"Histogram",false,butcolor,18));
   controls.push(new control(130,5,120,70,"Previous",false,butcolor,19));
@@ -55,7 +66,7 @@ function homeScreen(){
     fill(250);
     stroke(35,35,200);
     rect(5,5,300,500,4);
-    textSize(30);
+    textSize(26);
     noStroke();
     fill(textcolor);
     text("Multiple Choice Complete Sections",50,50);
@@ -369,7 +380,7 @@ class control{
       fill(0,0,200);
       noStroke();
       textSize(20);
-      if(this.ind<=17 && this.ind>=9){
+      if(this.ind==="year"){
         textAlign(CENTER,CENTER);
         text(this.txt,this.x+this.w/2, this.y+this.h/2);
       }
