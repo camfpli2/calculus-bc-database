@@ -69,7 +69,7 @@ function homeScreen(){
     textSize(26);
     noStroke();
     fill(textcolor);
-     textAlign(LEFT);
+    textAlign(LEFT,CENTER);
     text("Multiple Choice Complete Sections",50,50);
     text("Practice By Unit",600,50);  //change later to be a percent of window width
     //text("Practice By Skill",1000,50);  //same as above
