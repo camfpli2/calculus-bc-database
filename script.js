@@ -16,24 +16,25 @@ function setup(){
   wdth=windowWidth;
   createCanvas(wdth-20,hgt-20);
   background(240);
-  controls.push(new control(5,5,120,70,"Histogram",false,butcolor));
-  controls.push(new control(130,5,120,70,"Previous",false,butcolor));
-  controls.push(new control(255,5,120,70,"Next",false,butcolor));
-  controls.push(new control(150,80,120,60,"2008",true,butcolor));
-  controls.push(new control(150,160,120,60,"2012",true,butcolor));
-  controls.push(new control(150,240,120,60,"2013",true,butcolor));
-  controls.push(new control(150,320,120,60,"2014",true,butcolor));
-  controls.push(new control(150,400,120,60,"2015",true,butcolor));
-  controls.push(new control(700,80,350,60,"Unit 1: Limits and Continuity",true,butcolor));
-  controls.push(new control(700,150,350,60,"Unit 2: Derivatives",true,butcolor));
-  controls.push(new control(700,220,350,60,"Unit 3: Applications of the Derivative",true,butcolor));
-  controls.push(new control(700,290,350,60,"Unit 4: Integration",true,butcolor));
-  controls.push(new control(700,360,350,60,"Unit 5: Differential Equations",true,butcolor));
-  controls.push(new control(700,430,350,60,"Unit 6: Applications of Integration",true,butcolor));
-  controls.push(new control(700,500,350,60,"Unit 7: Parametric Equations",true,butcolor));
-  controls.push(new control(700,570,350,60,"Unit 8: Polar Equations",true,butcolor));
-  controls.push(new control(700,640,350,60,"Unit 9: Sequences and Series",true,butcolor));
 
+  controls.push(new control(150,80,120,60,"2008",true,butcolor,0));
+  controls.push(new control(150,160,120,60,"2012",true,butcolor,1));
+  controls.push(new control(150,240,120,60,"2013",true,butcolor,2));
+  controls.push(new control(150,320,120,60,"2014",true,butcolor,3));
+  controls.push(new control(150,400,120,60,"2015",true,butcolor,4));
+  controls.push(new control(600,80,350,60,"Unit 1: Limits and Continuity",true,butcolor,5));
+  controls.push(new control(600,150,350,60,"Unit 2: Derivatives",true,butcolor,6));
+  controls.push(new control(600,220,350,60,"Unit 3: Applications of the Derivative",true,butcolor,7));
+  controls.push(new control(600,290,350,60,"Unit 4: Integration",true,butcolor,8));
+  controls.push(new control(600,360,350,60,"Unit 5: Differential Equations",true,butcolor,9));
+  controls.push(new control(600,430,350,60,"Unit 6: Applications of Integration",true,butcolor,10));
+  controls.push(new control(600,500,350,60,"Unit 7: Parametric Equations",true,butcolor,11));
+  controls.push(new control(600,570,350,60,"Unit 8: Polar Equations",true,butcolor,12));
+  controls.push(new control(600,640,350,60,"Unit 9: Sequences and Series",true,butcolor,13));
+  
+  controls.push(new control(5,5,120,70,"Histogram",false,butcolor,14));
+  controls.push(new control(130,5,120,70,"Previous",false,butcolor,15));
+  controls.push(new control(255,5,120,70,"Next",false,butcolor,16));
 
   
   adjustImageDimensions();
@@ -335,8 +336,8 @@ function load2015(){
 }
 
 class control{
-  constructor(x,y,w,h,txt,there,rgb){
-    this.x=x; this.y=y; this.w=w; this.h=h; this.txt=txt; this.there=there; this.rgb=rgb;
+  constructor(x,y,w,h,txt,there,rgb,ind){
+    this.x=x; this.y=y; this.w=w; this.h=h; this.txt=txt; this.there=there; this.rgb=rgb; this.ind=ind;
   }
   
   tapit(){
@@ -357,8 +358,9 @@ class control{
       fill(this.rgb);
       rect(this.x, this.y, this.w, this.h, 4);
       fill(0,0,200);
-      textSize(20)
-      textAlign(LEFT,CENTER);
+      textSize(20);
+      if(ind<=4){textAlign(CENTER,CENTER);}
+      else{textAlign(LEFT,CENTER);}
       text(this.txt,this.x+this.w/2, this.y+this.h/2)
     }
   }
