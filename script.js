@@ -365,7 +365,7 @@ class control{
         fill(this.rgb);
         stroke(25, 45, 100);
         strokeWeight(2);
-        triangle(this.x,this.y,this.x,this.y+this.h,this.x+this.w/2,this.y+this.h/2);
+        triangle(this.x+this.w,this.y,this.x+this.w,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
       }
       if(this.txt==="Next"){
         n++;
