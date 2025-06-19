@@ -64,6 +64,7 @@ function homeScreen(){
     background(230);
     fill(240);
     stroke(35,35,200);
+    strokeWeight(1);
     rect(10,10,490,710,5);
     rect(520,10,890,710,5);
     textSize(26);
@@ -371,7 +372,7 @@ class control{
         line(this.x+this.w-2,this.y,this.x+this.w+30,this.y+this.h/2);
         line(this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
         fill(240);
-        rect(this.x+this.w+30,this.y+this.h/2,300,400);
+        rect(this.x+this.w+30,this.y+this.h/2,400,500,2);
       }
       if(this.txt==="Next"){
         n++;
