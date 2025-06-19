@@ -16,9 +16,16 @@ function setup(){
   wdth=windowWidth;
   createCanvas(wdth-20,hgt-20);
   background(240);
-  controls.push(new control(5,5,120,70,"Histogram",butcolor));
-  controls.push(new control(130,5,120,70,"Previous",butcolor));
-  controls.push(new control(255,5,120,70,"Next",butcolor));
+  controls.push(new control(5,5,120,70,"Histogram",false,butcolor));
+  controls.push(new control(130,5,120,70,"Previous",false,butcolor));
+  controls.push(new control(255,5,120,70,"Next",false,butcolor));
+  controls.push(new control(50,100,120,65,"2008",true,butcolor));
+  controls.push(new control(50,100,120,65,"2012",true,butcolor));
+  controls.push(new control(50,100,120,65,"2013",true,butcolor));
+  controls.push(new control(50,100,120,65,"2014",true,butcolor));
+  controls.push(new control(50,100,120,65,"2015",true,butcolor));
+
+  
   adjustImageDimensions();
   textAlign(LEFT);
   background(240);  
@@ -33,7 +40,7 @@ function homeScreen(){
     textSize(20);
     noStroke();
     fill(textcolor);
-    text("Multiple Choice Complete Sections",10,10);
+    text("Multiple Choice Complete Sections",30,30);
     text("Practice By Unit",600,30);  //change later to be a percent of window width
     text("Practice By Skill",1000,30);  //same as above
 }
@@ -315,12 +322,12 @@ function load2015(){
 }
 
 class control{
-  constructor(x,y,w,h,txt,rgb){
-    this.x=x; this.y=y; this.w=w; this.h=h; this.txt=txt; this.rgb=rgb;
+  constructor(x,y,w,h,txt,there,rgb){
+    this.x=x; this.y=y; this.w=w; this.h=h; this.txt=txt; this.there=there; this.rgb=rgb;
   }
   
   tapit(){
-    if(mouseX>=this.x && mouseX<=this.x+this.w && mouseY>=this.y && mouseY <= this.y+this.h){
+    if(mouseX>=this.x && mouseX<=this.x+this.w && mouseY>=this.y && mouseY <= this.y+this.h && this.there){
       if(this.txt==="Next"){
         n++;
         refresher();
@@ -333,12 +340,13 @@ class control{
   }
   
   drawit(){
-    fill(this.rgb);
-    rect(this.x, this.y, this.w, this.h, 4);
-    fill(0,0,200);
-    textSize(20)
-    textAlign(CENTER,CENTER);
-    text(this.txt,this.x+this.w/2, this.y+this.h/2)
-    
+    if(this.there){
+      fill(this.rgb);
+      rect(this.x, this.y, this.w, this.h, 4);
+      fill(0,0,200);
+      textSize(20)
+      textAlign(CENTER,CENTER);
+      text(this.txt,this.x+this.w/2, this.y+this.h/2)
+    }
   }
 }
