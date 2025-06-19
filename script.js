@@ -190,6 +190,30 @@ function preload(){
     questions.push(loadImage("2014-NC-27.png")); 
     questions.push(loadImage("2014-NC-28.png")); 
   
+
+}
+
+
+
+function setup(){
+
+  hgt=windowHeight;
+  wdth=windowWidth;
+  createCanvas(wdth-20,hgt-20);
+  background(240);
+  controls.push(new control(5,5,120,70,"Histogram",butcolor));
+  controls.push(new control(130,5,120,70,"Previous",butcolor));
+  controls.push(new control(255,5,120,70,"Next",butcolor));
+  adjustImageDimensions();
+  textAlign(LEFT);
+  background(240);  
+  textSize(30);
+  refresher();
+  
+
+}
+
+function load2015(){
     questions.push(loadImage("2015-C-76.png")); 
     questions.push(loadImage("2015-C-77.png")); 
     questions.push(loadImage("2015-C-78.png")); 
@@ -238,25 +262,6 @@ function preload(){
 }
 
 
-
-function setup(){
-
-  hgt=windowHeight;
-  wdth=windowWidth;
-  createCanvas(wdth-20,hgt-20);
-  background(240);
-  controls.push(new control(5,5,120,70,"Histogram",butcolor));
-  controls.push(new control(130,5,120,70,"Previous",butcolor));
-  controls.push(new control(255,5,120,70,"Next",butcolor));
-  adjustImageDimensions();
-  textAlign(LEFT);
-  background(240);  
-  textSize(30);
-  refresher();
-  
-
-}
-
 function refresher(){
    background(240);  
    for(var y=0;y<controls.length;y++){
@@ -269,6 +274,7 @@ function touchEnded() {
     for(var g=0;g<controls.length;g++){
     controls[g].tapit();
   }
+    load2015();
   return false;
 }
 
