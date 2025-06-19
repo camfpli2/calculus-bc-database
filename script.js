@@ -380,11 +380,12 @@ class control{
       if(this.ind<=8){  // user clicks a unit
         activateUnitOne();  // does work but only for unit 1
         //homeScreen();
-        fill(240);
-        rect(this.x+this.w+30,this.y,400,500,2);
+
         for(var y=0;y<controls.length;y++){
-          controls[y].drawit();
-       }
+            controls[y].drawit();
+         }
+                fill(240);
+        rect(this.x+this.w+30,this.y,400,500,2);
 
         fill(this.rgb);
         noStroke();
