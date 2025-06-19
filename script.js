@@ -43,9 +43,8 @@ function setup(){
 
   
   adjustImageDimensions();
-  textAlign(LEFT);
-  background(240);  
-  textSize(30);
+  // textAlign(LEFT);
+  // background(240);  
  // refresher();  refreshes background and goes to question
   homeScreen();
 
@@ -53,7 +52,10 @@ function setup(){
 
 function homeScreen(){
     background(240);
-    textSize(20);
+    fill(250);
+    stroke(35,35,200);
+    rect(5,5,300,500,4);
+    textSize(30);
     noStroke();
     fill(textcolor);
     text("Multiple Choice Complete Sections",50,50);
