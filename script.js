@@ -24,15 +24,15 @@ function setup(){
   controls.push(new control(150,240,120,60,"2013",true,butcolor));
   controls.push(new control(150,320,120,60,"2014",true,butcolor));
   controls.push(new control(150,400,120,60,"2015",true,butcolor));
-  controls.push(new control(700,80,250,60,"Unit 1: Limits and Continuity",true,butcolor));
-  controls.push(new control(700,150,250,60,"Unit 2: Derivatives",true,butcolor));
-  controls.push(new control(700,220,250,60,"Unit 3: Applications of the Derivative",true,butcolor));
-  controls.push(new control(700,290,250,60,"Unit 4: Integration",true,butcolor));
-  controls.push(new control(700,360,250,60,"Unit 5: Differential Equations",true,butcolor));
-  controls.push(new control(700,430,250,60,"Unit 6: Applications of Integration",true,butcolor));
-  controls.push(new control(700,500,250,60,"Unit 7: Parametric Equations",true,butcolor));
-  controls.push(new control(700,570,250,60,"Unit 8: Polar Equations",true,butcolor));
-  controls.push(new control(700,640,250,60,"Unit 9: Sequences and Series",true,butcolor));
+  controls.push(new control(700,80,350,60,"Unit 1: Limits and Continuity",true,butcolor));
+  controls.push(new control(700,150,350,60,"Unit 2: Derivatives",true,butcolor));
+  controls.push(new control(700,220,350,60,"Unit 3: Applications of the Derivative",true,butcolor));
+  controls.push(new control(700,290,350,60,"Unit 4: Integration",true,butcolor));
+  controls.push(new control(700,360,350,60,"Unit 5: Differential Equations",true,butcolor));
+  controls.push(new control(700,430,350,60,"Unit 6: Applications of Integration",true,butcolor));
+  controls.push(new control(700,500,350,60,"Unit 7: Parametric Equations",true,butcolor));
+  controls.push(new control(700,570,350,60,"Unit 8: Polar Equations",true,butcolor));
+  controls.push(new control(700,640,350,60,"Unit 9: Sequences and Series",true,butcolor));
 
 
   
@@ -358,7 +358,7 @@ class control{
       rect(this.x, this.y, this.w, this.h, 4);
       fill(0,0,200);
       textSize(20)
-      textAlign(CENTER,CENTER);
+      textAlign(LEFT,CENTER);
       text(this.txt,this.x+this.w/2, this.y+this.h/2)
     }
   }
