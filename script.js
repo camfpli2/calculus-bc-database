@@ -19,11 +19,21 @@ function setup(){
   controls.push(new control(5,5,120,70,"Histogram",false,butcolor));
   controls.push(new control(130,5,120,70,"Previous",false,butcolor));
   controls.push(new control(255,5,120,70,"Next",false,butcolor));
-  controls.push(new control(150,80,120,65,"2008",true,butcolor));
-  controls.push(new control(150,160,120,65,"2012",true,butcolor));
-  controls.push(new control(150,240,120,65,"2013",true,butcolor));
-  controls.push(new control(150,320,120,65,"2014",true,butcolor));
-  controls.push(new control(150,400,120,65,"2015",true,butcolor));
+  controls.push(new control(150,80,120,60,"2008",true,butcolor));
+  controls.push(new control(150,160,120,60,"2012",true,butcolor));
+  controls.push(new control(150,240,120,60,"2013",true,butcolor));
+  controls.push(new control(150,320,120,60,"2014",true,butcolor));
+  controls.push(new control(150,400,120,60,"2015",true,butcolor));
+  controls.push(new control(700,80,250,60,"Unit 1: Limits and Continuity",true,butcolor));
+  controls.push(new control(700,150,250,60,"Unit 2: Derivatives",true,butcolor));
+  controls.push(new control(700,220,250,60,"Unit 3: Applications of the Derivative",true,butcolor));
+  controls.push(new control(700,290,250,60,"Unit 4: Integration",true,butcolor));
+  controls.push(new control(700,360,250,60,"Unit 5: Differential Equations",true,butcolor));
+  controls.push(new control(700,430,250,60,"Unit 6: Applications of Integration",true,butcolor));
+  controls.push(new control(700,500,250,60,"Unit 7: Parametric Equations",true,butcolor));
+  controls.push(new control(700,570,250,60,"Unit 8: Polar Equations",true,butcolor));
+  controls.push(new control(700,640,250,60,"Unit 9: Sequences and Series",true,butcolor));
+
 
   
   adjustImageDimensions();
@@ -40,9 +50,9 @@ function homeScreen(){
     textSize(20);
     noStroke();
     fill(textcolor);
-    text("Multiple Choice Complete Sections",30,30);
-    text("Practice By Unit",600,30);  //change later to be a percent of window width
-    text("Practice By Skill",1000,30);  //same as above
+    text("Multiple Choice Complete Sections",50,50);
+    text("Practice By Unit",600,50);  //change later to be a percent of window width
+    text("Practice By Skill",1000,50);  //same as above
      for(var y=0;y<controls.length;y++){
       controls[y].drawit();
    }
