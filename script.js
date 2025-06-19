@@ -22,15 +22,15 @@ function setup(){
   controls.push(new control(150,240,120,60,"2013",true,butcolor,2));
   controls.push(new control(150,320,120,60,"2014",true,butcolor,3));
   controls.push(new control(150,400,120,60,"2015",true,butcolor,4));
-  controls.push(new control(600,80,350,60,"Unit 1: Limits and Continuity",true,butcolor,5));
-  controls.push(new control(600,150,350,60,"Unit 2: Derivatives",true,butcolor,6));
-  controls.push(new control(600,220,350,60,"Unit 3: Applications of the Derivative",true,butcolor,7));
-  controls.push(new control(600,290,350,60,"Unit 4: Integration",true,butcolor,8));
-  controls.push(new control(600,360,350,60,"Unit 5: Differential Equations",true,butcolor,9));
-  controls.push(new control(600,430,350,60,"Unit 6: Applications of Integration",true,butcolor,10));
-  controls.push(new control(600,500,350,60,"Unit 7: Parametric Equations",true,butcolor,11));
-  controls.push(new control(600,570,350,60,"Unit 8: Polar Equations",true,butcolor,12));
-  controls.push(new control(600,640,350,60,"Unit 9: Sequences and Series",true,butcolor,13));
+  controls.push(new control(550,80,400,60,"Unit 1: Limits and Continuity",true,butcolor,5));
+  controls.push(new control(550,150,400,60,"Unit 2: Derivatives",true,butcolor,6));
+  controls.push(new control(550,220,400,60,"Unit 3: Applications of the Derivative",true,butcolor,7));
+  controls.push(new control(550,290,400,60,"Unit 4: Integration",true,butcolor,8));
+  controls.push(new control(550,360,400,60,"Unit 5: Differential Equations",true,butcolor,9));
+  controls.push(new control(550,430,400,60,"Unit 6: Applications of Integration",true,butcolor,10));
+  controls.push(new control(550,500,400,60,"Unit 7: Parametric Equations",true,butcolor,11));
+  controls.push(new control(550,570,400,60,"Unit 8: Polar Equations",true,butcolor,12));
+  controls.push(new control(550,640,400,60,"Unit 9: Sequences and Series",true,butcolor,13));
   
   controls.push(new control(5,5,120,70,"Histogram",false,butcolor,14));
   controls.push(new control(130,5,120,70,"Previous",false,butcolor,15));
@@ -356,8 +356,11 @@ class control{
   drawit(){
     if(this.there){
       fill(this.rgb);
+      stroke(25, 45, 100);
+      strokeWeight(2);
       rect(this.x, this.y, this.w, this.h, 4);
       fill(0,0,200);
+      noStroke();
       textSize(20);
       if(this.ind<=4){
         textAlign(CENTER,CENTER);
@@ -365,7 +368,7 @@ class control{
       }
       else{
         textAlign(LEFT,CENTER);
-        text(this.txt,this.x, this.y+this.h/2);
+        text(this.txt,this.x+10, this.y+this.h/2);
       }
     }
   }
