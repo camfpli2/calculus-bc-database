@@ -66,13 +66,13 @@ function homeScreen(){
     fill(240);
     stroke(35,35,200);
     rect(10,10,490,710,5);
-    rect(520,10,490,710,5);
+    rect(520,10,890,710,5);
     textSize(26);
     noStroke();
     fill(textcolor);
     text("Multiple Choice Complete Sections",50,50);
     text("Practice By Unit",600,50);  //change later to be a percent of window width
-    text("Practice By Skill",1000,50);  //same as above
+    //text("Practice By Skill",1000,50);  //same as above
      for(var y=0;y<controls.length;y++){
       controls[y].drawit();
    }
@@ -361,6 +361,12 @@ class control{
   
   tapit(){
     if(mouseX>=this.x && mouseX<=this.x+this.w && mouseY>=this.y && mouseY <= this.y+this.h && this.there){
+      if(this.ind<==8){  // user clicks a unit
+        fill(this.rgb);
+        stroke(25, 45, 100);
+        strokeWeight(2);
+        triangle(this.x,this.y,this.x,this.y+this.h,this.x+this.w/2,this.y+this.h/2);
+      }
       if(this.txt==="Next"){
         n++;
         refresher();
