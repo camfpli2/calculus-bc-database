@@ -17,24 +17,29 @@ function setup(){
   createCanvas(wdth-20,hgt-20);
   background(240);
 
-  controls.push(new control(150,80,120,60,"2008",true,butcolor,0));
-  controls.push(new control(150,160,120,60,"2012",true,butcolor,1));
-  controls.push(new control(150,240,120,60,"2013",true,butcolor,2));
-  controls.push(new control(150,320,120,60,"2014",true,butcolor,3));
-  controls.push(new control(150,400,120,60,"2015",true,butcolor,4));
-  controls.push(new control(550,80,400,60,"Unit 1: Limits and Continuity",true,butcolor,5));
-  controls.push(new control(550,150,400,60,"Unit 2: Derivatives",true,butcolor,6));
-  controls.push(new control(550,220,400,60,"Unit 3: Applications of the Derivative",true,butcolor,7));
-  controls.push(new control(550,290,400,60,"Unit 4: Integration",true,butcolor,8));
-  controls.push(new control(550,360,400,60,"Unit 5: Differential Equations",true,butcolor,9));
-  controls.push(new control(550,430,400,60,"Unit 6: Applications of Integration",true,butcolor,10));
-  controls.push(new control(550,500,400,60,"Unit 7: Parametric Equations",true,butcolor,11));
-  controls.push(new control(550,570,400,60,"Unit 8: Polar Equations",true,butcolor,12));
-  controls.push(new control(550,640,400,60,"Unit 9: Sequences and Series",true,butcolor,13));
+
+  controls.push(new control(550,80,400,60,"Unit 1: Limits and Continuity",true,butcolor,0));
+  controls.push(new control(550,150,400,60,"Unit 2: Derivatives",true,butcolor,1));
+  controls.push(new control(550,220,400,60,"Unit 3: Applications of the Derivative",true,butcolor,2));
+  controls.push(new control(550,290,400,60,"Unit 4: Integration",true,butcolor,3));
+  controls.push(new control(550,360,400,60,"Unit 5: Differential Equations",true,butcolor,4));
+  controls.push(new control(550,430,400,60,"Unit 6: Applications of Integration",true,butcolor,5));
+  controls.push(new control(550,500,400,60,"Unit 7: Parametric Equations",true,butcolor,6));
+  controls.push(new control(550,570,400,60,"Unit 8: Polar Equations",true,butcolor,7));
+  controls.push(new control(550,640,400,60,"Unit 9: Sequences and Series",true,butcolor,8));
+  controls.push(new control(150,80,120,60,"2008",true,butcolor,9));
+  controls.push(new control(150,150,120,60,"2012",true,butcolor,10));
+  controls.push(new control(150,220,120,60,"2013",true,butcolor,11));
+  controls.push(new control(150,290,120,60,"2014",true,butcolor,12));
+  controls.push(new control(150,360,120,60,"2015",true,butcolor,13));
+  controls.push(new control(150,360,120,60,"2016",true,butcolor,14));
+  controls.push(new control(150,360,120,60,"2017",true,butcolor,15));
+  controls.push(new control(150,360,120,60,"2018",true,butcolor,16));
+  controls.push(new control(150,360,120,60,"2019",true,butcolor,17));
   
-  controls.push(new control(5,5,120,70,"Histogram",false,butcolor,14));
-  controls.push(new control(130,5,120,70,"Previous",false,butcolor,15));
-  controls.push(new control(255,5,120,70,"Next",false,butcolor,16));
+  controls.push(new control(5,5,120,70,"Histogram",false,butcolor,18));
+  controls.push(new control(130,5,120,70,"Previous",false,butcolor,19));
+  controls.push(new control(255,5,120,70,"Next",false,butcolor,20));
 
   
   adjustImageDimensions();
@@ -362,7 +367,7 @@ class control{
       fill(0,0,200);
       noStroke();
       textSize(20);
-      if(this.ind<=4){
+      if(this.ind<=17 && this.ind>=9){
         textAlign(CENTER,CENTER);
         text(this.txt,this.x+this.w/2, this.y+this.h/2);
       }
