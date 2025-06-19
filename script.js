@@ -383,6 +383,8 @@ class control{
 
 
         fill(20);
+                stroke(25, 45, 100);
+strokeWeight(2);
         rect(this.x+this.w+30,this.y,400,500,2);
         for(var y=0;y<controls.length;y++){
             controls[y].drawit();
