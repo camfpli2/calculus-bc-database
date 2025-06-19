@@ -384,7 +384,7 @@ class control{
         for(var y=0;y<controls.length;y++){
             controls[y].drawit();
          }
-                fill(240);
+        fill(20);
         rect(this.x+this.w+30,this.y,400,500,2);
 
         fill(this.rgb);
