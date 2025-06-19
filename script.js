@@ -366,7 +366,7 @@ function load2015(){
 
 function activateUnitOne(){
   for(var g=9;g<14;g++){
-    controls[v].there=true;
+    controls[g].there=true;
   }
 }
 
