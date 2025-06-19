@@ -6,17 +6,7 @@ var textcolor=[25,55,66];
 var questions=[];
 var n=0;
 
-function preload(){
 
-
-
-     
- 
-
-
-  
-
-}
 
 
 
@@ -40,12 +30,12 @@ function setup(){
 
 function homeScreen(){
     background(240);
-    textSize(30);
+    textSize(20);
     noStroke();
     fill(textcolor);
     text("Multiple Choice Complete Sections",10,10);
-    text("Practice By Unit",400,10);  //change later to be a percent of window width
-    text("Practice By Skill",800,10);  //same as above
+    text("Practice By Unit",600,30);  //change later to be a percent of window width
+    text("Practice By Skill",1000,30);  //same as above
 }
 
 
