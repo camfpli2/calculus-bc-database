@@ -38,7 +38,7 @@ function setup(){
   controls.push(new control(80,640,120,60,"2010",true,butcolor,"year"));
 
 
-  controls.push(new control(2500,80,120,60,"2011",true,butcolor,"year"));
+  controls.push(new control(250,80,120,60,"2011",true,butcolor,"year"));
   controls.push(new control(250,150,120,60,"2012",true,butcolor,"year"));
   controls.push(new control(250,220,120,60,"2013",true,butcolor,"year"));
   controls.push(new control(250,290,120,60,"2014",true,butcolor,"year"));
@@ -65,7 +65,7 @@ function homeScreen(){
     background(240);
     fill(250);
     stroke(35,35,200);
-    rect(5,5,300,500,4);
+    rect(5,5,500,700,4);
     textSize(26);
     noStroke();
     fill(textcolor);
