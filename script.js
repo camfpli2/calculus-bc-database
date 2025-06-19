@@ -382,7 +382,7 @@ class control{
         //homeScreen();
 
 
-        fill(20);
+        fill(240);
                 stroke(25, 45, 100);
 strokeWeight(2);
         rect(this.x+this.w+30,this.y,400,500,2);
