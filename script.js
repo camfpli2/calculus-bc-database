@@ -385,13 +385,14 @@ class control{
         for(var y=0;y<controls.length;y++){
           controls[y].drawit();
        }
+
+        fill(this.rgb);
+        noStroke();
+        triangle(this.x+this.w-2,this.y,this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
         stroke(25, 45, 100);
         strokeWeight(2);
         line(this.x+this.w-2,this.y,this.x+this.w+30,this.y+this.h/2);
         line(this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
-        fill(this.rgb);
-        noStroke();
-        triangle(this.x+this.w-2,this.y,this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
       }
       if(this.txt==="Next"){
         n++;
