@@ -27,6 +27,15 @@ function setup(){
   controls.push(new control(550,500,400,60,"Unit 7: Parametric Equations",true,butcolor,6));
   controls.push(new control(550,570,400,60,"Unit 8: Polar Equations",true,butcolor,7));
   controls.push(new control(550,640,400,60,"Unit 9: Sequences and Series",true,butcolor,8));
+  controls.push(new control(1000,100,300,40,"1.1 ",false,butcolor,9));
+  controls.push(new control(1000,150,300,40,"1.2 ",false,butcolor,10));
+  controls.push(new control(1000,200,300,40,"1.3 ",false,butcolor,11));
+  controls.push(new control(1000,250,300,40,"1.4 ",false,butcolor,12));
+  controls.push(new control(1000,300,300,40,"1.5 ",false,butcolor,13));
+
+
+  
+  
   controls.push(new control(80,80,120,60,"1996",true,butcolor,"year"));
   controls.push(new control(80,150,120,60,"1997",true,butcolor,"year"));
   controls.push(new control(80,220,120,60,"1998",true,butcolor,"year"));
