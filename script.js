@@ -46,14 +46,14 @@ function setup(){
   controls.push(new control(1000,570,360,40,"2.9",false,butcolor,22));
   controls.push(new control(1000,620,360,40,"2.10",false,butcolor,23));
 
-  controls.push(new control(1000,220,360,40,"3.1",false,butcolor,24));   //unit 3, index 24 tru 31
-  controls.push(new control(1000,270,360,40,"3.2",false,butcolor,25));   
-  controls.push(new control(1000,320,360,40,"3.2",false,butcolor,26));   
-  controls.push(new control(1000,370,360,40,"3.2",false,butcolor,27));   
-  controls.push(new control(1000,420,360,40,"3.2",false,butcolor,28));   
-  controls.push(new control(1000,470,360,40,"3.2",false,butcolor,29));   
-  controls.push(new control(1000,520,360,40,"3.2",false,butcolor,30));   
-  controls.push(new control(1000,570,360,40,"3.2",false,butcolor,31));   
+  controls.push(new control(1000,240,360,40,"3.1",false,butcolor,24));   //unit 3, index 24 tru 31
+  controls.push(new control(1000,290,360,40,"3.2",false,butcolor,25));   
+  controls.push(new control(1000,340,360,40,"3.2",false,butcolor,26));   
+  controls.push(new control(1000,390,360,40,"3.2",false,butcolor,27));   
+  controls.push(new control(1000,440,360,40,"3.2",false,butcolor,28));   
+  controls.push(new control(1000,490,360,40,"3.2",false,butcolor,29));   
+  controls.push(new control(1000,540,360,40,"3.2",false,butcolor,30));   
+  controls.push(new control(1000,590,360,40,"3.2",false,butcolor,31));   
 
   
 
