@@ -13,6 +13,11 @@ var skillBoxInfo=[[80,300],[150,550],[220,450],[290,250],[360,300],[330,350],[50
 
 function yearHomeScreen(y){
   background(240);
+  textSize(30);
+  noStroke();
+  fill(textcolor);
+  textAlign(CENTER);
+  text("AP Calculus BC: "+y,wdth/2,50);
 }
 
 function wholeSkillHomeScreen(i){
