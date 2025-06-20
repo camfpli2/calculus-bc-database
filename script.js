@@ -15,7 +15,7 @@ function yearHomeScreen(){
   background(240);
 }
 
-function wholeSkillHomeScreen(){
+function wholeSkillHomeScreen(i){
   background(240);
 }
 
