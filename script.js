@@ -392,10 +392,11 @@ class control{
   tapit(){
     if(mouseX>=this.x && mouseX<=this.x+this.w && mouseY>=this.y && mouseY <= this.y+this.h && this.there){
       if(this.ind<=8){  // user clicks a unit
-        for(var h=9;h<23;h++){
+        for(var h=9;h<=23;h++){
           controls[h].there=false;
         }
         activateUnit(this.ind);  // does work but only for unit 1
+        console.log(this.ind);
         fill(240);
         stroke(25, 45, 100);
         strokeWeight(2);
