@@ -2,7 +2,9 @@ var wdth;
 var hgt;
 var controls=[];
 var butcolor=[220, 200, 190];
+var selectcolor=[210,225,225];
 var textcolor=[25,55,66];
+var whichUnitSelected;
 var questions=[];
 var n=0;
 var skillIndexes=[[9,13],[14,23],[24,31],[],[],[],[],[],[]];
@@ -416,6 +418,7 @@ function load2015(){
 function activateUnit(ind){
   for(var g=skillIndexes[ind][0];g<=skillIndexes[ind][1];g++){
     controls[g].there=true;
+    controls[g].rgb=selectcolor;
   }
 }
 
@@ -427,6 +430,7 @@ class control{
   tapit(){
     if(mouseX>=this.x && mouseX<=this.x+this.w && mouseY>=this.y && mouseY <= this.y+this.h && this.there){
       if(this.ind<=8){  // user clicks a unit
+        //whichUnitSelected=this.ind;
         for(var h=9;h<=50;h++){
           controls[h].there=false;
         }
