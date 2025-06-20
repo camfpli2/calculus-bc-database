@@ -5,7 +5,8 @@ var butcolor=[220, 200, 190];
 var textcolor=[25,55,66];
 var questions=[];
 var n=0;
-var skillIndexes=[[9,13],[14,23],[24,31],[],[],[]];
+var skillIndexes=[[9,13],[14,23],[24,31],[],[],[],[],[],[]];
+var skillBoxInfo=[[80,400],[150,525],[220,425],[290,375],[],[],[],[],[]];
 
 
 function yearHomeScreen(){
@@ -416,7 +417,7 @@ class control{
         fill(240);
         stroke(25, 45, 100);
         strokeWeight(2);
-        rect(this.x+this.w+30,this.y,400,400,2);
+        rect(this.x+this.w+30,skillBoxInfo[this.ind][0],400,skillBoxInfo[this.ind][1],2);
         for(var y=0;y<controls.length;y++){
             controls[y].drawit();
          }
