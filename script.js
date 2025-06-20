@@ -11,7 +11,7 @@ var skillIndexes=[[9,13],[14,23],[24,31],[32,35],[36,40],[41,46],[47,48],[49,50]
 var skillBoxInfo=[[80,300],[150,550],[220,450],[290,250],[360,300],[330,350],[500,130],[570,130],[380,330]];
 
 
-function yearHomeScreen(){
+function yearHomeScreen(y){
   background(240);
 }
 
@@ -446,13 +446,10 @@ class control{
         for(var k=0;k<9;k++){
           controls[k].rgb=butcolor;
         }
-        
         for(var h=9;h<=56;h++){
           controls[h].there=false;
         }
-        activateUnit(this.ind);  // does work but only for unit 1
-        console.log(this.ind);
-        
+        activateUnit(this.ind);  
         homeScreen();
         fill(240);
         stroke(25, 45, 100);
@@ -469,11 +466,17 @@ class control{
         line(this.x+this.w-2,this.y,this.x+this.w+30,this.y+this.h/2);
         line(this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
       }
-      if(this.txt==="Next"){
+
+      else if(this.ind==="year"){    //user clicks a year
+        yearHomeScreen(parseInt(this.txt));
+      }
+
+      
+      else if(this.txt==="Next"){
         n++;
         refresher();
       }
-      if(this.txt==="Previous"){
+      else if(this.txt==="Previous"){
         n--;
         refresher();
       }
