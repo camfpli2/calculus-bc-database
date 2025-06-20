@@ -27,11 +27,11 @@ function setup(){
   controls.push(new control(550,500,400,60,"Unit 7: Parametric Equations",true,butcolor,6));
   controls.push(new control(550,570,400,60,"Unit 8: Polar Equations",true,butcolor,7));
   controls.push(new control(550,640,400,60,"Unit 9: Sequences and Series",true,butcolor,8));
-  controls.push(new control(1000,100,300,40,"1.1 ",false,butcolor,9));
-  controls.push(new control(1000,150,300,40,"1.2 ",false,butcolor,10));
-  controls.push(new control(1000,200,300,40,"1.3 ",false,butcolor,11));
-  controls.push(new control(1000,250,300,40,"1.4 ",false,butcolor,12));
-  controls.push(new control(1000,300,300,40,"1.5 ",false,butcolor,13));
+  controls.push(new control(1000,100,360,40,"1.1 Limits and Continuity",false,butcolor,9));  //unit 1 , index 9 thru 13
+  controls.push(new control(1000,150,360,40,"1.2 Properties of Limits",false,butcolor,10));
+  controls.push(new control(1000,200,360,40,"1.3 Limits at Infinity",false,butcolor,11));
+  controls.push(new control(1000,250,360,40,"1.4 Algebraic Limits",false,butcolor,12));
+  controls.push(new control(1000,300,360,40,"1.5 Continuity and the IVT",false,butcolor,13));
 
 
   
@@ -382,7 +382,7 @@ class control{
         fill(240);
         stroke(25, 45, 100);
         strokeWeight(2);
-        rect(this.x+this.w+30,this.y,400,500,2);
+        rect(this.x+this.w+30,this.y,400,400,2);
         for(var y=0;y<controls.length;y++){
             controls[y].drawit();
          }
