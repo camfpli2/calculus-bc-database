@@ -7,7 +7,7 @@ var textcolor=[25,55,66];
 var whichUnitSelected;
 var questions=[];
 var n=0;
-var skillIndexes=[[9,13],[14,23],[24,31],[],[],[],[],[],[]];
+var skillIndexes=[[9,13],[14,23],[24,31],[32,35],[36,40],[41,46],[47,48],[49,50],[]];
 var skillBoxInfo=[[80,300],[150,550],[220,450],[290,275],[360,300],[330,350],[500,125],[570,125],[380,300]];
 
 
@@ -65,7 +65,7 @@ function setup(){
   controls.push(new control(1000,410,360,40,"4.3",false,butcolor,34));
   controls.push(new control(1000,460,360,40,"4.4",false,butcolor,35));
 
-  controls.push(new control(1000,380,360,40,"5.1",false,butcolor,36));   //unit 5, index 33 thru 40
+  controls.push(new control(1000,380,360,40,"5.1",false,butcolor,36));   //unit 5, index 36 thru 40
   controls.push(new control(1000,430,360,40,"5.2",false,butcolor,37));
   controls.push(new control(1000,480,360,40,"5.3",false,butcolor,38));
   controls.push(new control(1000,530,360,40,"5.4",false,butcolor,39));
@@ -419,6 +419,7 @@ function activateUnit(ind){
   for(var g=skillIndexes[ind][0];g<=skillIndexes[ind][1];g++){
     controls[g].there=true;
     controls[g].rgb=selectcolor;
+    controls[ind].rgb=selectcolor;
   }
 }
 
@@ -433,6 +434,7 @@ class control{
         //whichUnitSelected=this.ind;
         for(var h=9;h<=50;h++){
           controls[h].there=false;
+          controls[h].rgb=butcolor;
         }
         activateUnit(this.ind);  // does work but only for unit 1
         console.log(this.ind);
