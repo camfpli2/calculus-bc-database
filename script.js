@@ -7,7 +7,7 @@ var textcolor=[25,55,66];
 var whichUnitSelected;
 var questions=[];
 var n=0;
-var skillIndexes=[[9,13],[14,23],[24,31],[32,35],[36,40],[41,46],[47,48],[49,50],[]];
+var skillIndexes=[[9,13],[14,23],[24,31],[32,35],[36,40],[41,46],[47,48],[49,50],[51,56]];
 var skillBoxInfo=[[80,300],[150,550],[220,450],[290,275],[360,300],[330,350],[500,125],[570,125],[380,300]];
 
 
@@ -75,14 +75,21 @@ function setup(){
   controls.push(new control(1000,400,360,40,"6.2",false,butcolor,42));
   controls.push(new control(1000,450,360,40,"6.3",false,butcolor,43));
   controls.push(new control(1000,500,360,40,"6.4",false,butcolor,44));
-  controls.push(new control(1000,550,360,40,"6.4",false,butcolor,45));
-  controls.push(new control(1000,600,360,40,"6.5",false,butcolor,46));
+  controls.push(new control(1000,550,360,40,"6.5",false,butcolor,45));
+  controls.push(new control(1000,600,360,40,"6.6",false,butcolor,46));
 
   controls.push(new control(1000,520,360,40,"7.1",false,butcolor,47));   //unit 7, index 47 thru 48
   controls.push(new control(1000,570,360,40,"7.2",false,butcolor,48));
 
-  controls.push(new control(1000,590,360,40,"8.1",false,butcolor,49));   //unit 6, index 49 thru 50
+  controls.push(new control(1000,590,360,40,"8.1",false,butcolor,49));   //unit 8, index 49 thru 50
   controls.push(new control(1000,640,360,40,"8.2",false,butcolor,50));
+
+  controls.push(new control(1000,400,360,40,"9.1",false,butcolor,51));   //unit 9, index 51 thru 56
+  controls.push(new control(1000,450,360,40,"9.2",false,butcolor,52));
+  controls.push(new control(1000,500,360,40,"9.3",false,butcolor,53));
+  controls.push(new control(1000,550,360,40,"9.4",false,butcolor,54));
+  controls.push(new control(1000,600,360,40,"9.5",false,butcolor,55));
+  controls.push(new control(1000,650,360,40,"9.6",false,butcolor,56));
   
   
   controls.push(new control(80,80,120,60,"1996",true,butcolor,"year"));
@@ -435,7 +442,7 @@ class control{
           controls[k].rgb=butcolor;
         }
         
-        for(var h=9;h<=50;h++){
+        for(var h=9;h<=56;h++){
           controls[h].there=false;
         }
         activateUnit(this.ind);  // does work but only for unit 1
