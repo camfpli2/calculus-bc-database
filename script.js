@@ -5,7 +5,7 @@ var butcolor=[220, 200, 190];
 var textcolor=[25,55,66];
 var questions=[];
 var n=0;
-var skillIndexes=[[9,13],[14,23],[],[],[],[]];
+var skillIndexes=[[9,13],[14,23],[24,25],[],[],[]];
 
 
 
@@ -34,16 +34,19 @@ function setup(){
   controls.push(new control(1000,250,360,40,"1.4 Algebraic Limits",false,butcolor,12));
   controls.push(new control(1000,300,360,40,"1.5 Continuity and the IVT",false,butcolor,13));
   
-  controls.push(new control(1000,360,360,40,"2.1",false,butcolor,14));  //unit2, index 14 thru 23
-  controls.push(new control(1000,360,360,40,"2.2",false,butcolor,15));
+  controls.push(new control(1000,160,360,40,"2.1",false,butcolor,14));  //unit2, index 14 thru 23
+  controls.push(new control(1000,310,360,40,"2.2",false,butcolor,15));
   controls.push(new control(1000,360,360,40,"2.3",false,butcolor,16));
-  controls.push(new control(1000,360,360,40,"2.4",false,butcolor,17));
-  controls.push(new control(1000,360,360,40,"2.5",false,butcolor,18));
-  controls.push(new control(1000,360,360,40,"2.6",false,butcolor,19));
-  controls.push(new control(1000,360,360,40,"2.7",false,butcolor,20));
-  controls.push(new control(1000,360,360,40,"2.8",false,butcolor,21));
-  controls.push(new control(1000,360,360,40,"2.9",false,butcolor,22));
-  controls.push(new control(1000,360,360,40,"2.10",false,butcolor,23));
+  controls.push(new control(1000,410,360,40,"2.4",false,butcolor,17));
+  controls.push(new control(1000,460,360,40,"2.5",false,butcolor,18));
+  controls.push(new control(1000,510,360,40,"2.6",false,butcolor,19));
+  controls.push(new control(1000,560,360,40,"2.7",false,butcolor,20));
+  controls.push(new control(1000,610,360,40,"2.8",false,butcolor,21));
+  controls.push(new control(1000,660,360,40,"2.9",false,butcolor,22));
+  controls.push(new control(1000,710,360,40,"2.10",false,butcolor,23));
+
+  controls.push(new control(1000,220,360,40,"3.1",false,butcolor,24));   //unit 3, index 24 tru
+  controls.push(new control(1000,270,360,40,"3.2",false,butcolor,25));   
 
   
 
