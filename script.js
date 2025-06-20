@@ -28,22 +28,23 @@ function setup(){
   controls.push(new control(550,500,400,60,"Unit 7: Parametric Equations",true,butcolor,6));
   controls.push(new control(550,570,400,60,"Unit 8: Polar Equations",true,butcolor,7));
   controls.push(new control(550,640,400,60,"Unit 9: Sequences and Series",true,butcolor,8));
+  
   controls.push(new control(1000,100,360,40,"1.1 Limits and Continuity",false,butcolor,9));  //unit 1 , index 9 thru 13
   controls.push(new control(1000,150,360,40,"1.2 Properties of Limits",false,butcolor,10));
   controls.push(new control(1000,200,360,40,"1.3 Limits at Infinity",false,butcolor,11));
   controls.push(new control(1000,250,360,40,"1.4 Algebraic Limits",false,butcolor,12));
   controls.push(new control(1000,300,360,40,"1.5 Continuity and the IVT",false,butcolor,13));
   
-  controls.push(new control(1000,160,360,40,"2.1",false,butcolor,14));  //unit2, index 14 thru 23
-  controls.push(new control(1000,310,360,40,"2.2",false,butcolor,15));
-  controls.push(new control(1000,360,360,40,"2.3",false,butcolor,16));
-  controls.push(new control(1000,410,360,40,"2.4",false,butcolor,17));
-  controls.push(new control(1000,460,360,40,"2.5",false,butcolor,18));
-  controls.push(new control(1000,510,360,40,"2.6",false,butcolor,19));
-  controls.push(new control(1000,560,360,40,"2.7",false,butcolor,20));
-  controls.push(new control(1000,610,360,40,"2.8",false,butcolor,21));
-  controls.push(new control(1000,660,360,40,"2.9",false,butcolor,22));
-  controls.push(new control(1000,710,360,40,"2.10",false,butcolor,23));
+  controls.push(new control(1000,170,360,40,"2.1",false,butcolor,14));  //unit2, index 14 thru 23
+  controls.push(new control(1000,220,360,40,"2.2",false,butcolor,15));
+  controls.push(new control(1000,270,360,40,"2.3",false,butcolor,16));
+  controls.push(new control(1000,320,360,40,"2.4",false,butcolor,17));
+  controls.push(new control(1000,370,360,40,"2.5",false,butcolor,18));
+  controls.push(new control(1000,420,360,40,"2.6",false,butcolor,19));
+  controls.push(new control(1000,470,360,40,"2.7",false,butcolor,20));
+  controls.push(new control(1000,520,360,40,"2.8",false,butcolor,21));
+  controls.push(new control(1000,570,360,40,"2.9",false,butcolor,22));
+  controls.push(new control(1000,620,360,40,"2.10",false,butcolor,23));
 
   controls.push(new control(1000,220,360,40,"3.1",false,butcolor,24));   //unit 3, index 24 tru 31
   controls.push(new control(1000,270,360,40,"3.2",false,butcolor,25));   
