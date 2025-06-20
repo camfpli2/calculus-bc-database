@@ -431,10 +431,12 @@ class control{
   tapit(){
     if(mouseX>=this.x && mouseX<=this.x+this.w && mouseY>=this.y && mouseY <= this.y+this.h && this.there){
       if(this.ind<=8){  // user clicks a unit
-        //whichUnitSelected=this.ind;
+        for(var k=0;k<9;k++){
+          controls[k].rgb=butcolor;
+        }
+        
         for(var h=9;h<=50;h++){
           controls[h].there=false;
-          controls[h].rgb=butcolor;
         }
         activateUnit(this.ind);  // does work but only for unit 1
         console.log(this.ind);
