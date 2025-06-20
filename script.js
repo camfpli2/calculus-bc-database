@@ -5,7 +5,7 @@ var butcolor=[220, 200, 190];
 var textcolor=[25,55,66];
 var questions=[];
 var n=0;
-var skillIndexes=[[9,13],[14,23],[24,25],[],[],[]];
+var skillIndexes=[[9,13],[14,23],[24,31],[],[],[]];
 
 
 
@@ -45,8 +45,14 @@ function setup(){
   controls.push(new control(1000,660,360,40,"2.9",false,butcolor,22));
   controls.push(new control(1000,710,360,40,"2.10",false,butcolor,23));
 
-  controls.push(new control(1000,220,360,40,"3.1",false,butcolor,24));   //unit 3, index 24 tru
+  controls.push(new control(1000,220,360,40,"3.1",false,butcolor,24));   //unit 3, index 24 tru 31
   controls.push(new control(1000,270,360,40,"3.2",false,butcolor,25));   
+  controls.push(new control(1000,320,360,40,"3.2",false,butcolor,26));   
+  controls.push(new control(1000,370,360,40,"3.2",false,butcolor,27));   
+  controls.push(new control(1000,420,360,40,"3.2",false,butcolor,28));   
+  controls.push(new control(1000,470,360,40,"3.2",false,butcolor,29));   
+  controls.push(new control(1000,520,360,40,"3.2",false,butcolor,30));   
+  controls.push(new control(1000,570,360,40,"3.2",false,butcolor,31));   
 
   
 
