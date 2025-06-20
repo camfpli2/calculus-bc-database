@@ -5,6 +5,7 @@ var butcolor=[220, 200, 190];
 var textcolor=[25,55,66];
 var questions=[];
 var n=0;
+var skillIndexes=[[9,13],[14,23],[],[],[],[]];
 
 
 
@@ -32,6 +33,19 @@ function setup(){
   controls.push(new control(1000,200,360,40,"1.3 Limits at Infinity",false,butcolor,11));
   controls.push(new control(1000,250,360,40,"1.4 Algebraic Limits",false,butcolor,12));
   controls.push(new control(1000,300,360,40,"1.5 Continuity and the IVT",false,butcolor,13));
+  
+  controls.push(new control(1000,360,360,40,"2.1",false,butcolor,14));  //unit2, index 14 thru 23
+  controls.push(new control(1000,360,360,40,"2.2",false,butcolor,15));
+  controls.push(new control(1000,360,360,40,"2.3",false,butcolor,16));
+  controls.push(new control(1000,360,360,40,"2.4",false,butcolor,17));
+  controls.push(new control(1000,360,360,40,"2.5",false,butcolor,18));
+  controls.push(new control(1000,360,360,40,"2.6",false,butcolor,19));
+  controls.push(new control(1000,360,360,40,"2.7",false,butcolor,20));
+  controls.push(new control(1000,360,360,40,"2.8",false,butcolor,21));
+  controls.push(new control(1000,360,360,40,"2.9",false,butcolor,22));
+  controls.push(new control(1000,360,360,40,"2.10",false,butcolor,23));
+
+  
 
 
   
@@ -364,8 +378,8 @@ function load2015(){
     questions.push(loadImage("2015-NC-28.png"));
 }
 
-function activateUnitOne(){
-  for(var g=9;g<14;g++){
+function activateUnit(ind){
+  for(var g=skillIndexes[ind][0];g<=skillIndexes[ind][1];g++){
     controls[g].there=true;
   }
 }
@@ -378,7 +392,10 @@ class control{
   tapit(){
     if(mouseX>=this.x && mouseX<=this.x+this.w && mouseY>=this.y && mouseY <= this.y+this.h && this.there){
       if(this.ind<=8){  // user clicks a unit
-        activateUnitOne();  // does work but only for unit 1
+        for(var h=9;h<23;h++){
+          controls[h].there=false;
+        }
+        activateUnit(this.ind);  // does work but only for unit 1
         fill(240);
         stroke(25, 45, 100);
         strokeWeight(2);
