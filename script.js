@@ -441,8 +441,15 @@ class control{
   
   tapit(){
     if(mouseX>=this.x && mouseX<=this.x+this.w && mouseY>=this.y && mouseY <= this.y+this.h && this.there){
-      if(this.ind<=8){  // user clicks a unit
-        if(this.rgb===selectcolor){wholeSkillHomeScreen(this.ind);}  //user has d-clicked and this will bypass to whole skill mix
+      if(this.ind<=8){                  // user clicks a unit
+        if(this.rgb===selectcolor){              //user has d-clicked and this will bypass to whole skill mix
+          for(var b=0;b<controls.length;b++){   //resets button colors and makes them not there
+            controls[b].rgb=butcolor;
+            controls[b].there=false;
+          }
+          wholeSkillHomeScreen(this.ind);
+        }
+          
         else{
         for(var k=0;k<9;k++){
           controls[k].rgb=butcolor;
