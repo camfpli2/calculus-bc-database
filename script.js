@@ -443,6 +443,7 @@ class control{
     if(mouseX>=this.x && mouseX<=this.x+this.w && mouseY>=this.y && mouseY <= this.y+this.h && this.there){
       if(this.ind<=8){  // user clicks a unit
         if(this.rgb===selectcolor){wholeSkillHomeScreen(this.ind);}  //user has d-clicked and this will bypass to whole skill mix
+        else{
         for(var k=0;k<9;k++){
           controls[k].rgb=butcolor;
         }
@@ -465,6 +466,7 @@ class control{
         strokeWeight(2);
         line(this.x+this.w-2,this.y,this.x+this.w+30,this.y+this.h/2);
         line(this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
+        }
       }
 
       else if(this.ind==="year"){    //user clicks a year
