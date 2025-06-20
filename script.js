@@ -8,7 +8,9 @@ var n=0;
 var skillIndexes=[[9,13],[14,23],[24,31],[],[],[]];
 
 
-
+function yearHomeScreen(){
+  background(240);
+}
 
 
 function setup(){
@@ -387,6 +389,8 @@ function load2015(){
     questions.push(loadImage("2015-NC-27.png")); 
     questions.push(loadImage("2015-NC-28.png"));
 }
+
+
 
 function activateUnit(ind){
   for(var g=skillIndexes[ind][0];g<=skillIndexes[ind][1];g++){
