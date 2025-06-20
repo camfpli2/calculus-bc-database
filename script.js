@@ -18,6 +18,10 @@ function yearHomeScreen(y){
   fill(textcolor);
   textAlign(CENTER);
   text("AP Calculus BC: "+y,wdth/2,50);
+  text("Multiple Choice Section",wdth/2,100);
+  textSize(26);
+  text("#1 - #28, No Calculator, 60 Minutes",wdth/2,150);
+  text("#76 - #92, Calculator, 30 Minutes",wdth/2,200);
 }
 
 function wholeSkillHomeScreen(i){
