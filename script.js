@@ -6,7 +6,7 @@ var textcolor=[25,55,66];
 var questions=[];
 var n=0;
 var skillIndexes=[[9,13],[14,23],[24,31],[],[],[],[],[],[]];
-var skillBoxInfo=[[80,400],[150,525],[220,425],[290,375],[],[],[],[],[]];
+var skillBoxInfo=[[80,300],[150,550],[220,450],[290,275],[360,300],[310,350],[],[],[]];
 
 
 function yearHomeScreen(){
