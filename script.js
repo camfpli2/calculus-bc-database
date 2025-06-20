@@ -397,10 +397,11 @@ class control{
         }
         activateUnit(this.ind);  // does work but only for unit 1
         console.log(this.ind);
+        
+        homeScreen();
         fill(240);
         stroke(25, 45, 100);
         strokeWeight(2);
-        homeScreen();
         rect(this.x+this.w+30,this.y,400,400,2);
         for(var y=0;y<controls.length;y++){
             controls[y].drawit();
