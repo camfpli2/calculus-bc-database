@@ -511,7 +511,7 @@ class control{
       }
 
       else if(this.ind==="year"){    //user clicks a year
-        for(ver f=0;f<controls.length;f++){
+        for(var f=0;f<controls.length;f++){
           controls[f].there=false;
         }
         loadQuestions(parseInt(this.txt));
