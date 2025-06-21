@@ -559,6 +559,7 @@ class control{
       fill(0,0,200);
       noStroke();
       if(this.ind>=9&&this.ind<=56){textSize(15);}
+      else if(this.ind==="answer choice"){textSize(44);}
       else{textSize(20);}
       if(this.ind==="year"||this.ind==="exam controller"){
         textAlign(CENTER,CENTER);
