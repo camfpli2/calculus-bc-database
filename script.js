@@ -561,7 +561,7 @@ class control{
       if(this.ind>=9&&this.ind<=56){textSize(15);}
       else if(this.ind==="answer choice"){textSize(44);}
       else{textSize(20);}
-      if(this.ind==="year"||this.ind==="exam controller"){
+      if(this.ind==="year"||this.ind==="exam controller"||this.ind==="answer choice"){
         textAlign(CENTER,CENTER);
         text(this.txt,this.x+this.w/2, this.y+this.h/2);
       }
