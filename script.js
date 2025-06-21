@@ -201,6 +201,8 @@ function touchEnded() {
 }
 
 function adjustImageDimensions(){
+  console.log(questions);
+  console.log(questions[23].width;);
   for(var v=0;v<questions.length;v++){
    console.log(v,questions[v].width, questions[v].height);
     if((questions[v].width>wdth-40)||(questions[v].height>hgt-130)){      //too tall or too wide
