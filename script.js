@@ -34,16 +34,16 @@ function yearHomeScreen(y){
       controls[p].drawit();
     }
   }
-  refresher();
-  // textSize(40);
-  // noStroke();
-  // fill(textcolor);
-  // textAlign(CENTER);
-  // text("AP Calculus BC: "+y,wdth/2,250);
-  // text("Multiple Choice Section",wdth/2,300);
-  // textSize(26);
-  // text("1 - 28, No Calculator",wdth/2,350);
-  // text("76 - 92, Calculator",wdth/2,400);
+  //refresher();
+  textSize(40);
+  noStroke();
+  fill(textcolor);
+  textAlign(CENTER);
+  text("AP Calculus BC: "+y,wdth/2,250);
+  text("Multiple Choice Section",wdth/2,300);
+  textSize(26);
+  text("1 - 28, No Calculator",wdth/2,350);
+  text("76 - 92, Calculator",wdth/2,400);
 }
 
 function wholeSkillHomeScreen(i){
@@ -59,6 +59,8 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     else if(ask===2008){load2008();}
   }
   console.log(questions[23].height);
+  console.log(questions);
+  console.log(questions[23]);
   adjustImageDimensions();
 }
 
@@ -163,6 +165,7 @@ function setup(){
   controls.push(new control(5,5,120,60,"Home",false,butcolor,"exam controller"));
   controls.push(new control(130,5,120,60,"Previous",false,butcolor,"exam controller"));
   controls.push(new control(255,5,120,60,"Next",false,butcolor,"exam controller"));
+  controls.push(new control(385,5,120,60,"Start",false,butcolor,"exam controller"));
 
   
  // adjustImageDimensions();
@@ -529,6 +532,11 @@ class control{
       }
       else if(this.txt==="Previous"){
         n--;
+        refresher();
+      }
+      else if(this.txt==="Start"){
+        adjustImageDimensions();
+        this.there=false;
         refresher();
       }
     }
