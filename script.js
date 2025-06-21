@@ -39,6 +39,10 @@ function wholeSkillHomeScreen(i){
   background(240);
 }
 
+function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal)
+  
+}
+
 
 function setup(){
 
@@ -253,7 +257,7 @@ function load2008(){
     questions.push(loadImage("2008-NC-28.png"));
 }
  function load2012(){
-         questions.push(loadImage("2012-C-76.png")); 
+    questions.push(loadImage("2012-C-76.png")); 
     questions.push(loadImage("2012-C-77.png")); 
     questions.push(loadImage("2012-C-78.png")); 
     questions.push(loadImage("2012-C-79.png")); 
@@ -349,7 +353,7 @@ function load2013(){
 }
 
 function load2014(){
-        questions.push(loadImage("2014-C-76.png")); 
+    questions.push(loadImage("2014-C-76.png")); 
     questions.push(loadImage("2014-C-77.png")); 
     questions.push(loadImage("2014-C-78.png")); 
     questions.push(loadImage("2014-C-79.png")); 
@@ -497,6 +501,9 @@ class control{
       }
 
       else if(this.ind==="year"){    //user clicks a year
+        for(ver f=0;f<controls.length;f++){
+          controls[f].there=false;
+        }
         yearHomeScreen(parseInt(this.txt));
       }
 
