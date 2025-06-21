@@ -58,7 +58,7 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     else if(ask===2012){load2012();}
     else if(ask===2008){load2008();}
   }
-  console.log(questions[0].width);
+  console.log(questions);
   adjustImageDimensions();
 }
 
