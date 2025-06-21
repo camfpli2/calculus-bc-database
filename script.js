@@ -61,9 +61,7 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     else if(ask===2012){load2012();}
     else if(ask===2008){load2008();}
   }
-  console.log(questions[23].height);
-  console.log(questions);
-  console.log(questions[23]);
+
   adjustImageDimensions();
 }
 
@@ -210,21 +208,15 @@ function touchEnded() {
 }
 
 function adjustImageDimensions(){
-  console.log(questions);
   for(var v=0;v<questions.length;v++){
-   console.log(v,questions[v].width, questions[v].height);
     if((questions[v].width>wdth-40)||(questions[v].height>hgt-130)){      //too tall or too wide
       if(questions[v].width/(wdth-40)>questions[v].height/(hgt-130)){    //%wise, wider than taller
          questions[v].resize(wdth-40,0);
-          console.log(v,questions[v].width, questions[v].height);
       }
       else{                                               //%wise, taller than wider
          questions[v].resize(0,hgt-130);
-         console.log(v,questions[v].width, questions[v].height);
       }
     }
-              // console.log(v,questions[v].width, questions[v].height);
-
   }
 }
 
