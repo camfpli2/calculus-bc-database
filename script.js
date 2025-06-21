@@ -12,11 +12,11 @@ var skillIndexes=[[9,13],[14,23],[24,31],[32,35],[36,40],[41,46],[47,48],[49,50]
 var skillBoxInfo=[[80,300],[150,550],[220,450],[290,250],[360,300],[330,350],[500,130],[570,130],[380,330]];
 
 function refresher(){
-  background(230);
-  fill(240);
-  strokeWeight(1);
-  stroke(bordercolor);
-  rect(10,70,wdth-40,hgt-100,5);
+  // background(230);
+  // fill(240);
+  // strokeWeight(1);
+  // stroke(bordercolor);
+  // rect(10,70,wdth-40,hgt-100,5);
   image(questions[n],15,80);
 }
 
