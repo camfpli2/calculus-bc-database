@@ -30,7 +30,7 @@ function yearHomeScreen(y){
   fill(240);
   strokeWeight(1);
   stroke(bordercolor);
-  rect(10,70,wdth-40,hgt-100,5);
+  rect(5,70,wdth-40,hgt-100,5);
   for(var p=0;p<controls.length;p++){
     if(controls[p].ind==="exam controller"){
       controls[p].there=true;
