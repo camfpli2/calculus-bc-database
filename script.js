@@ -11,6 +11,15 @@ var n=0;
 var skillIndexes=[[9,13],[14,23],[24,31],[32,35],[36,40],[41,46],[47,48],[49,50],[51,56]];
 var skillBoxInfo=[[80,300],[150,550],[220,450],[290,250],[360,300],[330,350],[500,130],[570,130],[380,330]];
 
+function refresher(){
+  background(230);
+  fill(240);
+  strokeWeight(1);
+  stroke(bordercolor);
+  rect(10,70,wdth-40,hgt-100,5);
+  image(questions[n],10,80);
+}
+
 
 function yearHomeScreen(y){
   background(230);
@@ -40,7 +49,13 @@ function wholeSkillHomeScreen(i){
 }
 
 function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal)
-  
+  if(ask>1000){   //user has clicked a year
+    if(ask===2015){load2015();}
+    else if(ask===2014){load2014();}
+    else if(ask===2013){load2013();}
+    else if(ask===2012){load2012();}
+    else if(ask===2008){load2008();}
+  }
 }
 
 
@@ -175,13 +190,7 @@ function homeScreen(){
 
 
 
-function refresher(){
-   background(240);  
-   for(var y=0;y<controls.length;y++){
-      controls[y].drawit();
-   }
- image(questions[n],10,80);
-}
+
 
 function touchEnded() {
     for(var g=0;g<controls.length;g++){
@@ -504,6 +513,7 @@ class control{
         for(ver f=0;f<controls.length;f++){
           controls[f].there=false;
         }
+        loadQuestions(parseInt(this.txt));
         yearHomeScreen(parseInt(this.txt));
       }
 
