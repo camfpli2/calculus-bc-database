@@ -5,6 +5,7 @@ var butcolor=[220, 200, 190];
 var selectcolor=[210,225,225];
 var textcolor=[25,55,66];
 var bordercolor=[35,35,200];
+var selectbordercolor=[200,35,35];
 var whichUnitSelected;
 var questions=[];
 var n=0;
@@ -496,7 +497,7 @@ class control{
         activateUnit(this.ind);  
         homeScreen();
         fill(240);
-        stroke(25, 45, 100);
+        stroke(selectbordercolor);
         strokeWeight(2);
         rect(this.x+this.w+30,skillBoxInfo[this.ind][0],400,skillBoxInfo[this.ind][1],2);
         for(var y=0;y<controls.length;y++){
@@ -505,7 +506,7 @@ class control{
         fill(this.rgb);
         noStroke();
         triangle(this.x+this.w-2,this.y,this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
-        stroke(25, 45, 100);
+        stroke(selectbordercolor);
         strokeWeight(2);
         line(this.x+this.w-2,this.y,this.x+this.w+30,this.y+this.h/2);
         line(this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
