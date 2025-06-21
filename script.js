@@ -33,7 +33,7 @@ function yearHomeScreen(y){
   stroke(bordercolor);
   rect(5,70,wdth-30,hgt-100,5);
   for(var p=0;p<controls.length;p++){
-    if(controls[p].ind==="exam controller"){
+    if(controls[p].ind==="exam controller"||controls[p].ind==="answer choice"){
       controls[p].there=true;
       controls[p].drawit();
     }
@@ -168,6 +168,12 @@ function setup(){
   controls.push(new control(130,5,120,60,"Previous",false,butcolor,"exam controller"));
   controls.push(new control(255,5,120,60,"Next",false,butcolor,"exam controller"));
   controls.push(new control(385,5,120,60,"Start",false,butcolor,"exam controller"));
+
+  controls.push(new control(600,5,60,60,"A",false,butcolor,"answer choice"));
+  controls.push(new control(670,5,60,60,"B",false,butcolor,"answer choice"));
+  controls.push(new control(740,5,60,60,"C",false,butcolor,"answer choice"));
+  controls.push(new control(810,5,60,60,"D",false,butcolor,"answer choice"));
+  controls.push(new control(880,5,60,60,"D",false,butcolor,"answer choice"));
 
   
  // adjustImageDimensions();
