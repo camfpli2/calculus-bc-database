@@ -222,24 +222,7 @@ function adjustImageDimensions(){
 }
 
 
-function load2008(){
-    questions.push(loadImage("2008-C-76.png")); 
-    questions.push(loadImage("2008-C-77.png")); 
-    questions.push(loadImage("2008-C-78.png")); 
-    questions.push(loadImage("2008-C-79.png")); 
-    questions.push(loadImage("2008-C-80.png")); 
-    questions.push(loadImage("2008-C-81.png")); 
-    questions.push(loadImage("2008-C-82.png")); 
-    questions.push(loadImage("2008-C-83.png")); 
-    questions.push(loadImage("2008-C-84.png")); 
-    questions.push(loadImage("2008-C-85.png")); 
-    questions.push(loadImage("2008-C-86.png")); 
-    questions.push(loadImage("2008-C-87.png")); 
-    questions.push(loadImage("2008-C-88.png")); 
-    questions.push(loadImage("2008-C-89.png")); 
-    questions.push(loadImage("2008-C-90.png")); 
-    questions.push(loadImage("2008-C-91.png")); 
-    questions.push(loadImage("2008-C-92.png")); 
+function load2008(){ 
     questions.push(loadImage("2008-NC-1.png")); 
     questions.push(loadImage("2008-NC-2.png")); 
     questions.push(loadImage("2008-NC-3.png")); 
@@ -268,25 +251,26 @@ function load2008(){
     questions.push(loadImage("2008-NC-26.png")); 
     questions.push(loadImage("2008-NC-27.png")); 
     questions.push(loadImage("2008-NC-28.png"));
+
+    questions.push(loadImage("2008-C-76.png")); 
+    questions.push(loadImage("2008-C-77.png")); 
+    questions.push(loadImage("2008-C-78.png")); 
+    questions.push(loadImage("2008-C-79.png")); 
+    questions.push(loadImage("2008-C-80.png")); 
+    questions.push(loadImage("2008-C-81.png")); 
+    questions.push(loadImage("2008-C-82.png")); 
+    questions.push(loadImage("2008-C-83.png")); 
+    questions.push(loadImage("2008-C-84.png")); 
+    questions.push(loadImage("2008-C-85.png")); 
+    questions.push(loadImage("2008-C-86.png")); 
+    questions.push(loadImage("2008-C-87.png")); 
+    questions.push(loadImage("2008-C-88.png")); 
+    questions.push(loadImage("2008-C-89.png")); 
+    questions.push(loadImage("2008-C-90.png")); 
+    questions.push(loadImage("2008-C-91.png")); 
+    questions.push(loadImage("2008-C-92.png"));
 }
  function load2012(){
-    questions.push(loadImage("2012-C-76.png")); 
-    questions.push(loadImage("2012-C-77.png")); 
-    questions.push(loadImage("2012-C-78.png")); 
-    questions.push(loadImage("2012-C-79.png")); 
-    questions.push(loadImage("2012-C-80.png")); 
-    questions.push(loadImage("2012-C-81.png")); 
-    questions.push(loadImage("2012-C-82.png")); 
-    questions.push(loadImage("2012-C-83.png")); 
-    questions.push(loadImage("2012-C-84.png")); 
-    questions.push(loadImage("2012-C-85.png")); 
-    questions.push(loadImage("2012-C-86.png")); 
-    questions.push(loadImage("2012-C-87.png")); 
-    questions.push(loadImage("2012-C-88.png")); 
-    questions.push(loadImage("2012-C-89.png")); 
-    questions.push(loadImage("2012-C-90.png")); 
-    questions.push(loadImage("2012-C-91.png")); 
-    questions.push(loadImage("2012-C-92.png")); 
     questions.push(loadImage("2012-NC-1.png")); 
     questions.push(loadImage("2012-NC-2.png")); 
     questions.push(loadImage("2012-NC-3.png")); 
@@ -315,26 +299,27 @@ function load2008(){
     questions.push(loadImage("2012-NC-26.png")); 
     questions.push(loadImage("2012-NC-27.png")); 
     questions.push(loadImage("2012-NC-28.png")); 
+
+    questions.push(loadImage("2012-C-76.png")); 
+    questions.push(loadImage("2012-C-77.png")); 
+    questions.push(loadImage("2012-C-78.png")); 
+    questions.push(loadImage("2012-C-79.png")); 
+    questions.push(loadImage("2012-C-80.png")); 
+    questions.push(loadImage("2012-C-81.png")); 
+    questions.push(loadImage("2012-C-82.png")); 
+    questions.push(loadImage("2012-C-83.png")); 
+    questions.push(loadImage("2012-C-84.png")); 
+    questions.push(loadImage("2012-C-85.png")); 
+    questions.push(loadImage("2012-C-86.png")); 
+    questions.push(loadImage("2012-C-87.png")); 
+    questions.push(loadImage("2012-C-88.png")); 
+    questions.push(loadImage("2012-C-89.png")); 
+    questions.push(loadImage("2012-C-90.png")); 
+    questions.push(loadImage("2012-C-91.png")); 
+    questions.push(loadImage("2012-C-92.png")); 
  }
 
 function load2013(){
-    questions.push(loadImage("2013-C-76.png")); 
-    questions.push(loadImage("2013-C-77.png")); 
-    questions.push(loadImage("2013-C-78.png")); 
-    questions.push(loadImage("2013-C-79.png")); 
-    questions.push(loadImage("2013-C-80.png")); 
-    questions.push(loadImage("2013-C-81.png")); 
-    questions.push(loadImage("2013-C-82.png")); 
-    questions.push(loadImage("2013-C-83.png")); 
-    questions.push(loadImage("2013-C-84.png")); 
-    questions.push(loadImage("2013-C-85.png")); 
-    questions.push(loadImage("2013-C-86.png")); 
-    questions.push(loadImage("2013-C-87.png")); 
-    questions.push(loadImage("2013-C-88.png")); 
-    questions.push(loadImage("2013-C-89.png")); 
-    questions.push(loadImage("2013-C-90.png")); 
-    questions.push(loadImage("2013-C-91.png")); 
-    questions.push(loadImage("2013-C-92.png")); 
     questions.push(loadImage("2013-NC-1.png")); 
     questions.push(loadImage("2013-NC-2.png")); 
     questions.push(loadImage("2013-NC-3.png")); 
@@ -363,26 +348,27 @@ function load2013(){
     questions.push(loadImage("2013-NC-26.png")); 
     questions.push(loadImage("2013-NC-27.png")); 
     questions.push(loadImage("2013-NC-28.png"));
+      
+    questions.push(loadImage("2013-C-76.png")); 
+    questions.push(loadImage("2013-C-77.png")); 
+    questions.push(loadImage("2013-C-78.png")); 
+    questions.push(loadImage("2013-C-79.png")); 
+    questions.push(loadImage("2013-C-80.png")); 
+    questions.push(loadImage("2013-C-81.png")); 
+    questions.push(loadImage("2013-C-82.png")); 
+    questions.push(loadImage("2013-C-83.png")); 
+    questions.push(loadImage("2013-C-84.png")); 
+    questions.push(loadImage("2013-C-85.png")); 
+    questions.push(loadImage("2013-C-86.png")); 
+    questions.push(loadImage("2013-C-87.png")); 
+    questions.push(loadImage("2013-C-88.png")); 
+    questions.push(loadImage("2013-C-89.png")); 
+    questions.push(loadImage("2013-C-90.png")); 
+    questions.push(loadImage("2013-C-91.png")); 
+    questions.push(loadImage("2013-C-92.png")); 
 }
 
 function load2014(){
-    questions.push(loadImage("2014-C-76.png")); 
-    questions.push(loadImage("2014-C-77.png")); 
-    questions.push(loadImage("2014-C-78.png")); 
-    questions.push(loadImage("2014-C-79.png")); 
-    questions.push(loadImage("2014-C-80.png")); 
-    questions.push(loadImage("2014-C-81.png")); 
-    questions.push(loadImage("2014-C-82.png")); 
-    questions.push(loadImage("2014-C-83.png")); 
-    questions.push(loadImage("2014-C-84.png")); 
-    questions.push(loadImage("2014-C-85.png")); 
-    questions.push(loadImage("2014-C-86.png")); 
-    questions.push(loadImage("2014-C-87.png")); 
-    questions.push(loadImage("2014-C-88.png")); 
-    questions.push(loadImage("2014-C-89.png")); 
-    questions.push(loadImage("2014-C-90.png")); 
-    questions.push(loadImage("2014-C-91.png")); 
-    questions.push(loadImage("2014-C-92.png")); 
     questions.push(loadImage("2014-NC-1.png")); 
     questions.push(loadImage("2014-NC-2.png")); 
     questions.push(loadImage("2014-NC-3.png")); 
@@ -411,26 +397,28 @@ function load2014(){
     questions.push(loadImage("2014-NC-26.png")); 
     questions.push(loadImage("2014-NC-27.png")); 
     questions.push(loadImage("2014-NC-28.png")); 
+
+    questions.push(loadImage("2014-C-76.png")); 
+    questions.push(loadImage("2014-C-77.png")); 
+    questions.push(loadImage("2014-C-78.png")); 
+    questions.push(loadImage("2014-C-79.png")); 
+    questions.push(loadImage("2014-C-80.png")); 
+    questions.push(loadImage("2014-C-81.png")); 
+    questions.push(loadImage("2014-C-82.png")); 
+    questions.push(loadImage("2014-C-83.png")); 
+    questions.push(loadImage("2014-C-84.png")); 
+    questions.push(loadImage("2014-C-85.png")); 
+    questions.push(loadImage("2014-C-86.png")); 
+    questions.push(loadImage("2014-C-87.png")); 
+    questions.push(loadImage("2014-C-88.png")); 
+    questions.push(loadImage("2014-C-89.png")); 
+    questions.push(loadImage("2014-C-90.png")); 
+    questions.push(loadImage("2014-C-91.png")); 
+    questions.push(loadImage("2014-C-92.png")); 
 }
 
 function load2015(){
-    questions.push(loadImage("2015-C-76.png")); 
-    questions.push(loadImage("2015-C-77.png")); 
-    questions.push(loadImage("2015-C-78.png")); 
-    questions.push(loadImage("2015-C-79.png")); 
-    questions.push(loadImage("2015-C-80.png")); 
-    questions.push(loadImage("2015-C-81.png")); 
-    questions.push(loadImage("2015-C-82.png")); 
-    questions.push(loadImage("2015-C-83.png")); 
-    questions.push(loadImage("2015-C-84.png")); 
-    questions.push(loadImage("2015-C-85.png")); 
-    questions.push(loadImage("2015-C-86.png")); 
-    questions.push(loadImage("2015-C-87.png")); 
-    questions.push(loadImage("2015-C-88.png")); 
-    questions.push(loadImage("2015-C-89.png")); 
-    questions.push(loadImage("2015-C-90.png")); 
-    questions.push(loadImage("2015-C-91.png")); 
-    questions.push(loadImage("2015-C-92.png")); 
+
     questions.push(loadImage("2015-NC-1.png")); 
     questions.push(loadImage("2015-NC-2.png")); 
     questions.push(loadImage("2015-NC-3.png")); 
@@ -459,6 +447,24 @@ function load2015(){
     questions.push(loadImage("2015-NC-26.png")); 
     questions.push(loadImage("2015-NC-27.png")); 
     questions.push(loadImage("2015-NC-28.png"));
+      
+    questions.push(loadImage("2015-C-76.png")); 
+    questions.push(loadImage("2015-C-77.png")); 
+    questions.push(loadImage("2015-C-78.png")); 
+    questions.push(loadImage("2015-C-79.png")); 
+    questions.push(loadImage("2015-C-80.png")); 
+    questions.push(loadImage("2015-C-81.png")); 
+    questions.push(loadImage("2015-C-82.png")); 
+    questions.push(loadImage("2015-C-83.png")); 
+    questions.push(loadImage("2015-C-84.png")); 
+    questions.push(loadImage("2015-C-85.png")); 
+    questions.push(loadImage("2015-C-86.png")); 
+    questions.push(loadImage("2015-C-87.png")); 
+    questions.push(loadImage("2015-C-88.png")); 
+    questions.push(loadImage("2015-C-89.png")); 
+    questions.push(loadImage("2015-C-90.png")); 
+    questions.push(loadImage("2015-C-91.png")); 
+    questions.push(loadImage("2015-C-92.png")); 
 }
 
 
