@@ -162,7 +162,7 @@ function setup(){
   controls.push(new control(255,5,120,60,"Next",false,butcolor,"exam controller"));
 
   
-  adjustImageDimensions();
+ // adjustImageDimensions();
   // background(240);  
  // refresher();  refreshes background and goes to question
   homeScreen();
