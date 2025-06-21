@@ -547,7 +547,7 @@ class control{
       noStroke();
       if(this.ind>=9&&this.ind<=56){textSize(15);}
       else{textSize(20);}
-      if(this.ind==="year"){
+      if(this.ind==="year"||this.ind==="exam controller"){
         textAlign(CENTER,CENTER);
         text(this.txt,this.x+this.w/2, this.y+this.h/2);
       }
