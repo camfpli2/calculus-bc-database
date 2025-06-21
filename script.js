@@ -545,7 +545,8 @@ class control{
       rect(this.x, this.y, this.w, this.h, 4);
       fill(0,0,200);
       noStroke();
-      textSize(20);
+      if(this.ind>=9&&this.ind<=56){textSize(15);}
+      else{textSize(20);}
       if(this.ind==="year"){
         textAlign(CENTER,CENTER);
         text(this.txt,this.x+this.w/2, this.y+this.h/2);
