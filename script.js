@@ -4,6 +4,7 @@ var controls=[];
 var butcolor=[220, 200, 190];
 var selectcolor=[210,225,225];
 var textcolor=[25,55,66];
+var bordercolor=[35,35,200];
 var whichUnitSelected;
 var questions=[];
 var n=0;
@@ -12,16 +13,26 @@ var skillBoxInfo=[[80,300],[150,550],[220,450],[290,250],[360,300],[330,350],[50
 
 
 function yearHomeScreen(y){
-  background(240);
-  textSize(30);
+  background(230);
+  fill(240);
+  strokeWeight(1);
+  stroke(bordercolor);
+  rect(10,70,wdth-40,hgt-100,5);
+  for(var p=0;p<controls.length;p++){
+    if(controls[p].ind==="exam controller"){
+      controls[p].there=true;
+      controls[p].drawit();
+    }
+  }
+  textSize(40);
   noStroke();
   fill(textcolor);
   textAlign(CENTER);
-  text("AP Calculus BC: "+y,wdth/2,50);
-  text("Multiple Choice Section",wdth/2,100);
+  text("AP Calculus BC: "+y,wdth/2,250);
+  text("Multiple Choice Section",wdth/2,300);
   textSize(26);
-  text("#1 - #28, No Calculator, 60 Minutes",wdth/2,150);
-  text("#76 - #92, Calculator, 30 Minutes",wdth/2,200);
+  text("1 - 28, No Calculator",wdth/2,350);
+  text("76 - 92, Calculator",wdth/2,500);
 }
 
 function wholeSkillHomeScreen(i){
@@ -126,9 +137,9 @@ function setup(){
   controls.push(new control(250,570,120,60,"2018",true,butcolor,"year"));
   controls.push(new control(250,640,120,60,"2019",true,butcolor,"year"));
   
-  controls.push(new control(5,5,120,70,"Histogram",false,butcolor,18));
-  controls.push(new control(130,5,120,70,"Previous",false,butcolor,19));
-  controls.push(new control(255,5,120,70,"Next",false,butcolor,20));
+  controls.push(new control(5,5,120,60,"Home",false,butcolor,"exam controller"));
+  controls.push(new control(130,5,120,60,"Previous",false,butcolor,"exam controller"));
+  controls.push(new control(255,5,120,60,"Next",false,butcolor,"exam controller"));
 
   
   adjustImageDimensions();
@@ -141,7 +152,7 @@ function setup(){
 function homeScreen(){
     background(230);
     fill(240);
-    stroke(35,35,200);
+    stroke(bordercolor);
     strokeWeight(1);
     rect(10,10,490,710,5);
     rect(520,10,890,710,5);
