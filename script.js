@@ -90,16 +90,16 @@ function setup(){
   controls.push(new control(1000,250,360,40,"1.4 Algebraic Limits",false,butcolor,12));
   controls.push(new control(1000,300,360,40,"1.5 Continuity and the IVT",false,butcolor,13));
   
-  controls.push(new control(1000,170,360,40,"2.1",false,butcolor,14));  //unit2, index 14 thru 23
-  controls.push(new control(1000,220,360,40,"2.2",false,butcolor,15));
-  controls.push(new control(1000,270,360,40,"2.3",false,butcolor,16));
-  controls.push(new control(1000,320,360,40,"2.4",false,butcolor,17));
-  controls.push(new control(1000,370,360,40,"2.5",false,butcolor,18));
-  controls.push(new control(1000,420,360,40,"2.6",false,butcolor,19));
-  controls.push(new control(1000,470,360,40,"2.7",false,butcolor,20));
-  controls.push(new control(1000,520,360,40,"2.8",false,butcolor,21));
-  controls.push(new control(1000,570,360,40,"2.9",false,butcolor,22));
-  controls.push(new control(1000,620,360,40,"2.10",false,butcolor,23));
+  controls.push(new control(1000,170,360,40,"2.1 Tangent Line & Differentiability",false,butcolor,14));  //unit2, index 14 thru 23
+  controls.push(new control(1000,220,360,40,"2.2 Derivatives on the Calculator",false,butcolor,15));
+  controls.push(new control(1000,270,360,40,"2.3 Basic Differentiation Rules",false,butcolor,16));
+  controls.push(new control(1000,320,360,40,"2.4 Product & Quotient Rules",false,butcolor,17));
+  controls.push(new control(1000,370,360,40,"2.5 Rates of Change and Particle Motion I",false,butcolor,18));
+  controls.push(new control(1000,420,360,40,"2.6 The Chain Rule",false,butcolor,19));
+  controls.push(new control(1000,470,360,40,"2.7 Implicit Differentiation",false,butcolor,20));
+  controls.push(new control(1000,520,360,40,"2.8 Derivatives of Inverse & Inverse Trig Functions",false,butcolor,21));
+  controls.push(new control(1000,570,360,40,"2.9 Derivatives of Exponential Functions",false,butcolor,22));
+  controls.push(new control(1000,620,360,40,"2.10 Derivatives of Log Functions",false,butcolor,23));
 
   controls.push(new control(1000,240,360,40,"3.1",false,butcolor,24));   //unit 3, index 24 tru 31
   controls.push(new control(1000,290,360,40,"3.2",false,butcolor,25));   
