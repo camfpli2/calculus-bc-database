@@ -22,6 +22,7 @@ function refresher(){
 
 
 function yearHomeScreen(y){
+  adjustImageDimensions();
   background(230);
   fill(240);
   strokeWeight(1);
@@ -517,7 +518,6 @@ class control{
         }
         loadQuestions(parseInt(this.txt));
         console.log(questions);
-        adjustImageDimensions();
         yearHomeScreen(parseInt(this.txt));
       }
 
