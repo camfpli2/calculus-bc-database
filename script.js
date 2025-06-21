@@ -12,7 +12,10 @@ var skillIndexes=[[9,13],[14,23],[24,31],[32,35],[36,40],[41,46],[47,48],[49,50]
 var skillBoxInfo=[[80,300],[150,550],[220,450],[290,250],[360,300],[330,350],[500,130],[570,130],[380,330]];
 
 function refresher(){
-  //background(230);
+  background(230);
+  for(var s=0;s<controls.length;s++){
+    controls[s].drawit();
+  }
   fill(240);
   strokeWeight(1);
   stroke(bordercolor);
