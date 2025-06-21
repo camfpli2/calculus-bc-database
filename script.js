@@ -17,7 +17,7 @@ function refresher(){
   strokeWeight(1);
   stroke(bordercolor);
   rect(10,70,wdth-40,hgt-100,5);
-  image(questions[n],10,80);
+  image(questions[n],15,80);
 }
 
 
@@ -515,6 +515,7 @@ class control{
           controls[f].there=false;
         }
         loadQuestions(parseInt(this.txt));
+        adjustImageDimensions();
         yearHomeScreen(parseInt(this.txt));
       }
 
