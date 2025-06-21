@@ -515,6 +515,7 @@ class control{
           controls[f].there=false;
         }
         loadQuestions(parseInt(this.txt));
+        console.log(questions);
         adjustImageDimensions();
         yearHomeScreen(parseInt(this.txt));
       }
