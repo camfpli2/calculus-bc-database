@@ -306,17 +306,16 @@ function load2008(indexes) {
   else if(selectedUnit){
     for(let i=1;i<indexes.length+1;i++){
       if(indexes[i-1]<=27){
-        questions.push(loadImage('2008-NC-${i}.png'));
+        var f=indexes[i];
+        questions.push(loadImage('2008-NC-${f}.png'));
       }
       else{
-        var h=i+48
+        var h=indexes[i]+48;
         questions.push(loadImage('2008-C-${h}.png'));
       }
     }
     console.log(questions);
   }
-
-  
 }
 
  function load2012(){
