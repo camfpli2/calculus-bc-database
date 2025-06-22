@@ -310,7 +310,7 @@ function load2008(indexes) {
       }
       else{
         var h=i+48
-        questions.push(loadImage('2008-C-${i}.png'));
+        questions.push(loadImage('2008-C-${h}.png'));
       }
     }
     console.log(questions);
