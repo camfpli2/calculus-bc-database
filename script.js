@@ -502,6 +502,7 @@ class control{
             controls[b].rgb=butcolor;
             controls[b].there=false;
           }
+          whichUnitSelected=this.ind+1;
           selectedUnit=true;
           questionIndexes=queryUnit(this.ind+1);
           wholeSkillHomeScreen(this.ind);
