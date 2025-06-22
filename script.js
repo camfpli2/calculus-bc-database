@@ -120,7 +120,7 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     else if(ask===2012){load2012();}
     else if(ask===2008){load2008(all2008);}
   }
-  else if(number.IsInteger(ask)){   //user has clicked an entire unit
+  else if(Number.IsInteger(ask)){   //user has clicked an entire unit
     load2008(questionIndexes);
   }
 
