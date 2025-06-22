@@ -302,12 +302,12 @@ function load2008(indexes) {
   else if(selectedUnit){
     for(let i=1;i<indexes.length+1;i++){
       if(indexes[i-1]<=27){
-        var f=indexes[i];
+        var f=indexes[i-1]+1;
         console.log(f);
         questions.push(loadImage('2008-NC-${f}.png'));
       }
       else{
-        var h=indexes[i]+48;
+        var h=indexes[i-1]+48;
         console.log(h);
         questions.push(loadImage('2008-C-${h}.png'));
       }
