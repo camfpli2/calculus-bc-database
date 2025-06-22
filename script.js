@@ -20,6 +20,22 @@ function preload(){
 
 }
 
+
+function queryUnit(u){
+  var ar=[];
+  for (var y=0;y<questionData.length;y++){
+    if(floor(questionData[y][4])===u||floor(questionData[y][5])===u){
+      ar.push(y);
+    }
+    
+  }
+  console.log(ar);
+  
+
+
+  return ar;  //array of 2008(more later) indexes
+}
+
 function refresher(){
   background(230);
   for(var s=0;s<controls.length;s++){
@@ -547,6 +563,7 @@ class control{
             controls[b].rgb=butcolor;
             controls[b].there=false;
           }
+          queryUnit(this.ind+1);
           wholeSkillHomeScreen(this.ind);
         }
           
