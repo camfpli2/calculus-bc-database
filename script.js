@@ -17,7 +17,6 @@ var questionData=[];  //array of arrays, format: [year, NC/C, n:number of answer
 
 function preload(){
     data=loadTable("calc-data-for-database.csv",".csv");
-    getQuestionData();
 
 }
 
@@ -206,6 +205,8 @@ function setup(){
   controls.push(new control(740,5,60,60,"C",false,butcolor,"answer choice"));
   controls.push(new control(810,5,60,60,"D",false,butcolor,"answer choice"));
   controls.push(new control(880,5,60,60,"D",false,butcolor,"answer choice"));
+console.log(data);
+      getQuestionData();
 
 
   homeScreen();
