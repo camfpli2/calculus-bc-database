@@ -30,7 +30,7 @@ function getQuestionData(){
   var data=loadTable("calc-data-for-database.csv",".csv");
   var ii=data.getRowCount();
   for (var q=0;q<ii;q++){
-    questionData.push([getRow(q)]);
+    questionData.push([data.getRow(q)]);
   }
 }
 
