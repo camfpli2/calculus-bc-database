@@ -70,6 +70,7 @@ function getQuestionData(){
 
 function yearHomeScreen(y){
   background(230);
+  
   fill(240);
   strokeWeight(1);
   stroke(bordercolor);
