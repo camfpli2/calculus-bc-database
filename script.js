@@ -301,6 +301,7 @@ function load2008(indexes) {
     }
   }
   else if(selectedUnit){
+    console.log(indexes);
     for(let i=1;i<indexes.length+1;i++){
       if(indexes[i-1]<=27){
         var f=indexes[i-1]+1;
