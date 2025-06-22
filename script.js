@@ -5,7 +5,7 @@ var butcolor=[220, 200, 190];
 var selectcolor=[210,225,225];
 var textcolor=[25,55,66];
 var bordercolor=[35,35,200];
-var selectbordercolor=[200,35,35];
+var selectbordercolor=[200,25,35];
 var whichUnitSelected;
 var questions=[];
 var n=0;
