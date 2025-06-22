@@ -121,10 +121,11 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     else if(ask===2008){load2008(all2008);}
   }
   else if(Number.isInteger(ask)){   //user has clicked an entire unit
+    console.log(ask);
     load2008(questionIndexes);
   }
 
-  adjustImageDimensions();
+ // adjustImageDimensions();
 }
 
 
@@ -291,16 +292,30 @@ function adjustImageDimensions(){
 
 
 function load2008(indexes) {
-  
-  // Load "2008-NC-1.png" to "2008-NC-28.png"
-  for (let i = indexes[0]+1; i <= indexes[27]+1; i++) {
-    questions.push(loadImage(`2008-NC-${i}.png`));
+  if(selectedYear){
+    // Load "2008-NC-1.png" to "2008-NC-28.png"
+    for (let i = indexes[0]+1; i <= indexes[27]+1; i++) {
+      questions.push(loadImage(`2008-NC-${i}.png`));
+    }
+
+    // Load "2008-C-76.png" to "2008-C-92.png"
+    for (let i = indexes[28]+48; i <= indexes[44]+48; i++) {
+      questions.push(loadImage(`2008-C-${i}.png`));
+    }
+  }
+  else if(selectedUnit){
+    for(let i=1;i<indexes.length+1;i++){
+      if(indexes[i]<=28){
+        questions.push(loadImage('2008-NC-${i}.png'));
+      }
+      else{
+        var h=i+48
+        questions.push(loadImage('2008-C-${i}.png'));
+      }
+    }
   }
 
-  // Load "2008-C-76.png" to "2008-C-92.png"
-  for (let i = indexes[28]+48; i <= indexes[44]+48; i++) {
-    questions.push(loadImage(`2008-C-${i}.png`));
-  }
+  
 }
 
  function load2012(){
