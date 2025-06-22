@@ -36,7 +36,7 @@ function getQuestionData(){
   var tempcol0=data.getColumn(0);
   var col0=tempcol0.map(parseInt);
   var col1=data.getColumn(1);
-  var temp col2=data.getColumn(2);
+  var tempcol2=data.getColumn(2);
   var col2=tempcol2.map(parseInt);
   var col3=data.getColumn(3);
   var tempcol4=data.getColumn(4);
