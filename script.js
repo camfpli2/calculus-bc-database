@@ -189,10 +189,7 @@ function setup(){
   controls.push(new control(810,5,60,60,"D",false,butcolor,"answer choice"));
   controls.push(new control(880,5,60,60,"D",false,butcolor,"answer choice"));
 
-  
- // adjustImageDimensions();
-  // background(240);  
- // refresher();  refreshes background and goes to question
+
   getQuestionData();
   homeScreen();
 
