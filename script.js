@@ -34,22 +34,19 @@ function refresher(){
 
 function getQuestionData(){
   var ii=data.getRowCount();
-  var tempcol0=data.getColumn(0);
-  var col0=tempcol0.map(parseInt);
+  var col0=data.getColumn(0);
   console.log(col0);
   var col1=data.getColumn(1);
   console.log(col1);
-  var tempcol2=data.getColumn(2);
-  var col2=tempcol2.map(parseInt);
+  var col2=data.getColumn(2);
   console.log(col2);
   var col3=data.getColumn(3);
   console.log(col3);
-  var tempcol4=data.getColumn(4);
-  var tempcol5=data.getColumn(5);
-  var col4=tempcol4.map(parseFloat);
-  var col5=tempcol5.map(parseFloat);
+  var col4=data.getColumn(4);
+  var col5=data.getColumn(5);
+
   for(var c=0;c<ii;c++){
-    questionData.push([col0[c],col1[c],col2[c],col3[c],col4[c],col5[c]]);
+    questionData.push(parseInt([col0[c]),col1[c],parseInt(col2[c]),col3[c],parseFloat(col4[c]),parseFloat(col5[c]]));
   }
 
 
