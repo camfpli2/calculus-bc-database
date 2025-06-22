@@ -33,8 +33,18 @@ function refresher(){
 
 function getQuestionData(){
   var ii=data.getRowCount();
+  var tempArray=[];
+  var tempArray2=[];
+
   for (var q=0;q<ii;q++){
-    questionData.push([data.getRow(q)]);
+    tempArray.push(data.getRow(q)));
+    tempArray2=[];
+    for(var t=0;t<tempArray.length();t++){
+      if(t==0||t==2){tempArray2.push(tempArray[t].map(parseInt))}
+      else if(t==4||t==5){tempArray2.push(tempArray[t].map(parseFloat))}
+      else{tempArray2.push(tempArray(t))}
+    }
+    questionData.push(tempArray2);
   }
 }
 
