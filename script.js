@@ -1,7 +1,7 @@
 var wdth;
 var hgt;
 var controls=[];
-var butcolor=[220, 210, 190];
+var butcolor=[220, 210, 195];
 var selectcolor=[210,225,225];
 var textcolor=[25,55,66];
 var bordercolor=[35,35,200];
