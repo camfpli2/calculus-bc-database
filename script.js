@@ -6,6 +6,9 @@ var selectcolor=[210,225,225];
 var textcolor=[25,55,66];
 var bordercolor=[35,35,200];
 var selectbordercolor=[200,45,35];
+var selectedYear=false;
+var selectedUnit=false;
+var selectedSkill=false;
 var whichUnitSelected;
 var questions=[];
 var n=0;
@@ -468,6 +471,7 @@ class control{
             controls[b].rgb=butcolor;
             controls[b].there=false;
           }
+          selectedUnit=true;
           queryUnit(this.ind+1);
           wholeSkillHomeScreen(this.ind);
         }
@@ -502,6 +506,7 @@ class control{
         for(var f=0;f<controls.length;f++){
           controls[f].there=false;
         }
+        selectedYear=true;
         loadQuestions(parseInt(this.txt));
         yearHomeScreen(parseInt(this.txt));
       }
