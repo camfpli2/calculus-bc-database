@@ -122,7 +122,6 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     load2008(questionIndexes);
   }
 
- // adjustImageDimensions();
 }
 
 
@@ -299,6 +298,7 @@ function load2008(indexes) {
     for (let i = indexes[28]+48; i <= indexes[44]+48; i++) {
       questions.push(loadImage(`2008-C-${i}.png`));
     }
+    console.log(questions);
   }
   else if(selectedUnit){
     console.log(indexes);
