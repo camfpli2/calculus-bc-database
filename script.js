@@ -11,8 +11,10 @@ var selectedUnit=false;
 var selectedSkill=false;
 var whichUnitSelected;
 var questions=[];
+var questionIndexes=[];
 var n=0;
 var data;
+var all2008=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45];
 var skillIndexes=[[9,13],[14,23],[24,31],[32,35],[36,40],[41,46],[47,48],[49,50],[51,56]];
 var skillBoxInfo=[[80,300],[150,550],[220,450],[290,250],[360,300],[330,350],[500,130],[570,130],[380,330]];
 var questionData=[];  //array of arrays, format: [year, NC/C, n:number of answer choices, a:answer, skill1, skill2]
@@ -34,8 +36,6 @@ function queryUnit(u){
   }
   console.log(ar);
   
-
-
   return ar;  //array of 2008(more later) indexes
 }
 
@@ -73,7 +73,6 @@ function getQuestionData(){
 
 
 function yearHomeScreen(y){
-  //adjustImageDimensions();
   background(230);
   fill(240);
   strokeWeight(1);
@@ -98,7 +97,19 @@ function yearHomeScreen(y){
 }
 
 function wholeSkillHomeScreen(i){
-  background(240);
+  background(230);
+  fill(240);
+  strokeWeight(1);
+  stroke(bordercolor);
+  rect(5,70,wdth-30,hgt-100,5);
+  loadQuestions(whichUnitSelected);
+    for(var p=0;p<controls.length;p++){
+    if(controls[p].ind==="exam controller"||controls[p].ind==="answer choice"){
+      controls[p].there=true;
+      controls[p].drawit();
+    }
+  }
+  
 }
 
 function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal)
@@ -107,7 +118,10 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     else if(ask===2014){load2014();}
     else if(ask===2013){load2013();}
     else if(ask===2012){load2012();}
-    else if(ask===2008){load2008();}
+    else if(ask===2008){load2008(all2008);}
+  }
+  else if(number.IsInteger(ask)){   //user has clicked an entire unit
+    load2008(questionIndexes);
   }
 
   adjustImageDimensions();
@@ -276,14 +290,15 @@ function adjustImageDimensions(){
 
 
 
-function load2008() {
+function load2008(indexes) {
+  
   // Load "2008-NC-1.png" to "2008-NC-28.png"
-  for (let i = 1; i <= 28; i++) {
+  for (let i = indexes[0]+1; i <= indexes[27]+1; i++) {
     questions.push(loadImage(`2008-NC-${i}.png`));
   }
 
   // Load "2008-C-76.png" to "2008-C-92.png"
-  for (let i = 76; i <= 92; i++) {
+  for (let i = indexes[28]+48; i <= indexes[44]+48; i++) {
     questions.push(loadImage(`2008-C-${i}.png`));
   }
 }
@@ -472,7 +487,7 @@ class control{
             controls[b].there=false;
           }
           selectedUnit=true;
-          queryUnit(this.ind+1);
+          questionIndexes=queryUnit(this.ind+1);
           wholeSkillHomeScreen(this.ind);
         }
           
