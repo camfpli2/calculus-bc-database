@@ -37,7 +37,7 @@ function getQuestionData(){
   var tempArray2=[];
 
   for (var q=0;q<ii;q++){
-    tempArray.push(data.getRow(q)));
+    tempArray.push(data.getRow(q));
     tempArray2=[];
     for(var t=0;t<tempArray.length();t++){
       if(t==0||t==2){tempArray2.push(tempArray[t].map(parseInt))}
