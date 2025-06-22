@@ -46,7 +46,7 @@ function getQuestionData(){
   var col5=data.getColumn(5);
 
   for(var c=0;c<ii;c++){
-    questionData.push(parseInt([col0[c]),col1[c],parseInt(col2[c]),col3[c],parseFloat(col4[c]),parseFloat(col5[c]]));
+    questionData.push([parseInt(col0[c]),col1[c],parseInt(col2[c]),col3[c],parseFloat(col4[c]),parseFloat(col5[c])]);
   }
 
 
