@@ -35,10 +35,14 @@ function getQuestionData(){
   var ii=data.getRowCount();
   var tempcol0=data.getColumn(0);
   var col0=tempcol0.map(parseInt);
+  console.log(col0);
   var col1=data.getColumn(1);
+  console.log(col1);
   var tempcol2=data.getColumn(2);
   var col2=tempcol2.map(parseInt);
+  console.log(col2);
   var col3=data.getColumn(3);
+  console.log(col3);
   var tempcol4=data.getColumn(4);
   var tempcol5=data.getColumn(5);
   var col4=tempcol4.map(parseFloat);
