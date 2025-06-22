@@ -26,6 +26,14 @@ function refresher(){
   image(questions[n],10,80);
 }
 
+function getQuestionData(){
+  var data=loadTable("calc-data-for-database.csv",".csv");
+  var ii=data.getRowCount();
+  for (var q=0;q<ii;q++){
+    questionData.push([getRow(q)]);
+  }
+}
+
 
 function yearHomeScreen(y){
   //adjustImageDimensions();
@@ -181,6 +189,7 @@ function setup(){
  // adjustImageDimensions();
   // background(240);  
  // refresher();  refreshes background and goes to question
+  getQuestionData();
   homeScreen();
 
 }
