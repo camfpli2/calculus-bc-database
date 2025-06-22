@@ -33,19 +33,21 @@ function refresher(){
 
 function getQuestionData(){
   var ii=data.getRowCount();
-  var tempArray=[];
-  var tempArray2=[];
-
-  for (var q=0;q<ii;q++){
-    tempArray.push(data.getRow(q));
-    tempArray2=[];
-    for(var t=0;t<data.getColumnCount();t++){
-      if(t==0||t==2){tempArray2.push(parseInt(tempArray[t]))}
-      else if(t==4||t==5){tempArray2.push(parseFloat(tempArray[t]))}
-      else{tempArray2.push(tempArray[t])}
-    }
-    questionData.push(tempArray2);
+  var tempcol0=data.getColumn(0);
+  var col0=tempcol0.map(parseInt);
+  var col1=data.getColumn(1);
+  var temp col2=data.getColumn(2);
+  var col2=tempcol2.map(parseInt);
+  var col3=data.getColumn(3);
+  var tempcol4=data.getColumn(4);
+  var tempcol5=data.getColumn(5);
+  var col4=tempcol4.map(parseFloat);
+  var col5=tempcol5.map(parseFloat);
+  for(var c=0;c<ii;c++){
+    questionData.push([col0[c],col1[c],col2[c],col3[c],col4[c],col5[c]]);
   }
+
+
 }
 
 
