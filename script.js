@@ -287,34 +287,31 @@ function adjustImageDimensions(){
 
 
 function load2008(indexes) {
-  if(selectedYear){
-    // Load "2008-NC-1.png" to "2008-NC-28.png"
-    for (let i = indexes[0]+1; i <= indexes[27]+1; i++) {
-      questions.push(loadImage(`2008-NC-${i}.png`));
-    }
+  // if(selectedYear){
+  //   // Load "2008-NC-1.png" to "2008-NC-28.png"
+  //   for (let i = indexes[0]+1; i <= indexes[27]+1; i++) {
+  //     questions.push(loadImage(`2008-NC-${i}.png`));
+  //   }
 
-    // Load "2008-C-76.png" to "2008-C-92.png"
-    for (let i = indexes[28]+48; i <= indexes[44]+48; i++) {
-      questions.push(loadImage(`2008-C-${i}.png`));
-    }
-    console.log(questions);
-  }
-  else if(selectedUnit){
+  //   // Load "2008-C-76.png" to "2008-C-92.png"
+  //   for (let i = indexes[28]+48; i <= indexes[44]+48; i++) {
+  //     questions.push(loadImage(`2008-C-${i}.png`));
+  //   }
+  // }
+  //else if(selectedUnit){
     console.log(indexes);
     for(let i=1;i<indexes.length+1;i++){
       if(indexes[i-1]<=27){
         var f=indexes[i-1]+1;
-        console.log(f);
         questions.push(loadImage(`2008-NC-${f}.png`));
       }
       else{
         var h=indexes[i-1]+48;
-        console.log(h);
         questions.push(loadImage(`2008-C-${h}.png`));
       }
     }
     console.log(questions);
-  }
+ // }
 }
 
  function load2012(){
