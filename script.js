@@ -313,6 +313,7 @@ function load2008(indexes) {
         questions.push(loadImage('2008-C-${i}.png'));
       }
     }
+    console.log(questions);
   }
 
   
