@@ -54,13 +54,9 @@ function refresher(){
 function getQuestionData(){
   var ii=data.getRowCount();
   var col0=data.getColumn(0);
-  console.log(col0);
   var col1=data.getColumn(1);
-  console.log(col1);
   var col2=data.getColumn(2);
-  console.log(col2);
   var col3=data.getColumn(3);
-  console.log(col3);
   var col4=data.getColumn(4);
   var col5=data.getColumn(5);
 
@@ -307,10 +303,12 @@ function load2008(indexes) {
     for(let i=1;i<indexes.length+1;i++){
       if(indexes[i-1]<=27){
         var f=indexes[i];
+        console.log(f);
         questions.push(loadImage('2008-NC-${f}.png'));
       }
       else{
         var h=indexes[i]+48;
+        console.log(h);
         questions.push(loadImage('2008-C-${h}.png'));
       }
     }
