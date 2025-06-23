@@ -135,6 +135,7 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     load2014(questionIndexes14);
     load2015(questionIndexes15);
     load2016(questionIndexes16);
+    load2017(questionIndexes17);
     
   }
 
