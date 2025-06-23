@@ -382,12 +382,12 @@ function load2016(indexes) {
 
 function load2017(indexes) {
     for(let i=1;i<indexes.length+1;i++){
-      if(indexes[i-1]<=27){
+      if(indexes[i-1]<=29){
         var f=indexes[i-1]+1;
         questions.push(loadImage(`2017-NC-${f}.png`));
       }
       else{
-        var h=indexes[i-1]+48;
+        var h=indexes[i-1]+46;
         questions.push(loadImage(`2017-C-${h}.png`));
       }
     }
