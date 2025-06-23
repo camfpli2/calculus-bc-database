@@ -12,10 +12,7 @@ var selectedSkill=false;
 var whichUnitSelected;
 var questions=[];
 var questionIndexes08=[];  // write these in the same order as questionData rows
-var questionIndexes12=[];
-var questionIndexes13=[];
-var questionIndexes14=[];
-var questionIndexes15=[];
+var questionIndexes12=[]; var questionIndexes13=[]; var questionIndexes14=[]; var questionIndexes15=[]; var questionIndexes16=[]; var questionIndexes17=[];
 
 var n=0;
 var data;
@@ -41,6 +38,8 @@ function queryUnit(u){
       else if(questionData[y][0]===2013){questionIndexes13.push(y-90)}  //2013 has 45 elements (135 cumulative)
       else if(questionData[y][0]===2014){questionIndexes14.push(y-135)}  //2014 has 45 elements (180 cumulative)
       else if(questionData[y][0]===2015){questionIndexes15.push(y-180)}  //2015 has 45 elements (225 cumulative)
+      else if(questionData[y][0]===2016){questionIndexes16.push(y-225)}  //2016 has 45 elements (270 cumulative)
+      else if(questionData[y][0]===2015){questionIndexes17.push(y-270)}  //2017 has 45 elements (315 cumulative)
     }
     
   }
@@ -369,18 +368,32 @@ function load2015(indexes) {
     }
 }
 
+function load2016(indexes) {
+    for(let i=1;i<indexes.length+1;i++){
+      if(indexes[i-1]<=27){
+        var f=indexes[i-1]+1;
+        questions.push(loadImage(`2016-NC-${f}.png`));
+      }
+      else{
+        var h=indexes[i-1]+48;
+        questions.push(loadImage(`2016-C-${h}.png`));
+      }
+    }
+}
 
-// function load2015() {
-//   // Load "2015-NC-1.png" to "2015-NC-28.png"
-//   for (let i = 1; i <= 28; i++) {
-//     questions.push(loadImage(`2015-NC-${i}.png`));
-//   }
+function load2017(indexes) {
+    for(let i=1;i<indexes.length+1;i++){
+      if(indexes[i-1]<=27){
+        var f=indexes[i-1]+1;
+        questions.push(loadImage(`2017-NC-${f}.png`));
+      }
+      else{
+        var h=indexes[i-1]+48;
+        questions.push(loadImage(`2017-C-${h}.png`));
+      }
+    }
+}
 
-//   // Load "2015-C-76.png" to "2015-C-92.png"
-//   for (let i = 76; i <= 92; i++) {
-//     questions.push(loadImage(`2015-C-${i}.png`));
-//   }
-// }
 
 
 
