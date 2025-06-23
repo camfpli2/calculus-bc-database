@@ -186,35 +186,35 @@ function setup(){
   controls.push(new control(1000,540,360,40,"3.7 Linearization and Differentials",false,butcolor,30));   
   controls.push(new control(1000,590,360,40,"3.8 Related Rates",false,butcolor,31));   
 
-  controls.push(new control(1000,310,360,40,"4.1",false,butcolor,32));   //unit 4, index 32 thru 35
-  controls.push(new control(1000,360,360,40,"4.2",false,butcolor,33));
-  controls.push(new control(1000,410,360,40,"4.3",false,butcolor,34));
-  controls.push(new control(1000,460,360,40,"4.4",false,butcolor,35));
+  controls.push(new control(1000,310,360,40,"4.1 Antiderivatives and Indefinite Integration",false,butcolor,32));   //unit 4, index 32 thru 35
+  controls.push(new control(1000,360,360,40,"4.2 Numeric Definite Integrals",false,butcolor,33));
+  controls.push(new control(1000,410,360,40,"4.3 The Fundamental Theorem Of Calculus I & II and MVT II",false,butcolor,34));
+  controls.push(new control(1000,460,360,40,"4.4 Integration by u-Substitution",false,butcolor,35));
 
-  controls.push(new control(1000,380,360,40,"5.1",false,butcolor,36));   //unit 5, index 36 thru 40
-  controls.push(new control(1000,430,360,40,"5.2",false,butcolor,37));
-  controls.push(new control(1000,480,360,40,"5.3",false,butcolor,38));
-  controls.push(new control(1000,530,360,40,"5.4",false,butcolor,39));
-  controls.push(new control(1000,580,360,40,"5.4",false,butcolor,40));
+  controls.push(new control(1000,380,360,40,"5.1 Separable Differential Equations",false,butcolor,36));   //unit 5, index 36 thru 40
+  controls.push(new control(1000,430,360,40,"5.2 Slope Fields",false,butcolor,37));
+  controls.push(new control(1000,480,360,40,"5.3 Euler's Method",false,butcolor,38));
+  controls.push(new control(1000,530,360,40,"5.4 Integration by Parts",false,butcolor,39));
+  controls.push(new control(1000,580,360,40,"5.5 Partial Fractions & Logistic Growth ",false,butcolor,40));
 
-  controls.push(new control(1000,350,360,40,"6.1",false,butcolor,41));   //unit 6, index 41 thru 46
-  controls.push(new control(1000,400,360,40,"6.2",false,butcolor,42));
-  controls.push(new control(1000,450,360,40,"6.3",false,butcolor,43));
-  controls.push(new control(1000,500,360,40,"6.4",false,butcolor,44));
-  controls.push(new control(1000,550,360,40,"6.5",false,butcolor,45));
-  controls.push(new control(1000,600,360,40,"6.6",false,butcolor,46));
+  controls.push(new control(1000,350,360,40,"6.1 Integral as Net Change",false,butcolor,41));   //unit 6, index 41 thru 46
+  controls.push(new control(1000,400,360,40,"6.2 Area between Curves",false,butcolor,42));
+  controls.push(new control(1000,450,360,40,"6.3 Volumes",false,butcolor,43));
+  controls.push(new control(1000,500,360,40,"6.4 Arc Length",false,butcolor,44));
+  controls.push(new control(1000,550,360,40,"6.5 L'Hôpital's Rule and Indeterminate Forms",false,butcolor,45));
+  controls.push(new control(1000,600,360,40,"6.6 Improper Integrals",false,butcolor,46));
 
-  controls.push(new control(1000,520,360,40,"7.1",false,butcolor,47));   //unit 7, index 47 thru 48
-  controls.push(new control(1000,570,360,40,"7.2",false,butcolor,48));
+  controls.push(new control(1000,520,360,40,"7.1 Intro to Parametric & Vector Calculus",false,butcolor,47));   //unit 7, index 47 thru 48
+  controls.push(new control(1000,570,360,40,"7.2 Parametric & Vector Accumulation",false,butcolor,48));
 
-  controls.push(new control(1000,590,360,40,"8.1",false,butcolor,49));   //unit 8, index 49 thru 50
-  controls.push(new control(1000,640,360,40,"8.2",false,butcolor,50));
+  controls.push(new control(1000,590,360,40,"8.1 Polar Intro & Derivatives",false,butcolor,49));   //unit 8, index 49 thru 50
+  controls.push(new control(1000,640,360,40,"8.2 Polar Area",false,butcolor,50));
 
-  controls.push(new control(1000,400,360,40,"9.1",false,butcolor,51));   //unit 9, index 51 thru 56
-  controls.push(new control(1000,450,360,40,"9.2",false,butcolor,52));
-  controls.push(new control(1000,500,360,40,"9.3",false,butcolor,53));
-  controls.push(new control(1000,550,360,40,"9.4",false,butcolor,54));
-  controls.push(new control(1000,600,360,40,"9.5",false,butcolor,55));
+  controls.push(new control(1000,400,360,40,"9.1 Infinite Sequences & Series",false,butcolor,51));   //unit 9, index 51 thru 56
+  controls.push(new control(1000,450,360,40,"9.2 Taylor Polynomials",false,butcolor,52));
+  controls.push(new control(1000,500,360,40,"9.3 Power Series I: Taylor & Maclaurin Series",false,butcolor,53));
+  controls.push(new control(1000,550,360,40,"9.4 Power Series II: Geometric Series",false,butcolor,54));
+  controls.push(new control(1000,600,360,40,"9.5 Lagrange Error Bound",false,butcolor,55));
   controls.push(new control(1000,650,360,40,"9.6",false,butcolor,56));
   
   
