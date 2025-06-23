@@ -119,13 +119,14 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
   if(ask>1000){   //user has clicked a year
     if(ask===2015){load2015();}
     else if(ask===2014){load2014();}
-    else if(ask===2013){load2013();}
+    else if(ask===2013){load2013(all2013);}
     else if(ask===2012){load2012(all2012);}
     else if(ask===2008){load2008(all2008);}
   }
   else if(Number.isInteger(ask)){   //user has clicked an entire unit
     load2008(questionIndexes08);
     load2012(questionIndexes12);
+    load2013(questionIndexes13);
     
   }
 
@@ -320,103 +321,67 @@ function load2012(indexes) {
     }
 }
 
- // function load2012(){
- //    questions.push(loadImage("2012-NC-1.png")); 
- //    questions.push(loadImage("2012-NC-2.png")); 
- //    questions.push(loadImage("2012-NC-3.png")); 
- //    questions.push(loadImage("2012-NC-4.png")); 
- //    questions.push(loadImage("2012-NC-5.png")); 
- //    questions.push(loadImage("2012-NC-6.png")); 
- //    questions.push(loadImage("2012-NC-7.png")); 
- //    questions.push(loadImage("2012-NC-8.png")); 
- //    questions.push(loadImage("2012-NC-9.png")); 
- //    questions.push(loadImage("2012-NC-10.png")); 
- //    questions.push(loadImage("2012-NC-11.png")); 
- //    questions.push(loadImage("2012-NC-12.png")); 
- //    questions.push(loadImage("2012-NC-13.png")); 
- //    questions.push(loadImage("2012-NC-14.png")); 
- //    questions.push(loadImage("2012-NC-15.png")); 
- //    questions.push(loadImage("2012-NC-16.png")); 
- //    questions.push(loadImage("2012-NC-17.png")); 
- //    questions.push(loadImage("2012-NC-18.png")); 
- //    questions.push(loadImage("2012-NC-19.png")); 
- //    questions.push(loadImage("2012-NC-20.png")); 
- //    questions.push(loadImage("2012-NC-21.png")); 
- //    questions.push(loadImage("2012-NC-22.png")); 
- //    questions.push(loadImage("2012-NC-23.png")); 
- //    questions.push(loadImage("2012-NC-24.png")); 
- //    questions.push(loadImage("2012-NC-25.png")); 
- //    questions.push(loadImage("2012-NC-26.png")); 
- //    questions.push(loadImage("2012-NC-27.png")); 
- //    questions.push(loadImage("2012-NC-28.png")); 
-
- //    questions.push(loadImage("2012-C-76.png")); 
- //    questions.push(loadImage("2012-C-77.png")); 
- //    questions.push(loadImage("2012-C-78.png")); 
- //    questions.push(loadImage("2012-C-79.png")); 
- //    questions.push(loadImage("2012-C-80.png")); 
- //    questions.push(loadImage("2012-C-81.png")); 
- //    questions.push(loadImage("2012-C-82.png")); 
- //    questions.push(loadImage("2012-C-83.png")); 
- //    questions.push(loadImage("2012-C-84.png")); 
- //    questions.push(loadImage("2012-C-85.png")); 
- //    questions.push(loadImage("2012-C-86.png")); 
- //    questions.push(loadImage("2012-C-87.png")); 
- //    questions.push(loadImage("2012-C-88.png")); 
- //    questions.push(loadImage("2012-C-89.png")); 
- //    questions.push(loadImage("2012-C-90.png")); 
- //    questions.push(loadImage("2012-C-91.png")); 
- //    questions.push(loadImage("2012-C-92.png")); 
- // }
-
-function load2013(){
-    questions.push(loadImage("2013-NC-1.png")); 
-    questions.push(loadImage("2013-NC-2.png")); 
-    questions.push(loadImage("2013-NC-3.png")); 
-    questions.push(loadImage("2013-NC-4.png")); 
-    questions.push(loadImage("2013-NC-5.png")); 
-    questions.push(loadImage("2013-NC-6.png")); 
-    questions.push(loadImage("2013-NC-7.png")); 
-    questions.push(loadImage("2013-NC-8.png")); 
-    questions.push(loadImage("2013-NC-9.png")); 
-    questions.push(loadImage("2013-NC-10.png")); 
-    questions.push(loadImage("2013-NC-11.png")); 
-    questions.push(loadImage("2013-NC-12.png")); 
-    questions.push(loadImage("2013-NC-13.png")); 
-    questions.push(loadImage("2013-NC-14.png")); 
-    questions.push(loadImage("2013-NC-15.png")); 
-    questions.push(loadImage("2013-NC-16.png")); 
-    questions.push(loadImage("2013-NC-17.png")); 
-    questions.push(loadImage("2013-NC-18.png")); 
-    questions.push(loadImage("2013-NC-19.png")); 
-    questions.push(loadImage("2013-NC-20.png")); 
-    questions.push(loadImage("2013-NC-21.png")); 
-    questions.push(loadImage("2013-NC-22.png")); 
-    questions.push(loadImage("2013-NC-23.png")); 
-    questions.push(loadImage("2013-NC-24.png")); 
-    questions.push(loadImage("2013-NC-25.png")); 
-    questions.push(loadImage("2013-NC-26.png")); 
-    questions.push(loadImage("2013-NC-27.png")); 
-    questions.push(loadImage("2013-NC-28.png"));
-      
-    questions.push(loadImage("2013-C-76.png")); 
-    questions.push(loadImage("2013-C-77.png")); 
-    questions.push(loadImage("2013-C-78.png")); 
-    questions.push(loadImage("2013-C-79.png")); 
-    questions.push(loadImage("2013-C-80.png")); 
-    questions.push(loadImage("2013-C-81.png")); 
-    questions.push(loadImage("2013-C-82.png")); 
-    questions.push(loadImage("2013-C-83.png")); 
-    questions.push(loadImage("2013-C-84.png")); 
-    questions.push(loadImage("2013-C-85.png")); 
-    questions.push(loadImage("2013-C-86.png")); 
-    questions.push(loadImage("2013-C-87.png")); 
-    questions.push(loadImage("2013-C-88.png")); 
-    questions.push(loadImage("2013-C-89.png")); 
-    questions.push(loadImage("2013-C-90.png")); 
-    questions.push(loadImage("2013-C-91.png")); 
-    questions.push(loadImage("2013-C-92.png")); 
+function load2013(indexes) {
+    for(let i=1;i<indexes.length+1;i++){
+      if(indexes[i-1]<=27){
+        var f=indexes[i-1]+1;
+        questions.push(loadImage(`2013-NC-${f}.png`));
+      }
+      else{
+        var h=indexes[i-1]+48;
+        questions.push(loadImage(`2013-C-${h}.png`));
+      }
+    }
 }
+
+// function load2013(){
+//     questions.push(loadImage("2013-NC-1.png")); 
+//     questions.push(loadImage("2013-NC-2.png")); 
+//     questions.push(loadImage("2013-NC-3.png")); 
+//     questions.push(loadImage("2013-NC-4.png")); 
+//     questions.push(loadImage("2013-NC-5.png")); 
+//     questions.push(loadImage("2013-NC-6.png")); 
+//     questions.push(loadImage("2013-NC-7.png")); 
+//     questions.push(loadImage("2013-NC-8.png")); 
+//     questions.push(loadImage("2013-NC-9.png")); 
+//     questions.push(loadImage("2013-NC-10.png")); 
+//     questions.push(loadImage("2013-NC-11.png")); 
+//     questions.push(loadImage("2013-NC-12.png")); 
+//     questions.push(loadImage("2013-NC-13.png")); 
+//     questions.push(loadImage("2013-NC-14.png")); 
+//     questions.push(loadImage("2013-NC-15.png")); 
+//     questions.push(loadImage("2013-NC-16.png")); 
+//     questions.push(loadImage("2013-NC-17.png")); 
+//     questions.push(loadImage("2013-NC-18.png")); 
+//     questions.push(loadImage("2013-NC-19.png")); 
+//     questions.push(loadImage("2013-NC-20.png")); 
+//     questions.push(loadImage("2013-NC-21.png")); 
+//     questions.push(loadImage("2013-NC-22.png")); 
+//     questions.push(loadImage("2013-NC-23.png")); 
+//     questions.push(loadImage("2013-NC-24.png")); 
+//     questions.push(loadImage("2013-NC-25.png")); 
+//     questions.push(loadImage("2013-NC-26.png")); 
+//     questions.push(loadImage("2013-NC-27.png")); 
+//     questions.push(loadImage("2013-NC-28.png"));
+      
+//     questions.push(loadImage("2013-C-76.png")); 
+//     questions.push(loadImage("2013-C-77.png")); 
+//     questions.push(loadImage("2013-C-78.png")); 
+//     questions.push(loadImage("2013-C-79.png")); 
+//     questions.push(loadImage("2013-C-80.png")); 
+//     questions.push(loadImage("2013-C-81.png")); 
+//     questions.push(loadImage("2013-C-82.png")); 
+//     questions.push(loadImage("2013-C-83.png")); 
+//     questions.push(loadImage("2013-C-84.png")); 
+//     questions.push(loadImage("2013-C-85.png")); 
+//     questions.push(loadImage("2013-C-86.png")); 
+//     questions.push(loadImage("2013-C-87.png")); 
+//     questions.push(loadImage("2013-C-88.png")); 
+//     questions.push(loadImage("2013-C-89.png")); 
+//     questions.push(loadImage("2013-C-90.png")); 
+//     questions.push(loadImage("2013-C-91.png")); 
+//     questions.push(loadImage("2013-C-92.png")); 
+// }
 
 function load2014(){
     questions.push(loadImage("2014-NC-1.png")); 
