@@ -123,7 +123,8 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     else if(ask===2008){load2008(all2008);}
   }
   else if(Number.isInteger(ask)){   //user has clicked an entire unit
-    load2008(questionIndexes);
+    load2008(questionIndexes08);
+    
   }
 
 }
