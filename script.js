@@ -60,7 +60,8 @@ function refresher(){
   rect(5,70,wdth-30,hgt-100,5);
   image(questions[n],10,80);
   fill(0);
-  text(n+1+" of "+questions.length,800,30);
+  textSize(20);
+  text(n+1+" of "+questions.length,1000,30);
 }
 
 function getQuestionData(){
