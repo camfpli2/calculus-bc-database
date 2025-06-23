@@ -53,12 +53,14 @@ function refresher(){
   for(var s=0;s<controls.length;s++){
     controls[s].drawit();
   }
-  text(n+1+" of "+questions.length,800,30);
+
   fill(240);
   strokeWeight(1);
   stroke(bordercolor);
   rect(5,70,wdth-30,hgt-100,5);
   image(questions[n],10,80);
+  fill(0);
+  text(n+1+" of "+questions.length,800,30);
 }
 
 function getQuestionData(){
