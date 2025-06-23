@@ -34,7 +34,6 @@ function preload(){
 
 
 function queryUnit(u){
-  var ar=[];
   for (var y=0;y<questionData.length;y++){
     if(floor(questionData[y][4])===u||floor(questionData[y][5])===u){
       if(questionData[y][0]===2008){questionIndexes08.push(y)}  //2008 has 45 elements
@@ -90,7 +89,7 @@ function yearHomeScreen(y){
   stroke(bordercolor);
   rect(5,70,wdth-30,hgt-100,5);
   for(var p=0;p<controls.length;p++){
-    if(controls[p].ind==="exam controller"||controls[p].ind==="answer choice"){
+    if(controls[p].ind==="Start"){
       controls[p].there=true;
       controls[p].drawit();
     }
@@ -246,16 +245,16 @@ function setup(){
   controls.push(new control(250,570,120,60,"2018",true,butcolor,"year"));
   controls.push(new control(250,640,120,60,"2019",true,butcolor,"year"));
   
-  controls.push(new control(5,5,120,60,"Home",false,butcolor,"exam controller"));
-  controls.push(new control(130,5,120,60,"Previous",false,butcolor,"exam controller"));
-  controls.push(new control(255,5,120,60,"Next",false,butcolor,"exam controller"));
-  controls.push(new control(385,5,120,60,"Start",false,butcolor,"exam controller"));
+  //controls.push(new control(5,5,120,60,"Home",false,butcolor,"exam controller"));
+  controls.push(new control(70,5,120,60,"Previous",false,butcolor,"exam controller"));
+  controls.push(new control(200,5,120,60,"Next",false,butcolor,"exam controller"));
+  controls.push(new control(650,500,130,70,"Start",false,butcolor,"exam controller"));
 
   controls.push(new control(600,5,60,60,"A",false,butcolor,"answer choice"));
   controls.push(new control(670,5,60,60,"B",false,butcolor,"answer choice"));
   controls.push(new control(740,5,60,60,"C",false,butcolor,"answer choice"));
   controls.push(new control(810,5,60,60,"D",false,butcolor,"answer choice"));
-  controls.push(new control(880,5,60,60,"D",false,butcolor,"answer choice"));
+  controls.push(new control(880,5,60,60,"E",false,butcolor,"answer choice"));
 console.log(data);
       getQuestionData();
 
@@ -443,7 +442,7 @@ class control{
           wholeSkillHomeScreen(this.ind);
         }
           
-        else{
+        else{                          //user selects a unit for 1st time
         for(var k=0;k<9;k++){
           controls[k].rgb=butcolor;
         }
@@ -488,8 +487,14 @@ class control{
         refresher();
       }
       else if(this.txt==="Start"){
-        adjustImageDimensions();
+        for(var k=0;k<controls.length;k++){
+          if(controls[k].ind==="exam controller||controls[k].ind==="answer choice")
+          {
+            this.there=true;
+          }
+        }
         this.there=false;
+        adjustImageDimensions();
         refresher();
       }
     }
