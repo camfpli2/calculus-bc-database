@@ -53,6 +53,7 @@ function refresher(){
   for(var s=0;s<controls.length;s++){
     controls[s].drawit();
   }
+  text(n+1+" of "+questions.length,800,30);
   fill(240);
   strokeWeight(1);
   stroke(bordercolor);
