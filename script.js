@@ -21,6 +21,7 @@ var n=0;
 var data;
 var all2008=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44];
 var all2012=all2008;
+var all2013=all2008;
 var skillIndexes=[[9,13],[14,23],[24,31],[32,35],[36,40],[41,46],[47,48],[49,50],[51,56]];
 var skillBoxInfo=[[80,300],[150,550],[220,450],[290,250],[360,300],[330,350],[500,130],[570,130],[380,330]];
 var questionData=[];  //array of arrays, format: [year, NC/C, n:number of answer choices, a:answer, skill1, skill2]
@@ -37,7 +38,8 @@ function queryUnit(u){
   for (var y=0;y<questionData.length;y++){
     if(floor(questionData[y][4])===u||floor(questionData[y][5])===u){
       if(questionData[y][0]===2008){questionIndexes08.push(y)}  //2008 has 45 elements
-      else if(questionData[y][0]===2012){questionIndexes12.push(y-45)}  //2012 has 
+      else if(questionData[y][0]===2012){questionIndexes12.push(y-45)}  //2012 has 45 elements (90 cummulative)
+      else if(questionData[y][0]===2013){questionIndexes13.push(y-90)}  //2013 has 45 elements (135 cumulative)
     }
     
   }
