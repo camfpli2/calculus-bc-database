@@ -128,6 +128,7 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     else if(ask===2013){load2013(all2013);}
     else if(ask===2012){load2012(all2012);}
     else if(ask===2008){load2008(all2008);}
+    else if(ask===2016){load2016(all2016);}
   }
   else if(Number.isInteger(ask)){   //user has clicked an entire unit
     load2008(questionIndexes08);
