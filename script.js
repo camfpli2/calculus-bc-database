@@ -1,3 +1,7 @@
+//each new exam after importing images:   1. var all-exam year    2. var questionIndexes-exam year  3.  another else if on line 40 and 130
+//                                        4. another load on line 140
+//                                        5. write the load function near line 400
+
 var wdth;
 var hgt;
 var controls=[];
@@ -13,11 +17,11 @@ var whichUnitSelected;
 var questions=[];
 var questionIndexes08=[];  // write these in the same order as questionData rows
 var questionIndexes12=[]; var questionIndexes13=[]; var questionIndexes14=[]; var questionIndexes15=[]; var questionIndexes16=[]; var questionIndexes17=[];
-
+var questionIndexes98=[];
 var n=0;
 var data;
 var all2008=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44];
-var all2012=all2008; var all2013=all2008; var all2014=all2008;  var all2015=all2008; var all2016=all2008; var all2017=all2008;
+var all2012=all2008; var all2013=all2008; var all2014=all2008;  var all2015=all2008; var all2016=all2008; var all2017=all2008; var all1998=all2008;
 var skillIndexes=[[9,13],[14,23],[24,31],[32,35],[36,40],[41,46],[47,48],[49,50],[51,56]];
 var skillBoxInfo=[[80,300],[150,550],[220,450],[290,250],[360,300],[330,350],[500,130],[570,130],[380,330]];
 var questionData=[];  //array of arrays, format: [year, NC/C, n:number of answer choices, a:answer, skill1, skill2]
@@ -40,6 +44,7 @@ function queryUnit(u){
       else if(questionData[y][0]===2015){questionIndexes15.push(y-180)}  //2015 has 45 elements (225 cumulative)
       else if(questionData[y][0]===2016){questionIndexes16.push(y-225)}  //2016 has 45 elements (270 cumulative)
       else if(questionData[y][0]===2017){questionIndexes17.push(y-270)}  //2017 has 45 elements (315 cumulative)
+      else if(questionData[y][0]===1998){questionIndexes98.push(y-315)}  //1998 has 45 elements (360 cumulative)
     }    
   }
 }
@@ -127,6 +132,7 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     else if(ask===2008){load2008(all2008);}
     else if(ask===2016){load2016(all2016);}
     else if(ask===2017){load2017(all2017);}
+    else if(ask===1998){load1998(all1998);}
   }
   else if(Number.isInteger(ask)){   //user has clicked an entire unit
     load2008(questionIndexes08);
@@ -136,6 +142,7 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     load2015(questionIndexes15);
     load2016(questionIndexes16);
     load2017(questionIndexes17);
+    load1998(questionIndexes98);
     
   }
 
@@ -395,7 +402,18 @@ function load2017(indexes) {
     }
 }
 
-
+function load1998(indexes) {
+    for(let i=1;i<indexes.length+1;i++){
+      if(indexes[i-1]<=27){
+        var f=indexes[i-1]+1;
+        questions.push(loadImage(`1998-NC-${f}.png`));
+      }
+      else{
+        var h=indexes[i-1]+48;
+        questions.push(loadImage(`1998-C-${h}.png`));
+      }
+    }
+}
 
 
 function activateUnit(ind){
