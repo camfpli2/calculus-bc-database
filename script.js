@@ -20,8 +20,7 @@ var questionIndexes15=[];
 var n=0;
 var data;
 var all2008=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44];
-var all2012=all2008;
-var all2013=all2008;
+var all2012=all2008; var all2013=all2008; var all2014=all2008;  var all2015=all2008;
 var skillIndexes=[[9,13],[14,23],[24,31],[32,35],[36,40],[41,46],[47,48],[49,50],[51,56]];
 var skillBoxInfo=[[80,300],[150,550],[220,450],[290,250],[360,300],[330,350],[500,130],[570,130],[380,330]];
 var questionData=[];  //array of arrays, format: [year, NC/C, n:number of answer choices, a:answer, skill1, skill2]
@@ -337,116 +336,44 @@ function load2013(indexes) {
     }
 }
 
-// function load2013(){
-//     questions.push(loadImage("2013-NC-1.png")); 
-//     questions.push(loadImage("2013-NC-2.png")); 
-//     questions.push(loadImage("2013-NC-3.png")); 
-//     questions.push(loadImage("2013-NC-4.png")); 
-//     questions.push(loadImage("2013-NC-5.png")); 
-//     questions.push(loadImage("2013-NC-6.png")); 
-//     questions.push(loadImage("2013-NC-7.png")); 
-//     questions.push(loadImage("2013-NC-8.png")); 
-//     questions.push(loadImage("2013-NC-9.png")); 
-//     questions.push(loadImage("2013-NC-10.png")); 
-//     questions.push(loadImage("2013-NC-11.png")); 
-//     questions.push(loadImage("2013-NC-12.png")); 
-//     questions.push(loadImage("2013-NC-13.png")); 
-//     questions.push(loadImage("2013-NC-14.png")); 
-//     questions.push(loadImage("2013-NC-15.png")); 
-//     questions.push(loadImage("2013-NC-16.png")); 
-//     questions.push(loadImage("2013-NC-17.png")); 
-//     questions.push(loadImage("2013-NC-18.png")); 
-//     questions.push(loadImage("2013-NC-19.png")); 
-//     questions.push(loadImage("2013-NC-20.png")); 
-//     questions.push(loadImage("2013-NC-21.png")); 
-//     questions.push(loadImage("2013-NC-22.png")); 
-//     questions.push(loadImage("2013-NC-23.png")); 
-//     questions.push(loadImage("2013-NC-24.png")); 
-//     questions.push(loadImage("2013-NC-25.png")); 
-//     questions.push(loadImage("2013-NC-26.png")); 
-//     questions.push(loadImage("2013-NC-27.png")); 
-//     questions.push(loadImage("2013-NC-28.png"));
-      
-//     questions.push(loadImage("2013-C-76.png")); 
-//     questions.push(loadImage("2013-C-77.png")); 
-//     questions.push(loadImage("2013-C-78.png")); 
-//     questions.push(loadImage("2013-C-79.png")); 
-//     questions.push(loadImage("2013-C-80.png")); 
-//     questions.push(loadImage("2013-C-81.png")); 
-//     questions.push(loadImage("2013-C-82.png")); 
-//     questions.push(loadImage("2013-C-83.png")); 
-//     questions.push(loadImage("2013-C-84.png")); 
-//     questions.push(loadImage("2013-C-85.png")); 
-//     questions.push(loadImage("2013-C-86.png")); 
-//     questions.push(loadImage("2013-C-87.png")); 
-//     questions.push(loadImage("2013-C-88.png")); 
-//     questions.push(loadImage("2013-C-89.png")); 
-//     questions.push(loadImage("2013-C-90.png")); 
-//     questions.push(loadImage("2013-C-91.png")); 
-//     questions.push(loadImage("2013-C-92.png")); 
+function load2014(indexes) {
+    for(let i=1;i<indexes.length+1;i++){
+      if(indexes[i-1]<=27){
+        var f=indexes[i-1]+1;
+        questions.push(loadImage(`2014-NC-${f}.png`));
+      }
+      else{
+        var h=indexes[i-1]+48;
+        questions.push(loadImage(`2014-C-${h}.png`));
+      }
+    }
+}
+
+function load2015(indexes) {
+    for(let i=1;i<indexes.length+1;i++){
+      if(indexes[i-1]<=27){
+        var f=indexes[i-1]+1;
+        questions.push(loadImage(`2015-NC-${f}.png`));
+      }
+      else{
+        var h=indexes[i-1]+48;
+        questions.push(loadImage(`2015-C-${h}.png`));
+      }
+    }
+}
+
+
+// function load2015() {
+//   // Load "2015-NC-1.png" to "2015-NC-28.png"
+//   for (let i = 1; i <= 28; i++) {
+//     questions.push(loadImage(`2015-NC-${i}.png`));
+//   }
+
+//   // Load "2015-C-76.png" to "2015-C-92.png"
+//   for (let i = 76; i <= 92; i++) {
+//     questions.push(loadImage(`2015-C-${i}.png`));
+//   }
 // }
-
-function load2014(){
-    questions.push(loadImage("2014-NC-1.png")); 
-    questions.push(loadImage("2014-NC-2.png")); 
-    questions.push(loadImage("2014-NC-3.png")); 
-    questions.push(loadImage("2014-NC-4.png")); 
-    questions.push(loadImage("2014-NC-5.png")); 
-    questions.push(loadImage("2014-NC-6.png")); 
-    questions.push(loadImage("2014-NC-7.png")); 
-    questions.push(loadImage("2014-NC-8.png")); 
-    questions.push(loadImage("2014-NC-9.png")); 
-    questions.push(loadImage("2014-NC-10.png")); 
-    questions.push(loadImage("2014-NC-11.png")); 
-    questions.push(loadImage("2014-NC-12.png")); 
-    questions.push(loadImage("2014-NC-13.png")); 
-    questions.push(loadImage("2014-NC-14.png")); 
-    questions.push(loadImage("2014-NC-15.png")); 
-    questions.push(loadImage("2014-NC-16.png")); 
-    questions.push(loadImage("2014-NC-17.png")); 
-    questions.push(loadImage("2014-NC-18.png")); 
-    questions.push(loadImage("2014-NC-19.png")); 
-    questions.push(loadImage("2014-NC-20.png")); 
-    questions.push(loadImage("2014-NC-21.png")); 
-    questions.push(loadImage("2014-NC-22.png")); 
-    questions.push(loadImage("2014-NC-23.png")); 
-    questions.push(loadImage("2014-NC-24.png")); 
-    questions.push(loadImage("2014-NC-25.png")); 
-    questions.push(loadImage("2014-NC-26.png")); 
-    questions.push(loadImage("2014-NC-27.png")); 
-    questions.push(loadImage("2014-NC-28.png")); 
-
-    questions.push(loadImage("2014-C-76.png")); 
-    questions.push(loadImage("2014-C-77.png")); 
-    questions.push(loadImage("2014-C-78.png")); 
-    questions.push(loadImage("2014-C-79.png")); 
-    questions.push(loadImage("2014-C-80.png")); 
-    questions.push(loadImage("2014-C-81.png")); 
-    questions.push(loadImage("2014-C-82.png")); 
-    questions.push(loadImage("2014-C-83.png")); 
-    questions.push(loadImage("2014-C-84.png")); 
-    questions.push(loadImage("2014-C-85.png")); 
-    questions.push(loadImage("2014-C-86.png")); 
-    questions.push(loadImage("2014-C-87.png")); 
-    questions.push(loadImage("2014-C-88.png")); 
-    questions.push(loadImage("2014-C-89.png")); 
-    questions.push(loadImage("2014-C-90.png")); 
-    questions.push(loadImage("2014-C-91.png")); 
-    questions.push(loadImage("2014-C-92.png")); 
-}
-
-
-function load2015() {
-  // Load "2015-NC-1.png" to "2015-NC-28.png"
-  for (let i = 1; i <= 28; i++) {
-    questions.push(loadImage(`2015-NC-${i}.png`));
-  }
-
-  // Load "2015-C-76.png" to "2015-C-92.png"
-  for (let i = 76; i <= 92; i++) {
-    questions.push(loadImage(`2015-C-${i}.png`));
-  }
-}
 
 
 
