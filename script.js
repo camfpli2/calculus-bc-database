@@ -40,11 +40,8 @@ function queryUnit(u){
       else if(questionData[y][0]===2015){questionIndexes15.push(y-180)}  //2015 has 45 elements (225 cumulative)
       else if(questionData[y][0]===2016){questionIndexes16.push(y-225)}  //2016 has 45 elements (270 cumulative)
       else if(questionData[y][0]===2017){questionIndexes17.push(y-270)}  //2017 has 45 elements (315 cumulative)
-    }
-    
+    }    
   }
-  console.log(ar);
-  
 }
 
 function refresher(){
