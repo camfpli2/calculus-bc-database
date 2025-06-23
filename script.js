@@ -486,11 +486,11 @@ class control{
         n--;
         refresher();
       }
+        
       else if(this.txt==="Start"){
         for(var k=0;k<controls.length;k++){
-          if(controls[k].ind==="exam controller||controls[k].ind==="answer choice")
-          {
-            this.there=true;
+          if(controls[k].ind==="exam controller"||controls[k].ind==="answer choice"){
+            controls[k].there=true
           }
         }
         this.there=false;
