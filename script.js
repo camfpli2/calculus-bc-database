@@ -1,6 +1,6 @@
 //each new exam after importing images:   1. var all-exam year    2. var questionIndexes-exam year  3.  another else if on line 40 and 130
 //                                        4. another load on line 140
-//                                        5. write the load function near line 400
+//                                        5. write the load function near line 400      6. update skills using actual program
 
 var wdth;
 var hgt;
