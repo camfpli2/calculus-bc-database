@@ -40,7 +40,7 @@ function queryUnit(u){
       else if(questionData[y][0]===2012){questionIndexes12.push(y-45)}  //2012 has 45 elements (90 cummulative)
       else if(questionData[y][0]===2013){questionIndexes13.push(y-90)}  //2013 has 45 elements (135 cumulative)
       else if(questionData[y][0]===2014){questionIndexes14.push(y-135)}  //2014 has 45 elements (180 cumulative)
-      else if(questionData[y][0]===2015){questionIndexes15.push(y-180)}  //2015 has 45 elements (225 cumulative
+      else if(questionData[y][0]===2015){questionIndexes15.push(y-180)}  //2015 has 45 elements (225 cumulative)
     }
     
   }
@@ -121,7 +121,7 @@ function wholeSkillHomeScreen(i){
 function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal)
   if(ask>1000){   //user has clicked a year
     if(ask===2015){load2015();}
-    else if(ask===2014){load2014();}
+    else if(ask===2014){load2014(all2014);}
     else if(ask===2013){load2013(all2013);}
     else if(ask===2012){load2012(all2012);}
     else if(ask===2008){load2008(all2008);}
