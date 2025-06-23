@@ -36,7 +36,7 @@ function queryUnit(u){
   }
   console.log(ar);
   
-  return ar;  //array of 2008(more later) indexes
+  return ar;  //array of 2008 and 2012 indexes, just that all 2012 indexes will be 45 more as written
 }
 
 function refresher(){
