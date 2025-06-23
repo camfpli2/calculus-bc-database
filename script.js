@@ -39,7 +39,8 @@ function queryUnit(u){
       if(questionData[y][0]===2008){questionIndexes08.push(y)}  //2008 has 45 elements
       else if(questionData[y][0]===2012){questionIndexes12.push(y-45)}  //2012 has 45 elements (90 cummulative)
       else if(questionData[y][0]===2013){questionIndexes13.push(y-90)}  //2013 has 45 elements (135 cumulative)
-      else if(questionData[y][0]===2014){questionIndexes14.push(y-135)}  //2013 has 45 elements (135 cumulative)
+      else if(questionData[y][0]===2014){questionIndexes14.push(y-135)}  //2014 has 45 elements (180 cumulative)
+      else if(questionData[y][0]===2015){questionIndexes15.push(y-180)}  //2015 has 45 elements (225 cumulative
     }
     
   }
@@ -129,6 +130,8 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     load2008(questionIndexes08);
     load2012(questionIndexes12);
     load2013(questionIndexes13);
+    load2014(questionIndexes14);
+    load2015(questionIndexes15);
     
   }
 
