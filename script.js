@@ -89,7 +89,7 @@ function yearHomeScreen(y){
   stroke(bordercolor);
   rect(5,70,wdth-30,hgt-100,5);
   for(var p=0;p<controls.length;p++){
-    if(controls[p].ind==="Start"){
+    if(controls[p].txt==="Start"){
       controls[p].there=true;
       controls[p].drawit();
     }
