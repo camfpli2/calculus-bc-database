@@ -248,7 +248,7 @@ function setup(){
   //controls.push(new control(5,5,120,60,"Home",false,butcolor,"exam controller"));
   controls.push(new control(70,5,120,60,"Previous",false,butcolor,"exam controller"));
   controls.push(new control(200,5,120,60,"Next",false,butcolor,"exam controller"));
-  controls.push(new control(450,460,130,70,"Start",false,butcolor,"exam controller"));
+  controls.push(new control(500,450,130,70,"Start",false,butcolor,"exam controller"));
 
   controls.push(new control(600,5,60,60,"A",false,butcolor,"answer choice"));
   controls.push(new control(670,5,60,60,"B",false,butcolor,"answer choice"));
