@@ -11,7 +11,12 @@ var selectedUnit=false;
 var selectedSkill=false;
 var whichUnitSelected;
 var questions=[];
-var questionIndexes=[];
+var questionIndexes08=[];  // write these in the same order as questionData rows
+var questionIndexes12=[];
+var questionIndexes13=[];
+var questionIndexes14=[];
+var questionIndexes15=[];
+
 var n=0;
 var data;
 var all2008=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44];
@@ -30,13 +35,13 @@ function queryUnit(u){
   var ar=[];
   for (var y=0;y<questionData.length;y++){
     if(floor(questionData[y][4])===u||floor(questionData[y][5])===u){
-      ar.push(y);
+      if(questionData[y][0]===2008){questionIndexes08.push(y)}  //2008 has 45 elements
+      else if(questionData[y][0]===2012){questionIndexes12.push(y-45)}  //2012 has 
     }
     
   }
   console.log(ar);
   
-  return ar;  //array of 2008 and 2012 indexes, just that all 2012 indexes will be 45 more as written
 }
 
 function refresher(){
@@ -484,7 +489,7 @@ class control{
           }
           whichUnitSelected=this.ind+1;
           selectedUnit=true;
-          questionIndexes=queryUnit(this.ind+1);
+          queryUnit(this.ind+1);
           wholeSkillHomeScreen(this.ind);
         }
           
