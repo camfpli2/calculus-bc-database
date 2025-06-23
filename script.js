@@ -20,6 +20,7 @@ var questionIndexes15=[];
 var n=0;
 var data;
 var all2008=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44];
+var all2012=all2008;
 var skillIndexes=[[9,13],[14,23],[24,31],[32,35],[36,40],[41,46],[47,48],[49,50],[51,56]];
 var skillBoxInfo=[[80,300],[150,550],[220,450],[290,250],[360,300],[330,350],[500,130],[570,130],[380,330]];
 var questionData=[];  //array of arrays, format: [year, NC/C, n:number of answer choices, a:answer, skill1, skill2]
@@ -119,7 +120,7 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     if(ask===2015){load2015();}
     else if(ask===2014){load2014();}
     else if(ask===2013){load2013();}
-    else if(ask===2012){load2012();}
+    else if(ask===2012){load2012(all2012);}
     else if(ask===2008){load2008(all2008);}
   }
   else if(Number.isInteger(ask)){   //user has clicked an entire unit
