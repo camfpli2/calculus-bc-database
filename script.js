@@ -124,7 +124,7 @@ function wholeSkillHomeScreen(i){
 
 function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal)
   if(ask>1000){   //user has clicked a year
-    if(ask===2015){load2015();}
+    if(ask===2015){load2015(all2015);}
     else if(ask===2014){load2014(all2014);}
     else if(ask===2013){load2013(all2013);}
     else if(ask===2012){load2012(all2012);}
