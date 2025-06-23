@@ -40,6 +40,7 @@ function queryUnit(u){
       if(questionData[y][0]===2008){questionIndexes08.push(y)}  //2008 has 45 elements
       else if(questionData[y][0]===2012){questionIndexes12.push(y-45)}  //2012 has 45 elements (90 cummulative)
       else if(questionData[y][0]===2013){questionIndexes13.push(y-90)}  //2013 has 45 elements (135 cumulative)
+      else if(questionData[y][0]===2014){questionIndexes14.push(y-135)}  //2013 has 45 elements (135 cumulative)
     }
     
   }
