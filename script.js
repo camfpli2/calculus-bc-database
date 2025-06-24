@@ -99,7 +99,7 @@ function yearHomeScreen(y){
   noStroke();
   fill(textcolor);
   textAlign(CENTER);
-  text("AP Calculus BC: "+y,wdth/2,250);
+  text("AP Calculus : "+y,wdth/2,250);
   text("Multiple Choice Section",wdth/2,300);
   textSize(26);
   text("1 - 28, No Calculator",wdth/2,350);
