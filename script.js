@@ -426,8 +426,8 @@ function activateUnit(ind){
 class control{
   constructor(x,y,w,h,txt,there,rgb,ind){
     this.x=x; this.y=y; this.w=w; this.h=h; this.txt=txt; this.there=there; this.rgb=rgb; this.ind=ind;
-    if(this.txt!=="year"){this.loaded=true;}
-    if(this.txt==="1998"||this.txt==="2003"||this.txt==="2008"||this.txt==="2012"||this.txt==="2013"||this.txt==="2014"||this.txt==="2015"||this.txt==="2016"||this.txt==="2017"){
+    if(txt!=="year"){this.loaded=true;}
+    if(txt==="1998"||txt==="2003"||txt==="2008"||txt==="2012"||txt==="2013"||txt==="2014"||txt==="2015"||txt==="2016"||txt==="2017"){
       this.loaded=true;
     }
   }
