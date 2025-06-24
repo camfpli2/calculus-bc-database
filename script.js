@@ -509,7 +509,7 @@ class control{
       stroke(25, 45, 100);
       strokeWeight(2);
       rect(this.x, this.y, this.w, this.h, 4);
-      if(this.ind!=="year"||this.loaded===true){fill(0,0,200);}
+      if(this.loaded===true){fill(0,0,200);}
       noStroke();
       if(this.ind>=9&&this.ind<=56){textSize(15);}
       else if(this.ind==="answer choice"){textSize(44);}
