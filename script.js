@@ -426,6 +426,9 @@ function activateUnit(ind){
 class control{
   constructor(x,y,w,h,txt,there,rgb,ind){
     this.x=x; this.y=y; this.w=w; this.h=h; this.txt=txt; this.there=there; this.rgb=rgb; this.ind=ind;
+    if(this.txt==="1998"||this.txt==="2003"||this.txt==="2008"||this.txt==="2012"||this.txt==="2013"||this.txt==="2014"||this.txt==="2015"||this.txt==="2016"||this.txt==="2017"){
+      this.loaded=true;
+    }
   }
   
   tapit(){
@@ -506,7 +509,7 @@ class control{
       stroke(25, 45, 100);
       strokeWeight(2);
       rect(this.x, this.y, this.w, this.h, 4);
-      fill(0,0,200);
+      if(this.ind!=="year"||this.loaded===true){fill(0,0,200);}
       noStroke();
       if(this.ind>=9&&this.ind<=56){textSize(15);}
       else if(this.ind==="answer choice"){textSize(44);}
