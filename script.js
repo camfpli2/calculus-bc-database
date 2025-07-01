@@ -1,6 +1,7 @@
 //each new exam after importing images:   1. var all-exam year    2. var questionIndexes-exam year  3.  another else if on line 40 and 130
 //                                        4. another load on line 140
 //                                        5. write the load function near line 400      6. update skills using actual program
+                                          7. something near line 430
 
 var wdth;
 var hgt;
@@ -36,6 +37,21 @@ function preload(){
 function queryUnit(u){
   for (var y=0;y<questionData.length;y++){
     if(floor(questionData[y][4])===u||floor(questionData[y][5])===u){
+      if(questionData[y][0]===2008){questionIndexes08.push(y)}  //2008 has 45 elements
+      else if(questionData[y][0]===2012){questionIndexes12.push(y-45)}  //2012 has 45 elements (90 cummulative)
+      else if(questionData[y][0]===2013){questionIndexes13.push(y-90)}  //2013 has 45 elements (135 cumulative)
+      else if(questionData[y][0]===2014){questionIndexes14.push(y-135)}  //2014 has 45 elements (180 cumulative)
+      else if(questionData[y][0]===2015){questionIndexes15.push(y-180)}  //2015 has 45 elements (225 cumulative)
+      else if(questionData[y][0]===2016){questionIndexes16.push(y-225)}  //2016 has 45 elements (270 cumulative)
+      else if(questionData[y][0]===2017){questionIndexes17.push(y-270)}  //2017 has 45 elements (315 cumulative)
+      else if(questionData[y][0]===1998){questionIndexes98.push(y-315)}  //1998 has 45 elements (360 cumulative)
+    }    
+  }
+}
+
+function querySkill(s){
+  for (var y=0;y<questionData.length;y++){
+    if(questionData[y][4]===s||questionData[y][5]===s){
       if(questionData[y][0]===2008){questionIndexes08.push(y)}  //2008 has 45 elements
       else if(questionData[y][0]===2012){questionIndexes12.push(y-45)}  //2012 has 45 elements (90 cummulative)
       else if(questionData[y][0]===2013){questionIndexes13.push(y-90)}  //2013 has 45 elements (135 cumulative)
@@ -133,7 +149,7 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     else if(ask===2017){load2017(all2017);}
     else if(ask===1998){load1998(all1998);}
   }
-  else if(Number.isInteger(ask)){   //user has clicked an entire unit
+  else if(Number.isInteger(ask)||ask<12){   //user has clicked an entire unit
     load2008(questionIndexes08);
     load2012(questionIndexes12);
     load2013(questionIndexes13);
@@ -221,7 +237,7 @@ function setup(){
   controls.push(new control(1000,500,360,40,"9.3 Power Series I: Taylor & Maclaurin Series",false,butcolor,53));
   controls.push(new control(1000,550,360,40,"9.4 Power Series II: Geometric Series",false,butcolor,54));
   controls.push(new control(1000,600,360,40,"9.5 Lagrange Error Bound",false,butcolor,55));
-  controls.push(new control(1000,650,360,40,"9.6",false,butcolor,56));
+  controls.push(new control(1000,650,360,40,"9.6",false,butcolor,56));                            //all sub-skills will always be index 9 thru 56
   
   
   controls.push(new control(80,80,120,60,"1996",true,butcolor,"year"));
@@ -428,7 +444,7 @@ class control{
     this.x=x; this.y=y; this.w=w; this.h=h; this.txt=txt; this.there=there; this.rgb=rgb; this.ind=ind;
     if(ind!="year"){this.loaded=true;}
     if(txt==="1998"||txt==="2003"||txt==="2008"||txt==="2012"||txt==="2013"||txt==="2014"||txt==="2015"||txt==="2016"||txt==="2017"){
-      this.loaded=true;
+      this.loaded=true;    //you'll see the text of the exams loaded, not for others
     }
   }
   
@@ -470,6 +486,18 @@ class control{
         line(this.x+this.w-2,this.y,this.x+this.w+30,this.y+this.h/2);
         line(this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
         }
+      }
+
+      else if(this.ind<=56){     //user clicks a sub-skill i.e 5.3, 9.1
+                                  // remember 2.10 is in question data as 2.11
+        var each=[1.1,1.2,1.3,1.4,1.5,2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,2.11,3.1,3.2,3.3,3.4,3.5,3.6,3.7,3.8,4.1,4.2,4.3,4.4,5.1,5.2,5.3,5.4,5.5,6.1,6.2,6.3,6.4,6.5,6.6,7.1,7.2,8.1,8.2,9.1,9.2,9.3,9.4,9.5,9.6];
+        whichUnitSelected=each[this.ind-9];
+        for(var f=0;f<controls.length;f++){
+          controls[f].there=false;
+        }
+        selectedSkill=true;
+        queryUnit(whichUnitSelected);
+        wholeSkillHomeScreen(whichUnitSelected);
       }
 
       else if(this.ind==="year"){    //user clicks a year
