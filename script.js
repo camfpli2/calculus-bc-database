@@ -271,8 +271,7 @@ function setup(){
   controls.push(new control(740,5,60,60,"C",false,butcolor,"answer choice"));
   controls.push(new control(810,5,60,60,"D",false,butcolor,"answer choice"));
   controls.push(new control(880,5,60,60,"E",false,butcolor,"answer choice"));
-console.log(data);
-      getQuestionData();
+  getQuestionData();
 
 
   homeScreen();
@@ -496,7 +495,7 @@ class control{
           controls[f].there=false;
         }
         selectedSkill=true;
-        queryUnit(whichUnitSelected);
+        querySkill(whichUnitSelected);
         wholeSkillHomeScreen(whichUnitSelected);
       }
 
