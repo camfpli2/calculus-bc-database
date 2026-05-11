@@ -82,10 +82,10 @@ function refresher(){
 
 function getQuestionData(){
   var ii=data.getRowCount();
-  var col0=data.getColumn(0);
-  var col1=data.getColumn(1);
-  var col2=data.getColumn(2);
-  var col3=data.getColumn(3);
+  var col0=data.getColumn(0); //year
+  var col1=data.getColumn(1); //NC or C
+  var col2=data.getColumn(2); // # of choices
+  var col3=data.getColumn(3); // correct choice
   var col4=data.getColumn(4);
   var col5=data.getColumn(5);
 
