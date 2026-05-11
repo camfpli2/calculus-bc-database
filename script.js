@@ -86,8 +86,8 @@ function getQuestionData(){
   var col1=data.getColumn(1); //NC or C
   var col2=data.getColumn(2); // # of choices
   var col3=data.getColumn(3); // correct choice
-  var col4=data.getColumn(4);
-  var col5=data.getColumn(5);
+  var col4=data.getColumn(4); // relevant unit
+  var col5=data.getColumn(5); // relevant unit #2, 0 if none
 
   for(var c=0;c<ii;c++){
     questionData.push([parseInt(col0[c]),col1[c],parseInt(col2[c]),col3[c],parseFloat(col4[c]),parseFloat(col5[c])]);
@@ -180,7 +180,7 @@ function setup(){
   controls.push(new control(550,430,400,60,"Unit 6: Applications of Integration",true,butcolor,5));
   controls.push(new control(550,500,400,60,"Unit 7: Parametric Equations",true,butcolor,6));
   controls.push(new control(550,570,400,60,"Unit 8: Polar Equations",true,butcolor,7));
-  controls.push(new control(550,640,400,60,"Unit 9: Sequences and Series",true,butcolor,8));
+  controls.push(new control(550,640,400,60,"Unit 9: Sequences and Series",true,butcolor,8));   //all unit indexes are 0 thru 8
   
   controls.push(new control(1000,100,360,40,"1.1 Limits and Continuity",false,butcolor,9));  //unit 1 , index 9 thru 13
   controls.push(new control(1000,150,360,40,"1.2 Properties of Limits",false,butcolor,10));
@@ -240,7 +240,7 @@ function setup(){
   controls.push(new control(1000,650,360,40,"9.6",false,butcolor,56));                            //all sub-skills will always be index 9 thru 56
   
   
-  controls.push(new control(80,80,120,60,"1996",true,butcolor,"year"));
+  controls.push(new control(80,80,120,60,"1996",true,butcolor,"year"));  //indexes 57 thru 65
   controls.push(new control(80,150,120,60,"1997",true,butcolor,"year"));
   controls.push(new control(80,220,120,60,"1998",true,butcolor,"year"));
   controls.push(new control(80,290,120,60,"1999",true,butcolor,"year"));
@@ -251,7 +251,7 @@ function setup(){
   controls.push(new control(80,640,120,60,"2010",true,butcolor,"year"));
 
 
-  controls.push(new control(250,80,120,60,"2011",true,butcolor,"year"));
+  controls.push(new control(250,80,120,60,"2011",true,butcolor,"year"));  //indexes 66 thru 74
   controls.push(new control(250,150,120,60,"2012",true,butcolor,"year"));
   controls.push(new control(250,220,120,60,"2013",true,butcolor,"year"));
   controls.push(new control(250,290,120,60,"2014",true,butcolor,"year"));
@@ -262,11 +262,11 @@ function setup(){
   controls.push(new control(250,640,120,60,"2019",true,butcolor,"year"));
   
   //controls.push(new control(5,5,120,60,"Home",false,butcolor,"exam controller"));
-  controls.push(new control(70,5,120,60,"Previous",false,butcolor,"exam controller"));
-  controls.push(new control(200,5,120,60,"Next",false,butcolor,"exam controller"));
-  controls.push(new control(500,450,130,70,"Start",false,butcolor,"exam controller"));
+  controls.push(new control(70,5,120,60,"Previous",false,butcolor,"exam controller"));  //index 75
+  controls.push(new control(200,5,120,60,"Next",false,butcolor,"exam controller"));     //index 76
+  controls.push(new control(500,450,130,70,"Start",false,butcolor,"exam controller"));  //index 77
 
-  controls.push(new control(600,5,60,60,"A",false,butcolor,"answer choice"));
+  controls.push(new control(600,5,60,60,"A",false,butcolor,"answer choice"));  //index 78 thru 82
   controls.push(new control(670,5,60,60,"B",false,butcolor,"answer choice"));
   controls.push(new control(740,5,60,60,"C",false,butcolor,"answer choice"));
   controls.push(new control(810,5,60,60,"D",false,butcolor,"answer choice"));
@@ -528,8 +528,11 @@ class control{
         adjustImageDimensions();
         refresher();
       }
+      else if(this.ind >=78 && this.ind <=82){
+        
+      }
     }
-  }
+  }     //end of tapit method
   
   drawit(){
     if(this.there){
