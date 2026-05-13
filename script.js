@@ -18,12 +18,12 @@ var whichUnitSelected;
 var questions=[];
 var questionIndexes08=[];  // write these in the same order as questionData rows
 var questionIndexes12=[]; var questionIndexes13=[]; var questionIndexes14=[]; var questionIndexes15=[]; var questionIndexes16=[]; var questionIndexes17=[];
-var questionIndexes98=[]; var questionIndexes18=[];
+var questionIndexes98=[]; var questionIndexes18=[]; var questionIndexes19=[];
 var n=0;
 var data;
 var all2008=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44];
 var all2012=all2008; var all2013=all2008; var all2014=all2008;  var all2015=all2008; var all2016=all2008; var all2017=all2008; var all1998=all2008;
-var all2018=all2008;
+var all2018=all2008; var all2019=all2008;
 var skillIndexes=[[9,13],[14,23],[24,31],[32,35],[36,40],[41,46],[47,48],[49,50],[51,56]];
 var skillBoxInfo=[[80,300],[150,550],[220,450],[290,250],[360,300],[330,350],[500,130],[570,130],[380,330]];
 var questionData=[];  //array of arrays, format: [year, NC/C, n:number of answer choices, a:answer, skill1, skill2]
@@ -46,6 +46,7 @@ function queryUnit(u){
       else if(questionData[y][0]===2017){questionIndexes17.push(y-270)}  //2017 has 45 elements (315 cumulative)
       else if(questionData[y][0]===1998){questionIndexes98.push(y-315)}  //1998 has 45 elements (360 cumulative)
       else if(questionData[y][0]===2018){questionIndexes18.push(y-360)}  //2018 has 45 elements (405 cumulative)
+      else if(questionData[y][0]===2019){questionIndexes19.push(y-405)}  //2019 has 45 elements (450 cumulative)
     }    
   }
 }
@@ -62,6 +63,7 @@ function querySkill(s){
       else if(questionData[y][0]===2017){questionIndexes17.push(y-270)}  //2017 has 45 elements (315 cumulative)
       else if(questionData[y][0]===1998){questionIndexes98.push(y-315)}  //1998 has 45 elements (360 cumulative)
       else if(questionData[y][0]===2018){questionIndexes18.push(y-360)}  //2018 has 45 elements (405 cumulative)
+      else if(questionData[y][0]===2019){questionIndexes19.push(y-405)}  //2019 has 45 elements (450 cumulative)
 
     }    
   }
@@ -152,6 +154,7 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     else if(ask===2017){load2017(all2017);}
     else if(ask===1998){load1998(all1998);}
     else if(ask===2018){load2018(all2018);}
+    else if(ask===2019){load2019(all2019);}
   }
   else if(Number.isInteger(ask)||ask<12){   //user has clicked an entire unit
     load2008(questionIndexes08);
@@ -163,6 +166,7 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     load2017(questionIndexes17);
     load1998(questionIndexes98);
     load2018(questionIndexes18);
+    load2019(questionIndexes19);
   }
 
 }
@@ -429,6 +433,19 @@ function load2018(indexes) {
       else{
         var h=indexes[i-1]+46;                
         questions.push(loadImage(`2018-C-${h}.png`));
+      }
+    }
+}
+
+function load2019(indexes) {
+    for(let i=1;i<indexes.length+1;i++){
+      if(indexes[i-1]<=29){                    
+        var f=indexes[i-1]+1;
+        questions.push(loadImage(`2019-NC-${f}.png`));
+      }
+      else{
+        var h=indexes[i-1]+46;                
+        questions.push(loadImage(`2019-C-${h}.png`));
       }
     }
 }
