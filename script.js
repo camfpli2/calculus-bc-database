@@ -1,4 +1,4 @@
-//each new exam after importing images:   1. var all-exam year    2. var questionIndexes-exam year  3.  another else if on line 40 and 140
+//each new exam after importing images:   1. var all-exam year    2. var questionIndexes-exam year  3.  another else if on line 40 and 64 and 154
 //                                        4. another load on line 162
 //                                        5. write the load function near line 400      6. update skills using actual program
   //                                        7. something near line 430
@@ -61,6 +61,8 @@ function querySkill(s){
       else if(questionData[y][0]===2016){questionIndexes16.push(y-225)}  //2016 has 45 elements (270 cumulative)
       else if(questionData[y][0]===2017){questionIndexes17.push(y-270)}  //2017 has 45 elements (315 cumulative)
       else if(questionData[y][0]===1998){questionIndexes98.push(y-315)}  //1998 has 45 elements (360 cumulative)
+      else if(questionData[y][0]===2018){questionIndexes18.push(y-360)}  //2018 has 45 elements (405 cumulative)
+
     }    
   }
 }
