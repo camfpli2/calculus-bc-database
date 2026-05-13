@@ -477,7 +477,7 @@ class control{
   constructor(x,y,w,h,txt,there,rgb,ind){
     this.x=x; this.y=y; this.w=w; this.h=h; this.txt=txt; this.there=there; this.rgb=rgb; this.ind=ind;
     if(ind!="year"){this.loaded=true;}
-    if(txt==="1998"||txt==="2003"||txt==="2008"||txt==="2012"||txt==="2013"||txt==="2014"||txt==="2015"||txt==="2016"||txt==="2017"||txt==="2018"){
+    if(txt==="1998"||txt==="2003"||txt==="2008"||txt==="2012"||txt==="2013"||txt==="2014"||txt==="2015"||txt==="2016"||txt==="2017"||txt==="2018"||txt==="2019"){
       this.loaded=true;    //you'll see the text of the exams loaded, not for others
     }
   }
