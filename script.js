@@ -16,6 +16,8 @@ var selectedUnit=false;
 var selectedSkill=false;
 var whichUnitSelected;
 var questions=[];
+var choices=[];  //new, i want to make it to allign with questions
+var answers=[];  //new, i want same on this
 var questionIndexes08=[];  // write these in the same order as questionData rows
 var questionIndexes12=[]; var questionIndexes13=[]; var questionIndexes14=[]; var questionIndexes15=[]; var questionIndexes16=[]; var questionIndexes17=[];
 var questionIndexes98=[]; var questionIndexes18=[]; var questionIndexes19=[];
