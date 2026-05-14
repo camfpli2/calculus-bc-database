@@ -20,12 +20,12 @@ var choices=[];  //new, i want to make it to allign with questions
 var answers=[];  //new, i want same on this
 var questionIndexes08=[];  // write these in the same order as questionData rows
 var questionIndexes12=[]; var questionIndexes13=[]; var questionIndexes14=[]; var questionIndexes15=[]; var questionIndexes16=[]; var questionIndexes17=[];
-var questionIndexes98=[]; var questionIndexes18=[]; var questionIndexes19=[];
+var questionIndexes98=[]; var questionIndexes18=[]; var questionIndexes19=[]; var questionIndexes99=[];
 var n=0;
 var data;
 var all2008=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44];
 var all2012=all2008; var all2013=all2008; var all2014=all2008;  var all2015=all2008; var all2016=all2008; var all2017=all2008; var all1998=all2008;
-var all2018=all2008; var all2019=all2008;
+var all2018=all2008; var all2019=all2008; var all1999=all2008;
 var skillIndexes=[[9,13],[14,23],[24,31],[32,35],[36,40],[41,46],[47,48],[49,50],[51,56]];
 var skillBoxInfo=[[80,300],[150,550],[220,450],[290,250],[360,300],[330,350],[500,130],[570,130],[380,330]];
 var questionData=[];  //array of arrays, format: [year, NC/C, n:number of answer choices, a:answer, skill1, skill2]
@@ -49,6 +49,7 @@ function queryUnit(u){
       else if(questionData[y][0]===1998){questionIndexes98.push(y-315)}  //1998 has 45 elements (360 cumulative)
       else if(questionData[y][0]===2018){questionIndexes18.push(y-360)}  //2018 has 45 elements (405 cumulative)
       else if(questionData[y][0]===2019){questionIndexes19.push(y-405)}  //2019 has 45 elements (450 cumulative)
+      else if(questionData[y][0]===1999){questionIndexes99.push(y-450)}  //1999 has 45 elements (495 cumulative)
     }    
   }
 }
@@ -66,7 +67,7 @@ function querySkill(s){
       else if(questionData[y][0]===1998){questionIndexes98.push(y-315)}  //1998 has 45 elements (360 cumulative)
       else if(questionData[y][0]===2018){questionIndexes18.push(y-360)}  //2018 has 45 elements (405 cumulative)
       else if(questionData[y][0]===2019){questionIndexes19.push(y-405)}  //2019 has 45 elements (450 cumulative)
-
+      else if(questionData[y][0]===1999){questionIndexes99.push(y-450)}  //1999 has 45 elements (495 cumulative)
     }    
   }
 }
@@ -157,6 +158,7 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     else if(ask===1998){load1998(all1998);}
     else if(ask===2018){load2018(all2018);}
     else if(ask===2019){load2019(all2019);}
+    else if(ask===1999){load1999(all1999);}    
   }
   else if(Number.isInteger(ask)||ask<12){   //user has clicked an entire unit
     load2008(questionIndexes08);
@@ -169,6 +171,7 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
     load1998(questionIndexes98);
     load2018(questionIndexes18);
     load2019(questionIndexes19);
+    load1999(questionIndexes99);
   }
 
 }
@@ -466,6 +469,19 @@ function load1998(indexes) {
     }
 }
 
+function load1999(indexes) {
+    for(let i=1;i<indexes.length+1;i++){
+      if(indexes[i-1]<=27){                      //because 1999 has 28 Non Calc
+        var f=indexes[i-1]+1;
+        questions.push(loadImage(`1998-NC-${f}.png`));
+      }
+      else{
+        var h=indexes[i-1]+48;                  //because 1999 Calc goes 76-92
+        questions.push(loadImage(`1998-C-${h}.png`));
+      }
+    }
+}
+
 
 function activateUnit(ind){
   for(var g=skillIndexes[ind][0];g<=skillIndexes[ind][1];g++){
@@ -479,7 +495,7 @@ class control{
   constructor(x,y,w,h,txt,there,rgb,ind){
     this.x=x; this.y=y; this.w=w; this.h=h; this.txt=txt; this.there=there; this.rgb=rgb; this.ind=ind;
     if(ind!="year"){this.loaded=true;}
-    if(txt==="1998"||txt==="2003"||txt==="2008"||txt==="2012"||txt==="2013"||txt==="2014"||txt==="2015"||txt==="2016"||txt==="2017"||txt==="2018"||txt==="2019"){
+    if(txt==="1998"||txt==="2003"||txt==="2008"||txt==="2012"||txt==="2013"||txt==="2014"||txt==="2015"||txt==="2016"||txt==="2017"||txt==="2018"||txt==="2019"||txt="1999"){
       this.loaded=true;    //you'll see the text of the exams loaded, not for others
     }
   }
