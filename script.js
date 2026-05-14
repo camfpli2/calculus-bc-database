@@ -473,11 +473,11 @@ function load1999(indexes) {
     for(let i=1;i<indexes.length+1;i++){
       if(indexes[i-1]<=27){                      //because 1999 has 28 Non Calc
         var f=indexes[i-1]+1;
-        questions.push(loadImage(`1998-NC-${f}.png`));
+        questions.push(loadImage(`1999-NC-${f}.png`));
       }
       else{
         var h=indexes[i-1]+48;                  //because 1999 Calc goes 76-92
-        questions.push(loadImage(`1998-C-${h}.png`));
+        questions.push(loadImage(`1999-C-${h}.png`));
       }
     }
 }
