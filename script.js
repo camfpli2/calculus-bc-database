@@ -14,6 +14,8 @@ var selectbordercolor=[200,45,35];
 var selectedYear=false;
 var selectedUnit=false;
 var selectedSkill=false;
+var MasterIndexes=[];  //will be indexes of selected questions based on master question archive
+var MasterData=[];    //will be array of arrays in format: [[C/NC, # ofchoices, correct choice], [], []....]
 var whichUnitSelected;
 var questions=[];
 var choices=[];  //new, i want to make it to allign with questions
@@ -38,18 +40,18 @@ function preload(){
 
 function queryUnit(u){
   for (var y=0;y<questionData.length;y++){
-    if(floor(questionData[y][4])===u||floor(questionData[y][5])===u){
-      if(questionData[y][0]===2008){questionIndexes08.push(y)}  //2008 has 45 elements
-      else if(questionData[y][0]===2012){questionIndexes12.push(y-45)}  //2012 has 45 elements (90 cummulative)
-      else if(questionData[y][0]===2013){questionIndexes13.push(y-90)}  //2013 has 45 elements (135 cumulative)
-      else if(questionData[y][0]===2014){questionIndexes14.push(y-135)}  //2014 has 45 elements (180 cumulative)
-      else if(questionData[y][0]===2015){questionIndexes15.push(y-180)}  //2015 has 45 elements (225 cumulative)
-      else if(questionData[y][0]===2016){questionIndexes16.push(y-225)}  //2016 has 45 elements (270 cumulative)
-      else if(questionData[y][0]===2017){questionIndexes17.push(y-270)}  //2017 has 45 elements (315 cumulative)
-      else if(questionData[y][0]===1998){questionIndexes98.push(y-315)}  //1998 has 45 elements (360 cumulative)
-      else if(questionData[y][0]===2018){questionIndexes18.push(y-360)}  //2018 has 45 elements (405 cumulative)
-      else if(questionData[y][0]===2019){questionIndexes19.push(y-405)}  //2019 has 45 elements (450 cumulative)
-      else if(questionData[y][0]===1999){questionIndexes99.push(y-450)}  //1999 has 45 elements (495 cumulative)
+    if(floor(questionData[y][4])===u||floor(questionData[y][5])===u){      //MasterIndexes is new it will load answers later for the correct questions
+      if(questionData[y][0]===2008){questionIndexes08.push(y); MasterIndexes.push(y);}  //2008 has 45 elements
+      else if(questionData[y][0]===2012){questionIndexes12.push(y-45);MasterIndexes.push(y);}  //2012 has 45 elements (90 cummulative)
+      else if(questionData[y][0]===2013){questionIndexes13.push(y-90);MasterIndexes.push(y);}  //2013 has 45 elements (135 cumulative)
+      else if(questionData[y][0]===2014){questionIndexes14.push(y-135);MasterIndexes.push(y);}  //2014 has 45 elements (180 cumulative)
+      else if(questionData[y][0]===2015){questionIndexes15.push(y-180);MasterIndexes.push(y);}  //2015 has 45 elements (225 cumulative)
+      else if(questionData[y][0]===2016){questionIndexes16.push(y-225);MasterIndexes.push(y);}  //2016 has 45 elements (270 cumulative)
+      else if(questionData[y][0]===2017){questionIndexes17.push(y-270);MasterIndexes.push(y);}  //2017 has 45 elements (315 cumulative)
+      else if(questionData[y][0]===1998){questionIndexes98.push(y-315);MasterIndexes.push(y);}  //1998 has 45 elements (360 cumulative)
+      else if(questionData[y][0]===2018){questionIndexes18.push(y-360);MasterIndexes.push(y);}  //2018 has 45 elements (405 cumulative)
+      else if(questionData[y][0]===2019){questionIndexes19.push(y-405);MasterIndexes.push(y);}  //2019 has 45 elements (450 cumulative)
+      else if(questionData[y][0]===1999){questionIndexes99.push(y-450);MasterIndexes.push(y);}  //1999 has 45 elements (495 cumulative)
     }    
   }
 }
@@ -57,17 +59,17 @@ function queryUnit(u){
 function querySkill(s){
   for (var y=0;y<questionData.length;y++){
     if(questionData[y][4]===s||questionData[y][5]===s){
-      if(questionData[y][0]===2008){questionIndexes08.push(y)}  //2008 has 45 elements
-      else if(questionData[y][0]===2012){questionIndexes12.push(y-45)}  //2012 has 45 elements (90 cummulative)
-      else if(questionData[y][0]===2013){questionIndexes13.push(y-90)}  //2013 has 45 elements (135 cumulative)
-      else if(questionData[y][0]===2014){questionIndexes14.push(y-135)}  //2014 has 45 elements (180 cumulative)
-      else if(questionData[y][0]===2015){questionIndexes15.push(y-180)}  //2015 has 45 elements (225 cumulative)
-      else if(questionData[y][0]===2016){questionIndexes16.push(y-225)}  //2016 has 45 elements (270 cumulative)
-      else if(questionData[y][0]===2017){questionIndexes17.push(y-270)}  //2017 has 45 elements (315 cumulative)
-      else if(questionData[y][0]===1998){questionIndexes98.push(y-315)}  //1998 has 45 elements (360 cumulative)
-      else if(questionData[y][0]===2018){questionIndexes18.push(y-360)}  //2018 has 45 elements (405 cumulative)
-      else if(questionData[y][0]===2019){questionIndexes19.push(y-405)}  //2019 has 45 elements (450 cumulative)
-      else if(questionData[y][0]===1999){questionIndexes99.push(y-450)}  //1999 has 45 elements (495 cumulative)
+      if(questionData[y][0]===2008){questionIndexes08.push(y);MasterIndexes.push(y);}  //2008 has 45 elements
+      else if(questionData[y][0]===2012){questionIndexes12.push(y-45);MasterIndexes.push(y);}  //2012 has 45 elements (90 cummulative)
+      else if(questionData[y][0]===2013){questionIndexes13.push(y-90);MasterIndexes.push(y);}  //2013 has 45 elements (135 cumulative)
+      else if(questionData[y][0]===2014){questionIndexes14.push(y-135);MasterIndexes.push(y);}  //2014 has 45 elements (180 cumulative)
+      else if(questionData[y][0]===2015){questionIndexes15.push(y-180);MasterIndexes.push(y);}  //2015 has 45 elements (225 cumulative)
+      else if(questionData[y][0]===2016){questionIndexes16.push(y-225);MasterIndexes.push(y);}  //2016 has 45 elements (270 cumulative)
+      else if(questionData[y][0]===2017){questionIndexes17.push(y-270);MasterIndexes.push(y);}  //2017 has 45 elements (315 cumulative)
+      else if(questionData[y][0]===1998){questionIndexes98.push(y-315);MasterIndexes.push(y);}  //1998 has 45 elements (360 cumulative)
+      else if(questionData[y][0]===2018){questionIndexes18.push(y-360);MasterIndexes.push(y);}  //2018 has 45 elements (405 cumulative)
+      else if(questionData[y][0]===2019){questionIndexes19.push(y-405);MasterIndexes.push(y);}  //2019 has 45 elements (450 cumulative)
+      else if(questionData[y][0]===1999){questionIndexes99.push(y-450);MasterIndexes.push(y);}  //1999 has 45 elements (495 cumulative)
     }    
   }
 }
@@ -137,6 +139,9 @@ function wholeSkillHomeScreen(i){
   stroke(bordercolor);
   rect(5,70,wdth-30,hgt-100,5);
   loadQuestions(whichUnitSelected);
+  for(var b=0;b<MasterIndexes.length;b++){
+    MasterData.push([questionData[MasterIndexes[b]][1], questionData[MasterIndexes[b]][2], questionData[MasterIndexes[b]][3]]);
+  }
     for(var p=0;p<controls.length;p++){
     if(controls[p].ind==="exam controller"||controls[p].ind==="answer choice"){
       controls[p].there=true;
@@ -558,8 +563,11 @@ class control{
         }
         selectedYear=true;
         loadQuestions(parseInt(this.txt));
+        for(var b=0;b<MasterIndexes.length;b++){
+          MasterData.push([questionData[MasterIndexes[b]][1], questionData[MasterIndexes[b]][2], questionData[MasterIndexes[b]][3]]);
+        }
         yearHomeScreen(parseInt(this.txt));
-      }
+      }  
 
       
       else if(this.txt==="Next"){
