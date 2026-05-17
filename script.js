@@ -602,7 +602,7 @@ class control{
         refresher();
       }
       else if(this.ind === "answer choice"){  
-        if(MasterData[n][2]===this.ind){
+        if(MasterData[n][2]===this.txt){
           this.rgb=[45,220,70];
         }
         else{
