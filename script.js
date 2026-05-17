@@ -154,11 +154,11 @@ function wholeSkillHomeScreen(i){
     }
   }
   textAlign(CENTER);
-  text(MasterData.length+" questions", wdth/2,400);
   loadQuestions(whichUnitSelected);
   for(var b=0;b<MasterIndexes.length;b++){  //anytime questions are loaded, the correspnding data should be loaded too
     MasterData.push([questionData[MasterIndexes[b]][1], questionData[MasterIndexes[b]][2], questionData[MasterIndexes[b]][3]]);
   }
+  text(MasterData.length+" questions", wdth/2,400);
 }
 
 function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal)
@@ -292,7 +292,7 @@ function setup(){
   //controls.push(new control(5,5,120,60,"Home",false,butcolor,"exam controller"));
   controls.push(new control(70,5,120,60,"Previous",false,butcolor,"exam controller"));  //index 75
   controls.push(new control(200,5,120,60,"Next",false,butcolor,"exam controller"));     //index 76
-  controls.push(new control(wdth/2-35,450,130,70,"Start",false,butcolor,"exam controller"));  //index 77
+  controls.push(new control(wdth/2-65,450,130,70,"Start",false,butcolor,"exam controller"));  //index 77
 
   controls.push(new control(600,5,60,60,"A",false,butcolor,"answer choice"));  //index 78 thru 82
   controls.push(new control(670,5,60,60,"B",false,butcolor,"answer choice"));
