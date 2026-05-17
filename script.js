@@ -590,8 +590,14 @@ class control{
         adjustImageDimensions();
         refresher();
       }
-      else if(this.ind >=78 && this.ind <=82){
-        
+      else if(this.ind >=78 && this.ind <=82){  //user has clicked an answer choice
+        if(MasterData[n][2]===this.ind){
+          this.rgb=[45,220,70];
+        }
+        else{
+          this.rgb=[220,45,70];
+        }
+        refresher();
       }
     }
   }     //end of tapit method
