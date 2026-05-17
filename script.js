@@ -573,10 +573,12 @@ class control{
       
       else if(this.txt==="Next"){
         n++;
+        for(var b=78;b<=82;b++){controls[b].rgb=butcolor;}
         refresher();
       }
       else if(this.txt==="Previous"){
         n--;
+        for(var b=78;b<=82;b++){controls[b].rgb=butcolor;}
         refresher();
       }
         
