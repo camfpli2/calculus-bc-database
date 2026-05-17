@@ -76,6 +76,7 @@ function querySkill(s){
 
 function refresher(){
   background(230);
+  if(MasterData[n][1]===5){controls[82].there=false;}
   for(var s=0;s<controls.length;s++){
     controls[s].drawit();
   }
@@ -139,7 +140,7 @@ function wholeSkillHomeScreen(i){
   stroke(bordercolor);
   rect(5,70,wdth-30,hgt-100,5);
   loadQuestions(whichUnitSelected);
-  for(var b=0;b<MasterIndexes.length;b++){
+  for(var b=0;b<MasterIndexes.length;b++){  //anytime questions are loaded, the correspnding data should be loaded too
     MasterData.push([questionData[MasterIndexes[b]][1], questionData[MasterIndexes[b]][2], questionData[MasterIndexes[b]][3]]);
   }
     for(var p=0;p<controls.length;p++){
@@ -563,7 +564,7 @@ class control{
         }
         selectedYear=true;
         loadQuestions(parseInt(this.txt));
-        for(var b=0;b<MasterIndexes.length;b++){
+        for(var b=0;b<MasterIndexes.length;b++){     //anytime questions are loaded, the correspnding data should be loaded too
           MasterData.push([questionData[MasterIndexes[b]][1], questionData[MasterIndexes[b]][2], questionData[MasterIndexes[b]][3]]);
         }
         yearHomeScreen(parseInt(this.txt));
