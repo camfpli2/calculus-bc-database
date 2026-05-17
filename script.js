@@ -74,6 +74,14 @@ function querySkill(s){
   }
 }
 
+function queryYear(y){
+  for(var g=0;g<questionData.length;g++){
+    if(questionData[g][0]===y){
+      MasterIndexes.push(g);
+    }
+  }
+}
+
 function refresher(){
   background(230);
   //if(MasterData[n][1]===4){controls[82].there=false;}
@@ -559,6 +567,7 @@ class control{
       }
 
       else if(this.ind==="year"){    //user clicks a year
+        queryYear(parseInt(this.txt));
         for(var f=0;f<controls.length;f++){
           controls[f].there=false;
         }
