@@ -601,7 +601,7 @@ class control{
         adjustImageDimensions();
         refresher();
       }
-      else if(this.ind >=78 && this.ind <=82){  //user has clicked an answer choice
+      else if(this.ind === "answer choice"){  
         if(MasterData[n][2]===this.ind){
           this.rgb=[45,220,70];
         }
