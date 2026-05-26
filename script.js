@@ -37,8 +37,7 @@ var questionData=[];  //array of arrays, format: [year, NC/C, n:number of answer
 
 function preload(){
     data=loadTable("calc-data-for-database.csv",".csv");
-    calcImg=loadImage("calc.png",".png");
-    nonCalcImg=loadImage("non-calc.png",".png");
+
 }
 
 
@@ -210,7 +209,8 @@ function setup(){
   wdth=windowWidth;
   createCanvas(wdth-20,hgt-20);
   background(240);
-
+  calcImg=loadImage("calc.png",".png");
+  nonCalcImg=loadImage("non-calc.png",".png");
 
   controls.push(new control(550,80,400,60,"Unit 1: Limits and Continuity",true,butcolor,0));
   controls.push(new control(550,150,400,60,"Unit 2: Derivatives",true,butcolor,1));
