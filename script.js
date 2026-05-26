@@ -18,6 +18,8 @@ var MasterIndexes=[];  //will be indexes of selected questions based on master q
 var MasterData=[];    //will be array of arrays in format: [[C/NC, # ofchoices, correct choice], [], []....]
 var whichUnitSelected;
 var questions=[];
+var calc-img;
+var non-calc-img;
 var choices=[];  //new, i want to make it to allign with questions
 var answers=[];  //new, i want same on this
 var questionIndexes08=[];  // write these in the same order as questionData rows
@@ -35,6 +37,8 @@ var questionData=[];  //array of arrays, format: [year, NC/C, n:number of answer
 
 function preload(){
     data=loadTable("calc-data-for-database.csv",".csv");
+    calc-img=loadImage('calc.png');
+    non-calc-img=loadImage('non-calc.png');
 }
 
 
