@@ -100,7 +100,7 @@ function refresher(){
   fill(0);
   textSize(20);
   text(n+1+" of "+questions.length,1000,30);
-  if(MasterData[0]==="C"){
+  if(MasterData[n][0]==="C"){
     image(calcImg,1100,10,50,50);    
   }
   else{
