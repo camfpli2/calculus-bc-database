@@ -37,8 +37,8 @@ var questionData=[];  //array of arrays, format: [year, NC/C, n:number of answer
 
 function preload(){
     data=loadTable("calc-data-for-database.csv",".csv");
-    calc-img=loadImage('calc.png');
-    non-calc-img=loadImage('non-calc.png');
+    calc-img=loadImage(`calc.png`);
+    non-calc-img=loadImage(`non-calc.png`);
 }
 
 
