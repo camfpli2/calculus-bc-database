@@ -158,12 +158,14 @@ function wholeSkillHomeScreen(i){
   strokeWeight(1);
   stroke(bordercolor);
   rect(5,70,wdth-30,hgt-100,5);
-    for(var p=0;p<controls.length;p++){
-    if(controls[p].txt==="Start"){
-      controls[p].there=true;
-      controls[p].drawit();
-    }
-  }
+  controls[77].there=true;
+  controls[77].drawit();
+  //   for(var p=0;p<controls.length;p++){
+  //   if(controls[p].txt==="Start"){
+  //     controls[p].there=true;
+  //     controls[p].drawit();
+  //   }
+  // }
   textAlign(CENTER);
   loadQuestions(whichUnitSelected);
   for(var b=0;b<MasterIndexes.length;b++){  //anytime questions are loaded, the correspnding data should be loaded too
