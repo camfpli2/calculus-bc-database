@@ -158,7 +158,6 @@ function wholeSkillHomeScreen(i){
   strokeWeight(1);
   stroke(bordercolor);
   rect(5,70,wdth-30,hgt-100,5);
-  text(MasterData.length+" questions", wdth/2,400);
   controls[77].there=true;
   controls[77].drawit();
   //   for(var p=0;p<controls.length;p++){
@@ -171,6 +170,7 @@ function wholeSkillHomeScreen(i){
   for(var b=0;b<MasterIndexes.length;b++){  //anytime questions are loaded, the correspnding data should be loaded too
     MasterData.push([questionData[MasterIndexes[b]][1], questionData[MasterIndexes[b]][2], questionData[MasterIndexes[b]][3]]);
   }
+  text(MasterData.length+" questions", wdth/2,400);
 
 }
 
