@@ -159,7 +159,9 @@ function wholeSkillHomeScreen(i){
   strokeWeight(1);
   stroke(bordercolor);
   rect(5,70,wdth-30,hgt-100,5);
+  console.log(controls[77].there);
   controls[77].there=true;
+  console.log(controls[77].there);
   console.log("hi2")
   controls[77].drawit();
   //   for(var p=0;p<controls.length;p++){
