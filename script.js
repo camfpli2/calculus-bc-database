@@ -153,6 +153,7 @@ function yearHomeScreen(y){
 }
 
 function wholeSkillHomeScreen(i){
+  console.log("hi");
   background(230);
   fill(240);
   strokeWeight(1);
