@@ -153,7 +153,6 @@ function yearHomeScreen(y){
 }
 
 function wholeSkillHomeScreen(i){
-  loadQuestions(whichUnitSelected);
   background(230);
   fill(240);
   strokeWeight(1);
@@ -540,6 +539,7 @@ class control{
           whichUnitSelected=this.ind+1;
           selectedUnit=true;
           queryUnit(this.ind+1);
+          loadQuestions(whichUnitSelected);
           wholeSkillHomeScreen(this.ind);
         }
           
