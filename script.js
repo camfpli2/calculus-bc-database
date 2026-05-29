@@ -158,8 +158,7 @@ function wholeSkillHomeScreen(i){
   strokeWeight(1);
   stroke(bordercolor);
   rect(5,70,wdth-30,hgt-100,5);
-  controls[77].there=true;
-  controls[77].drawit();
+
   //   for(var p=0;p<controls.length;p++){
   //   if(controls[p].txt==="Start"){
   //     controls[p].there=true;
@@ -171,6 +170,8 @@ function wholeSkillHomeScreen(i){
     MasterData.push([questionData[MasterIndexes[b]][1], questionData[MasterIndexes[b]][2], questionData[MasterIndexes[b]][3]]);
   }
   text(MasterData.length+" questions", wdth/2,400);
+  controls[77].there=true;
+  controls[77].drawit();
 }
 
 function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal)
