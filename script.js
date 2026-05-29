@@ -211,8 +211,8 @@ function setup(){
   wdth=windowWidth;
   createCanvas(wdth-20,hgt-20);
   background(240);
-  calcImg=loadImage("calc.png",".png");
-  nonCalcImg=loadImage("non-calc.png",".png");
+  calcImg=loadImage('calc.png');
+  nonCalcImg=loadImage('non-calc.png');
 
   controls.push(new control(550,80,400,60,"Unit 1: Limits and Continuity",true,butcolor,0));
   controls.push(new control(550,150,400,60,"Unit 2: Derivatives",true,butcolor,1));
