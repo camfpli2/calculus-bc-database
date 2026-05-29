@@ -160,6 +160,7 @@ function wholeSkillHomeScreen(i){
   stroke(bordercolor);
   rect(5,70,wdth-30,hgt-100,5);
   controls[77].there=true;
+  console.log("hi2")
   controls[77].drawit();
   //   for(var p=0;p<controls.length;p++){
   //   if(controls[p].txt==="Start"){
@@ -167,10 +168,12 @@ function wholeSkillHomeScreen(i){
   //     controls[p].drawit();
   //   }
   // }
+  console.log("hi3");
   textAlign(CENTER);
   for(var b=0;b<MasterIndexes.length;b++){  //anytime questions are loaded, the correspnding data should be loaded too
     MasterData.push([questionData[MasterIndexes[b]][1], questionData[MasterIndexes[b]][2], questionData[MasterIndexes[b]][3]]);
   }
+  console.log("hi4");
   text(MasterData.length+" questions", wdth/2,400);
 
 }
