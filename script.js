@@ -129,27 +129,21 @@ function getQuestionData(){
 
 function yearHomeScreen(y){
   background(230);
-  
   fill(240);
   strokeWeight(1);
   stroke(bordercolor);
-  rect(5,70,wdth-30,hgt-100,5);
-  for(var p=0;p<controls.length;p++){
-    if(controls[p].txt==="Start"){
-      controls[p].there=true;
-      controls[p].drawit();
-    }
-  }
-  //refresher();
+  rect(5,70,wdth-30,hgt-100,5);  //main panel
+  controls[77].there=true;  //show start button
+  controls[77].drawit();
   textSize(40);
   noStroke();
   fill(textcolor);
   textAlign(CENTER);
-  text("AP Calculus BC: "+y,wdth/2,250);
-  text("Multiple Choice Section",wdth/2,300);
+  text("AP Calculus BC: "+y,wdth/2,YProp(250));
+  text("Multiple Choice Section",wdth/2,YProp(300));
   textSize(26);
-  text("1 - 28, No Calculator",wdth/2,350);
-  text("76 - 92, Calculator",wdth/2,400);
+  text("1 - 28, No Calculator",wdth/2,YProp(350));
+  text("76 - 92, Calculator",wdth/2,YProp(400));
 }
 
 function wholeSkillHomeScreen(i){
@@ -158,24 +152,15 @@ function wholeSkillHomeScreen(i){
   fill(240);
   strokeWeight(1);
   stroke(bordercolor);
-  rect(5,70,wdth-30,hgt-100,5);
-  console.log(controls[77].there);
-  controls[77].there=true;
-  console.log(controls[77].there);
-  console.log("hi2")
+  rect(5,70,wdth-30,hgt-100,5);  //main panel
+  controls[77].there=true;  //show start button
   controls[77].drawit();
-  //   for(var p=0;p<controls.length;p++){
-  //   if(controls[p].txt==="Start"){
-  //     controls[p].there=true;
-  //     controls[p].drawit();
-  //   }
-  // }
+
   console.log("hi3");
   textAlign(CENTER);
   for(var b=0;b<MasterIndexes.length;b++){  //anytime questions are loaded, the correspnding data should be loaded too
     MasterData.push([questionData[MasterIndexes[b]][1], questionData[MasterIndexes[b]][2], questionData[MasterIndexes[b]][3]]);
   }
-  console.log("hi4");
   text(MasterData.length+" questions", wdth/2,400);
 
 }
@@ -213,13 +198,15 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
 function XProp(xORw){
   var newOne;
   newOne=map(xORw,0,1470,0,wdth);
-  console.log("done");
+  return newOne;
+}
+function YProp(yORh){
+  var newOne;
+  newOne=map(yORh,0,831,0,hgt);
   return newOne;
 }
 
-
 function setup(){
-
   hgt=windowHeight;
   wdth=windowWidth;
   createCanvas(wdth-20,hgt-20);
@@ -316,10 +303,9 @@ function setup(){
   controls.push(new control(250,570,120,60,"2018",true,butcolor,"year"));
   controls.push(new control(250,640,120,60,"2019",true,butcolor,"year"));
   
-  //controls.push(new control(5,5,120,60,"Home",false,butcolor,"exam controller"));
-  controls.push(new control(70,5,120,60,"Previous",false,butcolor,"exam controller"));  //index 75
-  controls.push(new control(200,5,120,60,"Next",false,butcolor,"exam controller"));     //index 76
-  controls.push(new control(wdth/2-65,450,130,70,"Start",false,butcolor,"exam controller"));  //index 77
+  controls.push(new control(XProp(5),YProp(5),XProp(120),YProp(60),"Previous",false,butcolor,"exam controller"));  //index 75
+  controls.push(new control(XProp(135),YProp(5),XProp(120),YProp(60),"Next",false,butcolor,"exam controller"));     //index 76
+  controls.push(new control(XProp(264),YProp(5),XProp(120),YProp(60),"Start",false,butcolor,"exam controller"));  //index 77
 
   controls.push(new control(600,5,60,60,"A",false,butcolor,"answer choice"));  //index 78 thru 82
   controls.push(new control(670,5,60,60,"B",false,butcolor,"answer choice"));
