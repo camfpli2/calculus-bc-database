@@ -211,105 +211,116 @@ function setup(){
   background(240);
   calcImg=loadImage('calc.png');
   nonCalcImg=loadImage('non-calc.png');
+  var unitX=XProp(550);
+  var unitW=XProp(400);
+  var unitH=YProp(60);
 
-  controls.push(new control(XProp(550),80,XProp(400),60,"Unit 1: Limits and Continuity",true,butcolor,0));
-  controls.push(new control(550,150,400,60,"Unit 2: Derivatives",true,butcolor,1));
-  controls.push(new control(550,220,400,60,"Unit 3: Applications of the Derivative",true,butcolor,2));
-  controls.push(new control(550,290,400,60,"Unit 4: Integration",true,butcolor,3));
-  controls.push(new control(550,360,400,60,"Unit 5: Differential Equations",true,butcolor,4));
-  controls.push(new control(550,430,400,60,"Unit 6: Applications of Integration",true,butcolor,5));
-  controls.push(new control(550,500,400,60,"Unit 7: Parametric Equations",true,butcolor,6));
-  controls.push(new control(550,570,400,60,"Unit 8: Polar Equations",true,butcolor,7));
-  controls.push(new control(550,640,400,60,"Unit 9: Sequences and Series",true,butcolor,8));   //all unit indexes are 0 thru 8
+  controls.push(new control(unitX,80,unitW,unitH,"Unit 1: Limits and Continuity",true,butcolor,0));
+  controls.push(new control(unitX,150,unitW,unitH,"Unit 2: Derivatives",true,butcolor,1));
+  controls.push(new control(unitX,220,unitW,unitH,"Unit 3: Applications of the Derivative",true,butcolor,2));
+  controls.push(new control(unitX,290,unitW,unitH,"Unit 4: Integration",true,butcolor,3));
+  controls.push(new control(unitX,360,unitW,unitH,"Unit 5: Differential Equations",true,butcolor,4));
+  controls.push(new control(unitX,430,unitW,unitH,"Unit 6: Applications of Integration",true,butcolor,5));
+  controls.push(new control(unitX,500,unitW,unitH,"Unit 7: Parametric Equations",true,butcolor,6));
+  controls.push(new control(unitX,570,unitW,unitH,"Unit 8: Polar Equations",true,butcolor,7));
+  controls.push(new control(unitX,640,unitW,unitH,"Unit 9: Sequences and Series",true,butcolor,8));   //all unit indexes are 0 thru 8
+
+  var skillX=XProp(1000);
+  var skillW=XProp(360);
+  var skillH=YProp(40);
+  controls.push(new control(skillX,100,skillW,skillH,"1.1 Limits and Continuity",false,butcolor,9));  //unit 1 , index 9 thru 13
+  controls.push(new control(skillX,150,skillW,skillH,"1.2 Properties of Limits",false,butcolor,10));
+  controls.push(new control(skillX,200,skillW,skillH,"1.3 Limits at Infinity",false,butcolor,11));
+  controls.push(new control(skillX,250,skillW,skillH,"1.4 Algebraic Limits",false,butcolor,12));
+  controls.push(new control(skillX,300,skillW,skillH,"1.5 Continuity and the IVT",false,butcolor,13));
   
-  controls.push(new control(1000,100,360,40,"1.1 Limits and Continuity",false,butcolor,9));  //unit 1 , index 9 thru 13
-  controls.push(new control(1000,150,360,40,"1.2 Properties of Limits",false,butcolor,10));
-  controls.push(new control(1000,200,360,40,"1.3 Limits at Infinity",false,butcolor,11));
-  controls.push(new control(1000,250,360,40,"1.4 Algebraic Limits",false,butcolor,12));
-  controls.push(new control(1000,300,360,40,"1.5 Continuity and the IVT",false,butcolor,13));
-  
-  controls.push(new control(1000,170,360,40,"2.1 Tangent Line & Differentiability",false,butcolor,14));  //unit2, index 14 thru 23
-  controls.push(new control(1000,220,360,40,"2.2 Derivatives on the Calculator",false,butcolor,15));
-  controls.push(new control(1000,270,360,40,"2.3 Basic Differentiation Rules",false,butcolor,16));
-  controls.push(new control(1000,320,360,40,"2.4 Product & Quotient Rules",false,butcolor,17));
-  controls.push(new control(1000,370,360,40,"2.5 Rates of Change and Particle Motion I",false,butcolor,18));
-  controls.push(new control(1000,420,360,40,"2.6 The Chain Rule",false,butcolor,19));
-  controls.push(new control(1000,470,360,40,"2.7 Implicit Differentiation",false,butcolor,20));
-  controls.push(new control(1000,520,360,40,"2.8 Derivatives of Inverse & Inverse Trig Functions",false,butcolor,21));
-  controls.push(new control(1000,570,360,40,"2.9 Derivatives of Exponential Functions",false,butcolor,22));
-  controls.push(new control(1000,620,360,40,"2.10 Derivatives of Log Functions",false,butcolor,23));
+  controls.push(new control(skillX,170,skillW,skillH,"2.1 Tangent Line & Differentiability",false,butcolor,14));  //unit2, index 14 thru 23
+  controls.push(new control(skillX,220,skillW,skillH,"2.2 Derivatives on the Calculator",false,butcolor,15));
+  controls.push(new control(skillX,270,skillW,skillH,"2.3 Basic Differentiation Rules",false,butcolor,16));
+  controls.push(new control(skillX,320,skillW,skillH,"2.4 Product & Quotient Rules",false,butcolor,17));
+  controls.push(new control(skillX,370,skillW,skillH,"2.5 Rates of Change and Particle Motion I",false,butcolor,18));
+  controls.push(new control(skillX,420,skillW,skillH,"2.6 The Chain Rule",false,butcolor,19));
+  controls.push(new control(skillX,470,skillW,skillH,"2.7 Implicit Differentiation",false,butcolor,20));
+  controls.push(new control(skillX,520,skillW,skillH,"2.8 Derivatives of Inverse & Inverse Trig Functions",false,butcolor,21));
+  controls.push(new control(skillX,570,skillW,skillH,"2.9 Derivatives of Exponential Functions",false,butcolor,22));
+  controls.push(new control(skillX,620,skillW,skillH,"2.10 Derivatives of Log Functions",false,butcolor,23));
 
-  controls.push(new control(1000,240,360,40,"3.1 Extrema on an interval",false,butcolor,24));   //unit 3, index 24 tru 31
-  controls.push(new control(1000,290,360,40,"3.2 Rolle's Theorem and the MVT",false,butcolor,25));   
-  controls.push(new control(1000,340,360,40,"3.3 Increasing, Decreasing, and 1st Derivative Test",false,butcolor,26));   
-  controls.push(new control(1000,390,360,40,"3.4 Concavity and the Second Derivative Test",false,butcolor,27));   
-  controls.push(new control(1000,440,360,40,"3.5 Graphs of Derivatives",false,butcolor,28));   
-  controls.push(new control(1000,490,360,40,"3.6 Optimization",false,butcolor,29));   
-  controls.push(new control(1000,540,360,40,"3.7 Linearization and Differentials",false,butcolor,30));   
-  controls.push(new control(1000,590,360,40,"3.8 Related Rates",false,butcolor,31));   
+  controls.push(new control(skillX,240,skillW,skillH,"3.1 Extrema on an interval",false,butcolor,24));   //unit 3, index 24 tru 31
+  controls.push(new control(skillX,290,skillW,skillH,"3.2 Rolle's Theorem and the MVT",false,butcolor,25));   
+  controls.push(new control(skillX,340,skillW,skillH,"3.3 Increasing, Decreasing, and 1st Derivative Test",false,butcolor,26));   
+  controls.push(new control(skillX,390,skillW,skillH,"3.4 Concavity and the Second Derivative Test",false,butcolor,27));   
+  controls.push(new control(skillX,440,skillW,skillH,"3.5 Graphs of Derivatives",false,butcolor,28));   
+  controls.push(new control(skillX,490,skillW,skillH,"3.6 Optimization",false,butcolor,29));   
+  controls.push(new control(skillX,540,skillW,skillH,"3.7 Linearization and Differentials",false,butcolor,30));   
+  controls.push(new control(skillX,590,360,40,"3.8 Related Rates",false,butcolor,31));   
 
-  controls.push(new control(1000,310,360,40,"4.1 Antiderivatives and Indefinite Integration",false,butcolor,32));   //unit 4, index 32 thru 35
-  controls.push(new control(1000,360,360,40,"4.2 Numeric Definite Integrals",false,butcolor,33));
-  controls.push(new control(1000,410,360,40,"4.3 The Fundamental Theorem Of Calculus I & II and MVT II",false,butcolor,34));
-  controls.push(new control(1000,460,360,40,"4.4 Integration by u-Substitution",false,butcolor,35));
+  controls.push(new control(skillX,310,skillW,skillH,"4.1 Antiderivatives and Indefinite Integration",false,butcolor,32));   //unit 4, index 32 thru 35
+  controls.push(new control(skillX,360,skillW,skillH,"4.2 Numeric Definite Integrals",false,butcolor,33));
+  controls.push(new control(skillX,410,skillW,skillH,"4.3 The Fundamental Theorem Of Calculus I & II and MVT II",false,butcolor,34));
+  controls.push(new control(skillX,460,skillW,skillH,"4.4 Integration by u-Substitution",false,butcolor,35));
 
-  controls.push(new control(1000,380,360,40,"5.1 Separable Differential Equations",false,butcolor,36));   //unit 5, index 36 thru 40
-  controls.push(new control(1000,430,360,40,"5.2 Slope Fields",false,butcolor,37));
-  controls.push(new control(1000,480,360,40,"5.3 Euler's Method",false,butcolor,38));
-  controls.push(new control(1000,530,360,40,"5.4 Integration by Parts",false,butcolor,39));
-  controls.push(new control(1000,580,360,40,"5.5 Partial Fractions & Logistic Growth ",false,butcolor,40));
+  controls.push(new control(skillX,380,skillW,skillH,"5.1 Separable Differential Equations",false,butcolor,36));   //unit 5, index 36 thru 40
+  controls.push(new control(skillX,430,skillW,skillH,"5.2 Slope Fields",false,butcolor,37));
+  controls.push(new control(skillX,480,skillW,skillH,"5.3 Euler's Method",false,butcolor,38));
+  controls.push(new control(skillX,530,skillW,skillH,"5.4 Integration by Parts",false,butcolor,39));
+  controls.push(new control(skillX,580,skillW,skillH,"5.5 Partial Fractions & Logistic Growth ",false,butcolor,40));
 
-  controls.push(new control(1000,350,360,40,"6.1 Integral as Net Change",false,butcolor,41));   //unit 6, index 41 thru 46
-  controls.push(new control(1000,400,360,40,"6.2 Area between Curves",false,butcolor,42));
-  controls.push(new control(1000,450,360,40,"6.3 Volumes",false,butcolor,43));
-  controls.push(new control(1000,500,360,40,"6.4 Arc Length",false,butcolor,44));
-  controls.push(new control(1000,550,360,40,"6.5 L'Hôpital's Rule and Indeterminate Forms",false,butcolor,45));
-  controls.push(new control(1000,600,360,40,"6.6 Improper Integrals",false,butcolor,46));
+  controls.push(new control(skillX,350,skillW,skillH,"6.1 Integral as Net Change",false,butcolor,41));   //unit 6, index 41 thru 46
+  controls.push(new control(skillX,400,skillW,skillH,"6.2 Area between Curves",false,butcolor,42));
+  controls.push(new control(skillX,450,skillW,skillH,"6.3 Volumes",false,butcolor,43));
+  controls.push(new control(skillX,500,skillW,skillH,"6.4 Arc Length",false,butcolor,44));
+  controls.push(new control(skillX,550,skillW,skillH,"6.5 L'Hôpital's Rule and Indeterminate Forms",false,butcolor,45));
+  controls.push(new control(skillX,600,skillW,skillH,"6.6 Improper Integrals",false,butcolor,46));
 
-  controls.push(new control(1000,520,360,40,"7.1 Intro to Parametric & Vector Calculus",false,butcolor,47));   //unit 7, index 47 thru 48
-  controls.push(new control(1000,570,360,40,"7.2 Parametric & Vector Accumulation",false,butcolor,48));
+  controls.push(new control(skillX,520,skillW,skillH,"7.1 Intro to Parametric & Vector Calculus",false,butcolor,47));   //unit 7, index 47 thru 48
+  controls.push(new control(skillX,570,skillW,skillH,"7.2 Parametric & Vector Accumulation",false,butcolor,48));
 
-  controls.push(new control(1000,590,360,40,"8.1 Polar Intro & Derivatives",false,butcolor,49));   //unit 8, index 49 thru 50
-  controls.push(new control(1000,640,360,40,"8.2 Polar Area",false,butcolor,50));
+  controls.push(new control(skillX,590,skillW,skillH,"8.1 Polar Intro & Derivatives",false,butcolor,49));   //unit 8, index 49 thru 50
+  controls.push(new control(skillX,640,skillW,skillH,"8.2 Polar Area",false,butcolor,50));
 
-  controls.push(new control(1000,400,360,40,"9.1 Infinite Sequences & Series",false,butcolor,51));   //unit 9, index 51 thru 56
-  controls.push(new control(1000,450,360,40,"9.2 Taylor Polynomials",false,butcolor,52));
-  controls.push(new control(1000,500,360,40,"9.3 Power Series I: Taylor & Maclaurin Series",false,butcolor,53));
-  controls.push(new control(1000,550,360,40,"9.4 Power Series II: Geometric Series",false,butcolor,54));
-  controls.push(new control(1000,600,360,40,"9.5 Lagrange Error Bound",false,butcolor,55));
-  controls.push(new control(1000,650,360,40,"9.6",false,butcolor,56));                            //all sub-skills will always be index 9 thru 56
-  
-  
-  controls.push(new control(80,80,120,60,"1996",true,butcolor,"year"));  //indexes 57 thru 65
-  controls.push(new control(80,150,120,60,"1997",true,butcolor,"year"));
-  controls.push(new control(80,220,120,60,"1998",true,butcolor,"year"));
-  controls.push(new control(80,290,120,60,"1999",true,butcolor,"year"));
-  controls.push(new control(80,360,120,60,"2006",true,butcolor,"year"));
-  controls.push(new control(80,430,120,60,"2007",true,butcolor,"year"));
-  controls.push(new control(80,500,120,60,"2008",true,butcolor,"year"));
-  controls.push(new control(80,570,120,60,"2009",true,butcolor,"year"));
-  controls.push(new control(80,640,120,60,"2010",true,butcolor,"year"));
+  controls.push(new control(skillX,400,skillW,skillH,"9.1 Infinite Sequences & Series",false,butcolor,51));   //unit 9, index 51 thru 56
+  controls.push(new control(skillX,450,skillW,skillH,"9.2 Taylor Polynomials",false,butcolor,52));
+  controls.push(new control(skillX,500,skillW,skillH,"9.3 Power Series I: Taylor & Maclaurin Series",false,butcolor,53));
+  controls.push(new control(skillX,550,skillW,skillH,"9.4 Power Series II: Geometric Series",false,butcolor,54));
+  controls.push(new control(skillX,600,skillW,skillH,"9.5 Lagrange Error Bound",false,butcolor,55));
+  controls.push(new control(skillX,650,skillW,skillH,"9.6",false,butcolor,56));                            //all sub-skills will always be index 9 thru 56
+  var yearX1=XProp(80);
+  var yearX2=XProp(250);
+  var yearW=XProp(120);
+  var yearH=YProp(60);
+  controls.push(new control(yearX1,80,yearW,yearH,"1996",true,butcolor,"year"));  //indexes 57 thru 65
+  controls.push(new control(yearX1,150,yearW,yearH,"1997",true,butcolor,"year"));
+  controls.push(new control(yearX1,220,yearW,yearH,"1998",true,butcolor,"year"));
+  controls.push(new control(yearX1,290,yearW,yearH,"1999",true,butcolor,"year"));
+  controls.push(new control(yearX1,360,yearW,yearH,"2006",true,butcolor,"year"));
+  controls.push(new control(yearX1,430,yearW,yearH,"2007",true,butcolor,"year"));
+  controls.push(new control(yearX1,500,yearW,yearH,"2008",true,butcolor,"year"));
+  controls.push(new control(yearX1,570,yearW,yearH,"2009",true,butcolor,"year"));
+  controls.push(new control(yearX1,640,yearW,yearH,"2010",true,butcolor,"year"));
 
 
-  controls.push(new control(250,80,120,60,"2011",true,butcolor,"year"));  //indexes 66 thru 74
-  controls.push(new control(250,150,120,60,"2012",true,butcolor,"year"));
-  controls.push(new control(250,220,120,60,"2013",true,butcolor,"year"));
-  controls.push(new control(250,290,120,60,"2014",true,butcolor,"year"));
-  controls.push(new control(250,360,120,60,"2015",true,butcolor,"year"));
-  controls.push(new control(250,430,120,60,"2016",true,butcolor,"year"));
-  controls.push(new control(250,500,120,60,"2017",true,butcolor,"year"));
-  controls.push(new control(250,570,120,60,"2018",true,butcolor,"year"));
-  controls.push(new control(250,640,120,60,"2019",true,butcolor,"year"));
-  
-  controls.push(new control(XProp(5),YProp(5),XProp(120),YProp(60),"Previous",false,butcolor,"exam controller"));  //index 75
-  controls.push(new control(XProp(135),YProp(5),XProp(120),YProp(60),"Next",false,butcolor,"exam controller"));     //index 76
-  controls.push(new control(XProp(264),YProp(5),XProp(120),YProp(60),"Start",false,butcolor,"exam controller"));  //index 77
+  controls.push(new control(yearX2,80,yearW,yearH,"2011",true,butcolor,"year"));  //indexes 66 thru 74
+  controls.push(new control(yearX2,150,yearW,yearH,"2012",true,butcolor,"year"));
+  controls.push(new control(yearX2,220,yearW,yearH,"2013",true,butcolor,"year"));
+  controls.push(new control(yearX2,290,yearW,yearH,"2014",true,butcolor,"year"));
+  controls.push(new control(yearX2,360,yearW,yearH,"2015",true,butcolor,"year"));
+  controls.push(new control(yearX2,430,yearW,yearH,"2016",true,butcolor,"year"));
+  controls.push(new control(yearX2,500,yearW,yearH,"2017",true,butcolor,"year"));
+  controls.push(new control(yearX2,570,yearW,yearH,"2018",true,butcolor,"year"));
+  controls.push(new control(yearX2,640,yearW,yearH,"2019",true,butcolor,"year"));
 
-  controls.push(new control(600,5,60,60,"A",false,butcolor,"answer choice"));  //index 78 thru 82
-  controls.push(new control(670,5,60,60,"B",false,butcolor,"answer choice"));
-  controls.push(new control(740,5,60,60,"C",false,butcolor,"answer choice"));
-  controls.push(new control(810,5,60,60,"D",false,butcolor,"answer choice"));
-  controls.push(new control(880,5,60,60,"E",false,butcolor,"answer choice"));
+  var topButtonY=YProp(5);
+  var topButtonW=yearW;
+  var topButtonH=yearH;
+  controls.push(new control(XProp(5),topButtonY,topButtonW,topButtonH,"Previous",false,butcolor,"exam controller"));  //index 75
+  controls.push(new control(XProp(135),topButtonY,topButtonW,topButtonH,"Next",false,butcolor,"exam controller"));     //index 76
+  controls.push(new control(XProp(265),topButtonY,topButtonW,topButtonH,"Start",false,butcolor,"exam controller"));  //index 77
+
+  controls.push(new control(XProp(500),topButtonY,60,60,"A",false,butcolor,"answer choice"));  //index 78 thru 82
+  controls.push(new control(XProp(570),topButtonY,60,60,"B",false,butcolor,"answer choice"));
+  controls.push(new control(XProp(640),topButtonY,60,60,"C",false,butcolor,"answer choice"));
+  controls.push(new control(XProp(710),topButtonY,60,60,"D",false,butcolor,"answer choice"));
+  controls.push(new control(XProp(780),topButtonY,60,60,"E",false,butcolor,"answer choice"));
   getQuestionData();
 
 
