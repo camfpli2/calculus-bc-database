@@ -99,7 +99,7 @@ function refresher(){
   image(questions[n],10,80);
   fill(0);
   textSize(20);
-  text(n+1+" of "+questions.length,1000,30);
+  text(n+1+" of "+questions.length,XProp(1000),YProp(30));
   if(MasterData[n][0]==="C"){
     image(calcImg,1100,10,50,50);    
   }
@@ -287,7 +287,7 @@ function setup(){
   var yearX1=XProp(80);
   var yearX2=XProp(250);
   var yearW=XProp(120);
-  var yearH=YProp(60);
+  var yearH=unitH;
   controls.push(new control(yearX1,80,yearW,yearH,"1996",true,butcolor,"year"));  //indexes 57 thru 65
   controls.push(new control(yearX1,150,yearW,yearH,"1997",true,butcolor,"year"));
   controls.push(new control(yearX1,220,yearW,yearH,"1998",true,butcolor,"year"));
@@ -315,17 +315,15 @@ function setup(){
   controls.push(new control(XProp(5),topButtonY,topButtonW,topButtonH,"Previous",false,butcolor,"exam controller"));  //index 75
   controls.push(new control(XProp(135),topButtonY,topButtonW,topButtonH,"Next",false,butcolor,"exam controller"));     //index 76
   controls.push(new control(XProp(265),topButtonY,topButtonW,topButtonH,"Start",false,butcolor,"exam controller"));  //index 77
-
-  controls.push(new control(XProp(500),topButtonY,60,60,"A",false,butcolor,"answer choice"));  //index 78 thru 82
-  controls.push(new control(XProp(570),topButtonY,60,60,"B",false,butcolor,"answer choice"));
-  controls.push(new control(XProp(640),topButtonY,60,60,"C",false,butcolor,"answer choice"));
-  controls.push(new control(XProp(710),topButtonY,60,60,"D",false,butcolor,"answer choice"));
-  controls.push(new control(XProp(780),topButtonY,60,60,"E",false,butcolor,"answer choice"));
+  
+  var answerChoiceSide=XProp(60);
+  controls.push(new control(XProp(500),topButtonY,answerChoiceSide,answerChoiceSide,"A",false,butcolor,"answer choice"));  //index 78 thru 82
+  controls.push(new control(XProp(570),topButtonY,answerChoiceSide,answerChoiceSide,"B",false,butcolor,"answer choice"));
+  controls.push(new control(XProp(640),topButtonY,answerChoiceSide,answerChoiceSide,"C",false,butcolor,"answer choice"));
+  controls.push(new control(XProp(710),topButtonY,answerChoiceSide,answerChoiceSide,"D",false,butcolor,"answer choice"));
+  controls.push(new control(XProp(780),topButtonY,answerChoiceSide,answerChoiceSide,"E",false,butcolor,"answer choice"));
   getQuestionData();
-
-
   homeScreen();
-
 }
 
 function homeScreen(){
