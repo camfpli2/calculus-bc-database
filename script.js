@@ -101,10 +101,10 @@ function refresher(){
   textSize(20);
   text(n+1+" of "+questions.length,XProp(1000),YProp(30));
   if(MasterData[n][0]==="C"){
-    image(calcImg,1100,10,50,50);    
+    image(calcImg,XProp(1000),YProp(10),50,50);    
   }
   else{
-    image(nonCalcImg,1100,10,50,50);
+    image(nonCalcImg,XProp(1000),YProp(10),50,50);
   }
 
   
