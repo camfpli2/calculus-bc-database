@@ -147,7 +147,6 @@ function yearHomeScreen(y){
 }
 
 function wholeSkillHomeScreen(i){
-  console.log("hi");
   background(230);
   fill(240);
   strokeWeight(1);
@@ -156,7 +155,6 @@ function wholeSkillHomeScreen(i){
   controls[77].there=true;  //show start button
   controls[77].drawit();
 
-  console.log("hi3");
   textAlign(CENTER);
   for(var b=0;b<MasterIndexes.length;b++){  //anytime questions are loaded, the correspnding data should be loaded too
     MasterData.push([questionData[MasterIndexes[b]][1], questionData[MasterIndexes[b]][2], questionData[MasterIndexes[b]][3]]);
