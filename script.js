@@ -316,12 +316,12 @@ function setup(){
   controls.push(new control(XProp(135),topButtonY,topButtonW,topButtonH,"Next",false,butcolor,"exam controller"));     //index 76
   controls.push(new control(XProp(265),topButtonY,topButtonW,topButtonH,"Start",false,butcolor,"exam controller"));  //index 77
   
-  var answerChoiceSide=XProp(60);
-  controls.push(new control(XProp(500),topButtonY,answerChoiceSide,answerChoiceSide,"A",false,butcolor,"answer choice"));  //index 78 thru 82
-  controls.push(new control(XProp(570),topButtonY,answerChoiceSide,answerChoiceSide,"B",false,butcolor,"answer choice"));
-  controls.push(new control(XProp(640),topButtonY,answerChoiceSide,answerChoiceSide,"C",false,butcolor,"answer choice"));
-  controls.push(new control(XProp(710),topButtonY,answerChoiceSide,answerChoiceSide,"D",false,butcolor,"answer choice"));
-  controls.push(new control(XProp(780),topButtonY,answerChoiceSide,answerChoiceSide,"E",false,butcolor,"answer choice"));
+  var answerChoiceStartX=XProp(500);
+  controls.push(new control(answerChoiceStartX,topButtonY,60,60,"A",false,butcolor,"answer choice"));  //index 78 thru 82
+  controls.push(new control(answerChoiceStartX+70,topButtonY,60,60,"B",false,butcolor,"answer choice"));
+  controls.push(new control(answerChoiceStartX+140,topButtonY,60,60,"C",false,butcolor,"answer choice"));
+  controls.push(new control(answerChoiceStartX+210,topButtonY,60,60,"D",false,butcolor,"answer choice"));
+  controls.push(new control(answerChoiceStartX+280,topButtonY,60,60,"E",false,butcolor,"answer choice"));
   getQuestionData();
   homeScreen();
 }
