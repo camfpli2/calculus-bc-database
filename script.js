@@ -576,6 +576,7 @@ class control{
         }
         selectedSkill=true;
         querySkill(whichUnitSelected);
+        loadQuestions(whichUnitSelected);
         wholeSkillHomeScreen(whichUnitSelected);
       }
 
