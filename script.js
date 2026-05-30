@@ -210,6 +210,13 @@ function loadQuestions(ask){   //ask could be "year" , integer, or skill(decimal
 
 }
 
+function XProp(xORw){
+  var newOne;
+  newOne=map(xORw,0,1470,0,wdth);
+  console.log("done");
+  return newOne;
+}
+
 
 function setup(){
 
@@ -220,7 +227,7 @@ function setup(){
   calcImg=loadImage('calc.png');
   nonCalcImg=loadImage('non-calc.png');
 
-  controls.push(new control(550,80,400,60,"Unit 1: Limits and Continuity",true,butcolor,0));
+  controls.push(new control(XProp(550),80,XProp(400),60,"Unit 1: Limits and Continuity",true,butcolor,0));
   controls.push(new control(550,150,400,60,"Unit 2: Derivatives",true,butcolor,1));
   controls.push(new control(550,220,400,60,"Unit 3: Applications of the Derivative",true,butcolor,2));
   controls.push(new control(550,290,400,60,"Unit 4: Integration",true,butcolor,3));
