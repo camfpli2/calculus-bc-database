@@ -562,17 +562,17 @@ class control{
         fill(240);
         stroke(selectbordercolor);
         strokeWeight(2);
-        rect(this.x+this.w+30,skillBoxInfo[this.ind][0],400,skillBoxInfo[this.ind][1],2);
+        rect(this.x+this.w+XProp(30),YProp(skillBoxInfo[this.ind][0]),XProp(400),YProp(skillBoxInfo[this.ind][1]),2);
         for(var y=0;y<controls.length;y++){
             controls[y].drawit();
          }
         fill(this.rgb);
         noStroke();
-        triangle(this.x+this.w-2,this.y,this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
+        triangle(this.x+this.w-2,this.y,this.x+this.w-2,this.y+this.h,this.x+this.w+XProp(30),this.y+this.h/2);
         stroke(selectbordercolor);
         strokeWeight(2);
-        line(this.x+this.w-2,this.y,this.x+this.w+30,this.y+this.h/2);
-        line(this.x+this.w-2,this.y+this.h,this.x+this.w+30,this.y+this.h/2);
+        line(this.x+this.w-2,this.y,this.x+this.w+XProp(30),this.y+this.h/2);
+        line(this.x+this.w-2,this.y+this.h,this.x+this.w+XProp(30),this.y+this.h/2);
         }
       }
 
