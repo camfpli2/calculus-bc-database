@@ -99,7 +99,7 @@ function refresher(){
   image(questions[n],10,80);
   fill(0);
   textSize(20);
-  text(n+1+" of "+questions.length,XProp(1000),YProp(30));
+  text(n+1+" of "+questions.length,XProp(350),YProp(30));
   if(MasterData[n][0]==="C"){
     image(calcImg,XProp(1000),YProp(10),50,50);    
   }
@@ -331,14 +331,14 @@ function homeScreen(){
     fill(240);
     stroke(bordercolor);
     strokeWeight(1);
-    rect(10,10,490,710,5);
-    rect(520,10,890,710,5);
+    rect(XProp(10),YProp(10),XProp(490),YProp(710),5);
+    rect(XProp(520),YProp(10),XProp(890),YProp(710),5);
     textSize(26);
     noStroke();
     fill(textcolor);
     textAlign(LEFT,CENTER);
-    text("Multiple Choice Complete Sections",50,50);
-    text("Practice By Unit",600,50);  //change later to be a percent of window width
+    text("Multiple Choice Complete Sections",XProp(50),YProp(50));
+    text("Practice By Unit",XProp(600),YProp(50));  //change later to be a percent of window width
     //text("Practice By Skill",1000,50);  //same as above
      for(var y=0;y<controls.length;y++){
       controls[y].drawit();
