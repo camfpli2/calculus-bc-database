@@ -88,6 +88,7 @@ function queryYear(y){
 function refresher(){
   background(230);
   if(MasterData[n][1]===4){controls[82].there=false;}
+  else{controls[82].there=true;}
   for(var s=0;s<controls.length;s++){
     controls[s].drawit();
   }
