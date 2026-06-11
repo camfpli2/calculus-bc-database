@@ -87,13 +87,15 @@ function queryYear(y){
 
 function refresher(){
   background(230);
+  fill(255);
+  rect(5,5,wdth-30,hgt-105,5);
+
   if(MasterData[n][1]===4){controls[82].there=false;}
   else{controls[82].there=true;}
   for(var s=0;s<controls.length;s++){
     controls[s].drawit();
   }
-
-  fill(240);
+  fill(255);
   strokeWeight(1);
   stroke(bordercolor);
   rect(5,70,wdth-30,hgt-100,5);
